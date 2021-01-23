@@ -1,6 +1,9 @@
+//settings
 @import './settings/fonts';
 @import './settings/colors';
 @import './settings/normailze';
+//partials
+@import './home_header';
 
 body {
  font-family: $font-base; 
