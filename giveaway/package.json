@@ -7,7 +7,7 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.2",
-    "node-sass": "^5.0.0",
+    "node-sass": "^4.14.1",
     "normalize.css": "^8.0.1",
     "normalize.scss": "^0.1.0",
     "npm-font-open-sans": "^1.1.0",
@@ -41,5 +41,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-normalize": "^0.4.4"
   }
 }
