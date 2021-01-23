@@ -1,9 +1,10 @@
 import React from 'react';
+import header from '../assets/header.jpg'
 
-const HomeHeader = () => {
+const HomeHeader = () => {   
     return (
         <div className="header-container">
-        <div className="header-left-side">lewa strona header, tu image</div>
+        <img src={header} className="header-left-side" alt="header-left-img" />
         <div className="header-right-side">prawa strona header, tu menu z dwu części oraz treść z dwoma przyciskami</div>
         </div>
     )
