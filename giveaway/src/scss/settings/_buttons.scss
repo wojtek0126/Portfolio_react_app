@@ -1,0 +1,38 @@
+@import './settings/colors';
+
+//base for all buttons
+.btn {
+    background-color: $color_white;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+//home header buttons
+.menu-top-button {
+    padding: 10px;
+    color: $color_greyish;
+    font-size: 0.6em;
+    border: none;   
+    &:hover {
+        border: 1px solid $color3_yellowish;    
+    }
+}
+
+.menu-bottom-button {
+    padding: 10px 20px;  
+    font-size: 0.8em;
+    border: none;
+    &:hover {
+     border: 1px solid $color_black;    
+    } 
+ }
+
+
+.header-button {
+    border: 1px solid $color_black; 
+    text-transform: uppercase;
+    padding: 10px 30px;
+    font-size: 1.4em;
+    width: 200px;
+}

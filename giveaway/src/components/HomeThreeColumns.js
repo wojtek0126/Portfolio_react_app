@@ -2,7 +2,7 @@ import React from 'react';
 
 const HomeThreeColumns = () => {
     return (
-        <div>Home three columns render</div>
+        <div>HomeThreeColumns render</div>
     )
 }
 

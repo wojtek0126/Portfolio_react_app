@@ -5,9 +5,48 @@
 
 .header-left-side {
     width: 50%;
+    transform: scale(1.5) translateX(-130px);
+    margin-top: 30px;
+    margin-top: 95px;
    
 }
 
 .header-right-side {
     width: 50%;
+}
+
+.header-right-side--menu {
+    margin:  20px 40px 0 0;
+}
+
+.header-right-side--menu__top {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-right-side--menu__bottom {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-right-side--content__text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.header-right-side--content__buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.header-right-side--content {
+    margin-top: 100px;
+}
+
+.header-right-side--content__decoration {
+    width: 30%;
 }
