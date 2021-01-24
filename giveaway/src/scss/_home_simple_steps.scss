@@ -1,0 +1,57 @@
+@import './settings/colors';
+
+// .simple-steps-container {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+.simple-steps-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    & p {
+        margin-bottom: 10px;
+    }
+}
+
+.simple-steps-top--decoration {      
+    transform: scale(0.7);
+}
+
+.simple-steps-middle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 0 100px 0 100px;
+    background-color: $color_whiteish;    
+}
+
+.simple-steps-middle--decoration {
+    margin-top: 30px;    
+    transform: scale(0.7);
+}
+
+.simple-steps-middle__underlined {
+    border-bottom: 1px solid $color_black;
+    // border-image: linear-gradient(to left, $color_black ,$color_white); 
+    border-image-slice: 1;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.simple-steps-middle__bottom-text {
+    margin-bottom: 30px;
+}
+
+.simple-steps-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}

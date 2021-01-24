@@ -28,12 +28,16 @@ const HomeHeader = () => {
             </div>
             <div className="header-right-side--content">
                 <div className="header-right-side--content__text">
-                    <h3>Zacznij pomagać!<br/> Oddaj niechciane rzeczy w zaufane ręce</h3>                    
+                    <h2>Zacznij pomagać!<br/> Oddaj niechciane rzeczy w zaufane ręce</h2>                    
                     <img src={Decoration} alt="decor" className="header-right-side--content__decoration" />
                     </div>
                 <div className="header-right-side--content__buttons">
-                     <button className="btn header-button" href="">oddaj rzeczy</button>
-                <button className="btn header-button" href="">zorganizuj zbiórkę</button>
+                    <Link to="/login">
+                        <button className="btn header-button" href="">oddaj rzeczy</button>
+                    </Link>
+                    <Link to="/login">
+                        <button className="btn header-button" href="">zorganizuj zbiórkę</button>
+                    </Link>              
                 </div>
             </div>
             </div>
