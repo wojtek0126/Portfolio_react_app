@@ -6,7 +6,6 @@ import About from "./About.js";
 import WhoWeHelp from "./WhoWeHelp.js";
 import Contact from "./Contact.js";
 
-
 const Home = () => {
     return (
        <>
