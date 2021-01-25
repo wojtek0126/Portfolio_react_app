@@ -1,5 +1,5 @@
-import Home from "./components/Home";
-import Login from "./components/Login";
+import Home from "C:/CodersLab/Portfolio_react_app/giveaway/src/components/homePage/Home.js";
+import Login from "./components/login/Login";
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 function App() {

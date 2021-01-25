@@ -1,7 +1,7 @@
 import React from 'react';
-import Decoration from '../assets/icons/Decoration.svg';
-import Signature from '../assets/icons/Signature.svg';
-import People from '../assets/images/People.jpg';
+import Decoration from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/icons/Decoration.svg';
+import Signature from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/icons/Signature.svg';
+import People from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/images/People.jpg';
 
 const About = () => {
     return (

@@ -12,9 +12,12 @@ const HomeHeaderMenu = () => {
                     <Link to="aboutUs" smooth={true} duration={1000}>
                         <button className="btn menu-bottom-button" href="">O nas</button>
                     </Link>              
-        
-        <button className="btn menu-bottom-button" href="">Fundacja i organizacje</button>
-        <button className="btn menu-bottom-button" href="">Kontakt</button>
+                    <Link to="whoWeHelp" smooth={true} duration={1000}>
+                        <button className="btn menu-bottom-button" href="">Fundacja i organizacje</button>
+                    </Link> 
+                    <Link to="contact" smooth={true} duration={1000}>
+                        <button className="btn menu-bottom-button" href="">Kontakt</button>
+                    </Link>         
         </>
     )
 }

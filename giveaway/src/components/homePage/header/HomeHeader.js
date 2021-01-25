@@ -1,9 +1,8 @@
 import React from 'react';
-import header from '../assets/images/header.jpg';
-import Decoration from '../assets/icons/Decoration.svg';
+import header from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/images/header.jpg';
+import Decoration from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/icons/Decoration.svg';
 import {Link} from 'react-router-dom';
-import HomeHeaderMenu from "./HomeHeaderMenu.js";
-
+import HomeHeaderMenu from "../../atoms/HomeHeaderMenu.js";
 
 const HomeHeader = () => {   
     return (  

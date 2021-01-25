@@ -11,18 +11,20 @@
 //home header buttons
 .menu-top-button {
     padding: 10px;
+    margin: 1px;
     color: $color_greyish;
     font-size: 0.6em;
-    border: none;   
+    border: 1px solid $color_white; 
     &:hover {
         border: 1px solid $color3_yellowish;    
     }
 }
 
 .menu-bottom-button {
-    padding: 10px 20px;  
-    font-size: 0.8em;
-    border: none;  
+    padding: 10px 20px;     
+    margin: 1px; 
+    border: 1px solid $color_white;   
+    font-size: 0.8em;     
     &:hover {
      border: 1px solid $color_black;    
     } 
@@ -36,3 +38,21 @@
     font-size: 1.4em;
     width: 200px;
 }
+
+.who-we-help--button {
+    border: 1px solid $color_black;     
+    padding: 10px 30px;
+    font-size: 1.2em;
+    width: 200px;
+    text-align: center;
+}
+
+.form-submit-button {
+    padding: 10px 20px;     
+    margin: 1px; 
+    border: 1px solid $color_black;   
+    font-size: 0.8em;     
+    // &:hover {
+    //  border: 1px solid $color_black;    
+    // } 
+ }

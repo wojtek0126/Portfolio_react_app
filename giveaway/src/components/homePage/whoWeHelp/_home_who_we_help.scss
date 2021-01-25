@@ -1,0 +1,35 @@
+
+.who-we-help-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.who-we-help-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.who-we-help-top__decoration {
+    transform: scale(0.7);
+    margin-bottom: 20px;
+}
+
+.who-we-help-top__options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 65%;
+}
+
+.who-we-help-top__text {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
