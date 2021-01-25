@@ -2,6 +2,8 @@ import React from 'react';
 import header from '../assets/images/header.jpg';
 import Decoration from '../assets/icons/Decoration.svg';
 import {Link} from 'react-router-dom';
+import HomeHeaderMenu from "./HomeHeaderMenu.js";
+
 
 const HomeHeader = () => {   
     return (  
@@ -17,14 +19,10 @@ const HomeHeader = () => {
                     </Link>
                  
                     <button className="btn menu-top-button" href="">Załóż konto</button>
-                    </div>                    
+                </div>                    
                 <div className="header-right-side--menu__bottom">
-                <button className="btn menu-bottom-button" href="">Start</button>
-                <button className="btn menu-bottom-button" href="">O co chodzi?</button>
-                <button className="btn menu-bottom-button" href="">O nas</button>
-                <button className="btn menu-bottom-button" href="">Fundacja i organizacje</button>
-                <button className="btn menu-bottom-button" href="">Kontakt</button>
-                    </div>
+                    <HomeHeaderMenu />
+                </div>
             </div>
             <div className="header-right-side--content">
                 <div className="header-right-side--content__text">
