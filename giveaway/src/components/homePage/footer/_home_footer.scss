@@ -1,0 +1,22 @@
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    background: transparent;
+    position: absolute;
+    transform: translateY(-30px);
+}
+
+.footer-copyright {
+    width: 90vw;
+    text-align: center;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-icons--icon {
+    height: 70%;
+}

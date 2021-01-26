@@ -1,0 +1,14 @@
+{
+    "foundations":  [ 
+    {
+    "name": "bobflex",
+    "description": "jedzenie mało używane",
+    "items": "banany używane, szprychy od rowerów"
+    },
+    { 
+    "name": "pitu sp.zoo",
+    "description": "pomoce szkolne dla ubogich",
+    "items": "szmaty do podłogi z prlu"
+    }
+  ]
+}

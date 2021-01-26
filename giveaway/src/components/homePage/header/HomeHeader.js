@@ -2,7 +2,7 @@ import React from 'react';
 import header from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/images/header.jpg';
 import Decoration from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/icons/Decoration.svg';
 import {Link} from 'react-router-dom';
-import HomeHeaderMenu from "../../atoms/HomeHeaderMenu.js";
+import HomeHeaderMenu from "C:/CodersLab/Portfolio_react_app/giveaway/src/components/atoms/commonRenders/HomeHeaderMenu.js";
 
 const HomeHeader = () => {   
     return (  
@@ -15,8 +15,7 @@ const HomeHeader = () => {
                     <button className="btn menu-top-button" href="">                          
                                 Zaloguj                                        
                     </button>
-                    </Link>
-                 
+                    </Link>                 
                     <button className="btn menu-top-button" href="">Załóż konto</button>
                 </div>                    
                 <div className="header-right-side--menu__bottom">

@@ -1,3 +1,4 @@
+@import './settings/colors';
 
 .who-we-help-container {
     display: flex;
@@ -5,6 +6,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 50px;
+    margin-bottom: 40px;
 }
 
 .who-we-help-top {
@@ -32,4 +34,36 @@
     justify-content: center;
     align-items: center;
     width: 60%;
+}
+
+.who-we-help__list--container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70vw;
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+}
+
+.who-we-help__list--left {
+    display: flex;
+    flex-direction: column;
+}
+
+.who-we-help__list--right {
+   display: flex;
+   align-items: flex-end;
+}
+
+.who-we-help__list--name {
+    margin: 0;
+}
+
+.who-we-help__list--text {
+    margin: 0;    
+}
+
+.who-we-help__list--underline {
+    border-top: 1px solid $color_black;
+    width: 80vw;
 }
