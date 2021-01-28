@@ -1,14 +1,316 @@
 {
-    "foundations":  [ 
+  "foundations": [
     {
-    "name": "bobflex",
-    "description": "jedzenie mało używane",
-    "items": "banany używane, szprychy od rowerów"
+      "id": 1,
+      "name": "blopex",
+      "description": "fundacja na rzecz pomocy bezdomnym pancernikom",
+      "items": "niepotrzebne drewno"
     },
-    { 
-    "name": "pitu sp.zoo",
-    "description": "pomoce szkolne dla ubogich",
-    "items": "szmaty do podłogi z prlu"
+    {
+      "id": 2,
+      "name": "pitu",
+      "description": "fundacja na rzecz pomocy gargamelom",
+      "items": "niepotrzebne smerfy"
+    },
+    {
+      "id": 3,
+      "name": "coldereco",
+      "description": "fundacja na rzecz pomocy Bera Grylisa",
+      "items": "zaschnięte szczypawy zza szafy"
+    },
+    {
+      "id": 1,
+      "name": "łapeć",
+      "description": "fundacja na rzecz pomocy kurom domowym",
+      "items": "niepotrzebne klapki"
+    },
+    {
+      "id": 2,
+      "name": "bumtrexco",
+      "description": "fundacja na rzecz pomocy menelom",
+      "items": "niepotrzebny denaturat"
+    },
+    {
+      "id": 3,
+      "name": "McFlonald",
+      "description": "fundacja na rzecz pomocy grubasom",
+      "items": "uzywane hamburgery"
+    },
+    {
+      "id": 1,
+      "name": "Tofus",
+      "description": "fundacja na rzecz pomocy bezdomnym pancernikom",
+      "items": "stare łopaty"
+    },
+    {
+      "id": 2,
+      "name": "Truperio",
+      "description": "fundacja na rzecz pomocy grabarzom",
+      "items": "niepotrzebne smerfy"
+    },
+    {
+      "id": 3,
+      "name": "FUS",
+      "description": "fundacja na rzecz pomocy kawie",
+      "items": "fusy z kawy"
+    }
+  ],
+  "organizations": [
+    {
+      "id": 1,
+      "name": "baza",
+      "description": "pomagamy głodującym pchłom",
+      "items": "łupierz z psa"
+    },
+    {
+      "id": 2,
+      "name": "trupijada",
+      "description": "pomagamy zombiakom",
+      "items": "używane maski chirurgiczne"
+    },
+    {
+      "id": 3,
+      "name": "gizmox",
+      "description": "pomagamy gremlinom",
+      "items": "klatki dla zwierząt"
+    },
+    {
+      "id": 1,
+      "name": "froter",
+      "description": "pomagamy oldschoolowym sprzątaczkom",
+      "items": "szmaty z prlu"
+    },
+    {
+      "id": 2,
+      "name": "pudłos",
+      "description": "pomagamy magazynierom",
+      "items": "stare pudła"
+    },
+    {
+      "id": 3,
+      "name": "flix",
+      "description": "pomagamy małym zbirom",
+      "items": "puste bidony"
+    }
+  ],
+  "localCharities": [
+    {
+      "id": 1,
+      "name": "ratuj bobra",
+      "description": "dokarmiamy bobry",
+      "items": "używane drewno"
+    },
+    {
+      "id": 2,
+      "name": "pomóż sprzątać",
+      "description": "pomagamy dozorcom",
+      "items": "szczoty"
+    },
+    {
+      "id": 3,
+      "name": "pomóż głodnym bejom",
+      "description": "pomagamy menelom",
+      "items": "jedzenie mało używane, denaturat"
+    }
+  ],
+  "messages": [
+    {
+      "name": "Wojciech",
+      "email": "ddd@ff.kk",
+      "message": "gfddfgdfg",
+      "id": 1
+    },
+    {
+      "name": [],
+      "email": "fdfd@ee.ll",
+      "message": "ggg",
+      "id": 2
+    },
+    {
+      "name": "ssss",
+      "email": "dd@ff.ll",
+      "message": "gggggggg",
+      "id": 3
+    },
+    {
+      "name": "ssss",
+      "email": "dd@ff.ll",
+      "message": "gggggggg",
+      "id": 4
+    },
+    {
+      "name": "Wojciech",
+      "email": "dd@ff.ll",
+      "message": "gggggggg",
+      "id": 5
+    },
+    {
+      "name": "Wojciech",
+      "email": "woj@str.pl",
+      "message": "testowanko",
+      "id": 6
+    },
+    {
+      "name": "wojt3",
+      "email": "woj@str.pl",
+      "message": "testowanko",
+      "id": 7
+    },
+    {
+      "name": "wojt",
+      "email": "woj@str.pl",
+      "message": "testowanko",
+      "id": 8
+    },
+    {
+      "name": "wojt3",
+      "email": "woj@str.pl",
+      "message": "testowanko",
+      "id": 9
+    },
+    {
+      "name": "wojt3",
+      "email": "woj@str.pl",
+      "message": "testowanko",
+      "id": 10
+    },
+    {
+      "name": "wojt3",
+      "email": "woj@str.pl",
+      "message": "testowanko",
+      "id": 11
+    },
+    {
+      "name": "wojt3",
+      "email": "woj@str.pl",
+      "message": "testowanko",
+      "id": 12
+    },
+    {
+      "name": "wojt33",
+      "email": "woj@str.pl",
+      "message": "testowanko",
+      "id": 13
+    },
+    {
+      "name": "wojt33",
+      "email": "woj@str.pl",
+      "message": "testowanko",
+      "id": 14
+    },
+    {
+      "name": "wojt33",
+      "email": "woj@str.pl",
+      "message": "testowanko",
+      "id": 15
+    },
+    {
+      "name": "wojt33",
+      "email": "woj@str.pl",
+      "message": "testowanko",
+      "id": 16
+    },
+    {
+      "name": "sdt5",
+      "email": "dd@gg.ll",
+      "message": "fdfdfdfdfd",
+      "id": 17
+    },
+    {
+      "name": "sdt5",
+      "email": "dd@gg.ll",
+      "message": "fdfdfdfdfd",
+      "id": 18
+    },
+    {
+      "name": "sdt5",
+      "email": "dd@gg.ll",
+      "message": "fdfdfdfdfd",
+      "id": 19
+    },
+    {
+      "name": "Wojciech",
+      "email": "dd@gg.ll",
+      "message": "fdfdfdfdfd",
+      "id": 20
+    },
+    {
+      "name": "ss-",
+      "email": "dd@gg.ll",
+      "message": "fdfdfdfdfd",
+      "id": 21
+    },
+    {
+      "name": "ss2",
+      "email": "dd@gg.ll",
+      "message": "fdfdfdfdfd",
+      "id": 22
+    },
+    {
+      "name": "ss/",
+      "email": "dd@gg.ll",
+      "message": "fdfdfdfdfd",
+      "id": 23
+    },
+    {
+      "name": "ss/",
+      "email": "dd@gg.ll",
+      "message": "fdfdfdfdfd",
+      "id": 24
+    },
+    {
+      "name": "sse/",
+      "email": "dd@gg.ll",
+      "message": "fdfdfdfdfd",
+      "id": 25
+    },
+    {
+      "name": "sse/",
+      "email": "dd@gg.ll",
+      "message": "fdfdfdfdfd",
+      "id": 26
+    },
+    {
+      "name": "Wojciech",
+      "email": "dd@gg.ll",
+      "message": "fdfdfdfdfd",
+      "id": 27
+    },
+    {
+      "name": "Wojciech",
+      "email": "dd@gg.ll",
+      "message": "fdfdfdfdfd",
+      "id": 28
+    },
+    {
+      "name": "Wojciech",
+      "email": "dd@gg.ll",
+      "message": "fdfdfdfdfd",
+      "id": 29
+    },
+    {
+      "name": "Wojciech",
+      "email": [],
+      "message": "ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "id": 30
+    },
+    {
+      "name": "Wojciech",
+      "email": [],
+      "message": "ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "id": 31
+    },
+    {
+      "name": "Wojciech",
+      "email": "d@ff.kl",
+      "message": "chcialbym oddac 60 pustych kapsuł do kotów niskopodłogowych extra extra dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd!!!",
+      "id": 32
+    },
+    {
+      "name": "Wojciech",
+      "email": "d@ff.kl",
+      "message": "chcialbym oddac 60 pustych kapsuł do kotów niskopodłogowych extra extra dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd!!!",
+      "id": 33
     }
   ]
 }
