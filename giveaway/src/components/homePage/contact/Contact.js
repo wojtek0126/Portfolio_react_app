@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Decoration from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/icons/Decoration.svg';
 import BackgroundContactForm from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/images/Background-Contact-Form.jpg';
 import {sendMessage} from 'C:/CodersLab/Portfolio_react_app/giveaway/src/API/fetch.js';
@@ -8,6 +8,7 @@ const Contact = () => {
     let [nameData, setNameData] = useState([]);
     let [emailData, setEmailData] = useState([]);
     let [messageData, setMessageData] = useState([]); 
+    
 
     const handleSubmit = (e) => {
         e.preventDefault();       
@@ -15,18 +16,27 @@ const Contact = () => {
             name: nameData,
             email: emailData,
             message: messageData           
-        };   
+        };  
+            //for claearing fields after submit
+            const formNameField = document.getElementById("nameField");
+            const formEmailField = document.getElementById("emailField");
+            const formMessageField = document.getElementById("messageField");
+            console.log(formEmailField);
+            //clearing fields after submit
+            formNameField.value = "";
+            formEmailField.value = "";  
+            formMessageField.value = "";   
+      
+     
         //form validation
         function validateNameInput(nameInput, emailInput, messageInput){
-            let str = String(nameInput);
-            let isNumberOrSpecial = false;
+            let str = String(nameInput);            
             for( let i = 0; i < str.length; i++){                     
                 if(!isNaN(str.charAt(i)) || str.charAt(i) === "-") {           //if the string is a number, do the following
-                    return alert("imię nie może zawierać numerów ani spacji");
-                    isNumberOrSpecial = true;
+                    return alert("imię nie może zawierać numerów ani spacji");                    
                 }              
             }
-            if (/[^a-zA-Z0-9\-\/]/.test(nameInput)) {
+            if (/[^a-zA-Z0-9\-/]/.test(nameInput)) {
                 alert("znaki specjalne niedozwolone");
             }
             else if (nameData.length <= 1 || nameData.length > 30 || nameData.includes("/")) {
@@ -38,19 +48,26 @@ const Contact = () => {
             else if (messageInput.length < 120) {
                 alert("wiadomość za krótka, minimum 120 znaków");
             } 
-            //in case if necessary this is basic injection security measure, could exclude ", . !"
+            //max length message 2000 chars
+            else if (messageInput.length > 2000) {
+                alert("wiadomość za długa, max 2000 znaków");
+            } 
             // else if (/[^a-zA-Z0-9\-\/]/.test(messageInput)) {
             //     console.log("znaki specjalne niedozwolone ze względów bezpieczeństwa, proszę używać wyłącznie liter orza liczb");
             // } 
+
             else if (emailInput.length === 0) {
                 alert("nie wpisano adresu email");
             }                                
             else{
                 alert("dane prawidłowe, wysłano wiadomość")
+                //sending to API
                 sendMessage(newMessage);
             }
         }
-        validateNameInput(nameData, emailData, messageData);       
+        validateNameInput(nameData, emailData, messageData);
+         
+               
     }
 
     const handleNameChange = (e) => {
@@ -80,15 +97,15 @@ const Contact = () => {
                 <form className="contact-form" onSubmit={handleSubmit}>
                     <div className="contact-form-fields">
                         <label className="contact-form-input--label">Wpisz swoje imię
-                            <input className="contact-form-input--input" type="name" name="firstName" onChange={handleNameChange}></input>
+                            <input id="nameField" className="contact-form-input--input" type="name" name="firstName" onChange={handleNameChange}></input>
                             </label>
                         <label className="contact-form-input--label">Wpisz swój email
-                            <input className="contact-form-input--input" type="email" onChange={handleEmailChange}></input>
+                            <input id="emailField" className="contact-form-input--input" type="email" onChange={handleEmailChange}></input>
                         </label>                                             
                     </div>      
                     <div className="contact-form-fields">
                     <label className="contact-form-input--label">Wpisz swoją wiadomość
-                            <textarea className="contact-form-input--input" onChange={handleMessageChange}></textarea>
+                            <textarea id="messageField" className="contact-form-input--input" onChange={handleMessageChange}></textarea>
                         </label> 
                     </div>                               
                     <button className="btn form-submit-button"  >Wyślij</button>

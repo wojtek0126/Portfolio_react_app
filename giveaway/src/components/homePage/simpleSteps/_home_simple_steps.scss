@@ -1,10 +1,11 @@
 @import './settings/colors';
 
-// .simple-steps-container {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
+.simple-steps-container {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    height: 100vh;
+}
 
 .simple-steps-top {
     display: flex;
@@ -15,6 +16,7 @@
     margin-bottom: 20px;
     & p {
         margin-bottom: 10px;
+        margin-top: 40px;
     }
 }
 
@@ -68,5 +70,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 50px;
 }

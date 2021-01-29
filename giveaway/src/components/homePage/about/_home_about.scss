@@ -2,8 +2,9 @@
 .about-container {
     display: flex;
     margin-top: 20px;    
+    height: 100vh;
 }
-
+//
 .about-left-side {
     width: 50%;
     display: flex;
@@ -14,7 +15,8 @@
 
 
 .about-right-side__img {
-    width: 50%;    
+    width: 50vw; 
+    height: 100vh;   
 }
 
 .about-left-side__decoration {

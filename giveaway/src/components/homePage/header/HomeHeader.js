@@ -12,11 +12,11 @@ const HomeHeader = () => {
             <div className="header-right-side--menu">
                 <div className="header-right-side--menu__top">
                     <Link to="/login">
-                    <button className="btn menu-top-button" href="">                          
-                                Zaloguj                                        
-                    </button>
-                    </Link>                 
-                    <button className="btn menu-top-button" href="">Załóż konto</button>
+                    <button className="btn menu-top-button" href="">Zaloguj</button>
+                    </Link> 
+                    <Link to="/signUp">
+                         <button className="btn menu-top-button" href="">Załóż konto</button>
+                    </Link>                   
                 </div>                    
                 <div className="header-right-side--menu__bottom">
                     <HomeHeaderMenu />
