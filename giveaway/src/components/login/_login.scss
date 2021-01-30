@@ -45,6 +45,7 @@
         display: flex;
         flex-direction: column;
         margin: 40px;
+        margin-bottom: 0;
         & input {
             border-right: none;
             border-left: none;
@@ -67,4 +68,11 @@
 }
 .login-password--error-message {
     color: $color_reddish;
+}
+.login-confirm-password--error-message {
+    color: $color_reddish;
+}
+
+.login-form-top {
+    margin-top: 40px;
 }

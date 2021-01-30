@@ -3,7 +3,7 @@ import Decoration from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/ico
 import HomeHeaderMenu from "C:/CodersLab/Portfolio_react_app/giveaway/src/components/atoms/commonRenders/HomeHeaderMenu.js";
 
 import {Link} from 'react-router-dom';
-import {nullifyState} from '../functionsStorage/functions';
+import {nullifyInputValue, nullifyState, switchBorderColor} from '../functionsStorage/functions';
 
 const Login = () => {
     let [emailData, setEmailData] = useState([]);
@@ -13,25 +13,85 @@ const Login = () => {
         e.preventDefault();
         const emailErrorMessage = document.querySelector(".login-email--error-message");
         const passwordErrorMessage = document.querySelector(".login-password--error-message");
+        const emailInputField = document.getElementById("loginPassword");
+        const passwordInputField = document.getElementById("loginEmail");
+        const errorColor = "#DC143C";
+        const validColor = "black";
+        let isEmailValid = false;
+        let isPasswordVaild = false;
        
         if (passwordData.length < 6) {
-            nullifyState(setPasswordData);
-            passwordErrorMessage.innerText = "Podane hasło jest nieprawidłowe"          
+           
+            passwordErrorMessage.innerText = "Podane hasło jest nieprawidłowe";
+            // passwordInputField.style.borderColor = "#DC143C";  
+            isPasswordVaild = false;
+                       
         }
         else if (passwordData.length >= 6) {
-            nullifyState(setPasswordData);
-            passwordErrorMessage.innerText = "";
+           
+            passwordErrorMessage.innerText = "";   
+            
+            passwordInputField.style.borderColor = "black";   
+            isPasswordVaild = true;                       
         }
         if (/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(emailData) === true) {
             //if email contains email chars
-           nullifyState(setEmailData);
+         
            emailErrorMessage.innerText = "";
+           emailInputField.style.borderColor = "black"; 
+           isEmailValid = true;  
+             
         }
         else if (/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(emailData) === false) {
             emailErrorMessage.innerText = "Podany email jest nieprawidłowy" 
+            isEmailValid = false;  
+                   
         }     
-        nullifyState(setPasswordData);
-        nullifyState(setEmailData);
+      
+        // if (isEmailValid === false){
+        //     console.log(emailInputField);
+        //     // nullifyInputValue(emailInputField);
+        //     // switchBorderColor(emailInputField, errorColor);  
+        //     // nullifyState(setEmailData);
+        //     // nullifyInputValue(emailInputField);  
+        //     // switchBorderColor(passwordInputField, validColor);        
+        // }
+        // else if (isEmailValid === false && isPasswordVaild === true) {
+        //     // switchBorderColor(emailInputField, errorColor);    
+        //     // switchBorderColor(passwordInputField, validColor); 
+        // }
+        // else if (isEmailValid === true) {
+        //     // switchBorderColor(emailInputField, validColor); 
+        //     // switchBorderColor(passwordInputField, validColor);
+        // }
+        // if (isPasswordVaild === false){
+        //     console.log(passwordInputField);
+        //     // nullifyInputValue(passwordInputField); 
+        //     // switchBorderColor(passwordInputField, errorColor);  
+        //     // nullifyState(setPasswordData);
+        //     // nullifyInputValue(emailInputField);
+        // } 
+        // else if (isPasswordVaild === false  && isEmailValid === true) {
+        //     // switchBorderColor(passwordInputField, errorColor);    
+        //     // switchBorderColor(emailInputField, validColor); 
+        // }
+        // else if (isPasswordVaild === true) {  
+        //     // switchBorderColor(passwordInputField, validColor); 
+        //     // switchBorderColor(emailInputField, validColor); 
+        // } 
+        if (isPasswordVaild === true && isEmailValid === true){
+            alert("przesłano pomyślnie");
+            // switchBorderColor(passwordInputField, validColor); 
+            // switchBorderColor(emailInputField, validColor); 
+            // nullifyState(setPasswordData);
+            // nullifyState(setEmailData);
+            // nullifyInputValue(emailInputField);
+            // nullifyInputValue(passwordInputField); 
+        }      
+            nullifyState(setPasswordData);
+            nullifyState(setEmailData);
+            nullifyInputValue(emailInputField);
+            nullifyInputValue(passwordInputField);    
     }
 
     const handleEmailChange = (e) => {     
@@ -65,11 +125,11 @@ const Login = () => {
             <form onSubmit={handleLoginSubmit}>
                     <div className="login-form-container">
                         <label>Email
-                            <input type="email" onChange={handleEmailChange}></input>
+                            <input id="loginEmail" type="email" onChange={handleEmailChange}></input>
                             <p className="login-email--error-message"></p>
                         </label>
                         <label>Hasło
-                            <input type="password" onChange={handlePasswordChange}></input>
+                            <input id="loginPassword" type="password" onChange={handlePasswordChange}></input>
                             <p className="login-password--error-message"></p>
                         </label>
                     </div>

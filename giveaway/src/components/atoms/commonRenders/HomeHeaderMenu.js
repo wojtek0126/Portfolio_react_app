@@ -26,7 +26,9 @@ const HomeHeaderMenu = ({homeOrLogin}) => {
     else {
         return (
             <>
-            <button className="btn menu-bottom-button" href="">Start</button>
+                        <NavHashLink to="" smooth={true} duration={1000}>
+                            <button className="btn menu-bottom-button" href="">Start</button>
+                        </NavHashLink>              
                         <NavHashLink to="simpleSteps" smooth={true} duration={1000}>
                             <button className="btn menu-bottom-button" href="">O co chodzi?</button>
                         </NavHashLink>    
