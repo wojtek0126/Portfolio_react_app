@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Decoration from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/icons/Decoration.svg';
 import BackgroundContactForm from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/images/Background-Contact-Form.jpg';
 import {sendMessage} from 'C:/CodersLab/Portfolio_react_app/giveaway/src/API/fetch.js';
+import {nullifyState} from '../../functionsStorage/functions';
 
 
 const Contact = () => {
@@ -26,7 +27,7 @@ const Contact = () => {
             formNameField.value = "";
             formEmailField.value = "";  
             formMessageField.value = "";   
-      
+        
      
         //form validation
         function validateNameInput(nameInput, emailInput, messageInput){
@@ -35,17 +36,21 @@ const Contact = () => {
                 if(!isNaN(str.charAt(i)) || str.charAt(i) === "-") {           //if the string is a number, do the following
                     return alert("imię nie może zawierać numerów ani spacji");                    
                 }              
-            }
+            }                     
             if (/[^a-zA-Z0-9\-/]/.test(nameInput)) {
                 alert("znaki specjalne niedozwolone");
             }
+            else if (messageInput.length <= 1 || nameInput.length <= 1) {
+                alert("proszęsię upewnić że wszystkie pola są wypełnione");
+            } 
             else if (nameData.length <= 1 || nameData.length > 30 || nameData.includes("/")) {
                 alert("imię nie wpisane, za krótkie(conajmniej dwa znaki) lub za długie(max 30 znaków), nie może zawierać znaków specjalnych");
-            }  
-            else if (messageInput.length === 0) {
-                alert("wiadomość pusta");
-            }             
-            else if (messageInput.length < 120) {
+            }            
+            else if (!/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(emailData) || emailInput.length <= 1) {
+                alert("nieprawidłowy adres email");
+            }           
+            //set this to 120         
+            else if (messageInput.length < 10) {
                 alert("wiadomość za krótka, minimum 120 znaków");
             } 
             //max length message 2000 chars
@@ -56,18 +61,20 @@ const Contact = () => {
             //     console.log("znaki specjalne niedozwolone ze względów bezpieczeństwa, proszę używać wyłącznie liter orza liczb");
             // } 
 
-            else if (emailInput.length === 0) {
-                alert("nie wpisano adresu email");
-            }                                
+                                        
             else{
                 alert("dane prawidłowe, wysłano wiadomość")
                 //sending to API
                 sendMessage(newMessage);
             }
+            
         }
-        validateNameInput(nameData, emailData, messageData);
-         
-               
+        validateNameInput(nameData, emailData, messageData);   
+        
+        // nullify state after submit   
+        nullifyState(setNameData);
+        nullifyState(setEmailData);
+        nullifyState(setMessageData);                 
     }
 
     const handleNameChange = (e) => {
@@ -108,7 +115,7 @@ const Contact = () => {
                             <textarea id="messageField" className="contact-form-input--input" onChange={handleMessageChange}></textarea>
                         </label> 
                     </div>                               
-                    <button className="btn form-submit-button"  >Wyślij</button>
+                    <button className="btn form-submit-button">Wyślij</button>
                 </form>
             </div>
         </div>

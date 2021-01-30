@@ -3,7 +3,7 @@ import Decoration from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/ico
 import HomeHeaderMenu from "C:/CodersLab/Portfolio_react_app/giveaway/src/components/atoms/commonRenders/HomeHeaderMenu.js";
 import {Link} from 'react-router-dom';
 
-const SignUp = () => {
+const LogOut = () => {
     return (
         <div className="login-container">       
             <div className="login-menu-container" >
@@ -20,31 +20,16 @@ const SignUp = () => {
                 </div>
             </div>   
             <div className="login-text-container">
-                <h1 className="login-text">Załóż konto</h1>
+                <h1 className="login-text">Wylogowanie nastąpiło pomyślnie</h1>
                 <img src={Decoration} alt="decor" className="who-we-help-top__decoration" />
-            </div>           
-            <form>
-                    <div className="login-form-container">
-                        <label>Email
-                            <input type="email"></input>
-                        </label>
-                        <label>Hasło
-                            <input type="password"></input>
-                        </label>
-                        <label>Powtórz hasło
-                            <input type="password"></input>
-                        </label>
-                    </div>
-                    <div className="login-form-buttons-container" >    
-                        <button className="btn form-submit-button">Załóż konto</button>                    
-                        <Link to="/login">
-                            <button className="btn form-submit-button">Zaloguj się</button>
-                        </Link>   
-                       
-                    </div>                               
-            </form>
+            </div>     
+            <div className="login-form-buttons-container" >                        
+                <Link to="/home">
+                    <button className="btn form-submit-button">Strona główna</button>
+                </Link>                     
+            </div>              
         </div>
     )
 }
 
-export default SignUp;
+export default LogOut;

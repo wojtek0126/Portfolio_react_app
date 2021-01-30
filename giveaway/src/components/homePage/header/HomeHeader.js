@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom';
 import HomeHeaderMenu from "C:/CodersLab/Portfolio_react_app/giveaway/src/components/atoms/commonRenders/HomeHeaderMenu.js";
 
 const HomeHeader = () => {   
+    // const headSection = document.getElementById();
     return (  
         <div className="header-container">
         <img src={header} className="header-left-side" alt="header-left-img" />
@@ -19,7 +20,7 @@ const HomeHeader = () => {
                     </Link>                   
                 </div>                    
                 <div className="header-right-side--menu__bottom">
-                    <HomeHeaderMenu />
+                    <HomeHeaderMenu homeOrLogin={"home"} />
                 </div>
             </div>
             <div className="header-right-side--content">

@@ -38,8 +38,8 @@
     },
     {
       "id": 1,
-      "name": "Tofus",
-      "description": "fundacja na rzecz pomocy bezdomnym pancernikom",
+      "name": "Budamento",
+      "description": "fundacja na rzecz pomocy słupkom chodnikowym",
       "items": "stare łopaty"
     },
     {
@@ -389,6 +389,18 @@
       "email": "fdg@ee.ll",
       "message": "fgdddddddddddddddddddddddddddddyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
       "id": 46
+    },
+    {
+      "name": "Wojciech",
+      "email": "wer@ff.pl",
+      "message": "ffgggggggggggfffffff",
+      "id": 47
+    },
+    {
+      "name": "Wojciechhhhh",
+      "email": "wer@ff.pl",
+      "message": "gflllllllllllllllllllllllllllllllllllllllll",
+      "id": 48
     }
   ]
 }

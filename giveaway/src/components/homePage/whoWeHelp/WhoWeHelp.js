@@ -31,7 +31,6 @@ const preparedForPagination = (list) => {
     return currentOrgs
 }; 
 
-console.log(preparedForPagination(orgList), "sliced list baby");
 const pageNumbers = [];
 
 for (let index = 1; index <= Math.ceil(orgType.length / orgsPerpage); index++) {
@@ -39,7 +38,14 @@ for (let index = 1; index <= Math.ceil(orgType.length / orgsPerpage); index++) {
     
 }
 
-const paginate = (pageNumber) => {setCurrentpage(pageNumber)};
+const paginate = (pageNumber) => {
+        setCurrentpage(pageNumber); 
+};
+
+const handleChangeOrg = (orgList) => {
+    setOrgType(orgList);
+    setCurrentpage(1);
+}
 
 const hidePagination = (targetId) => {    
     const paginationList = document.getElementById(targetId);
@@ -51,16 +57,15 @@ const showPagination = (targetId) => {
     paginationList.style.display = "inline";
 }
 
-console.log(pageNumbers, "pagenumbers array baby");
     return (        
         <div className="who-we-help-container" id="whoWeHelp">
             <div className="who-we-help-top">
                 <p>Komu pomagamy?</p>
                 <img src={Decoration} alt="decor" className="who-we-help-top__decoration" />
                 <div className="who-we-help-top__options">
-                    <button id="startingDisplay" className="btn who-we-help--button" onClick={() => setOrgType(orgList)}>Fundacjom</button>
-                    <button className="btn who-we-help--button" onClick={() => setOrgType(fundList)}>Organizacjom pozarządowym</button>
-                    <button className="btn who-we-help--button" onClick={() => setOrgType(charList)}>Lokalnym zbiórkom</button>
+                    <button id="startingDisplay" className="btn who-we-help--button" onClick={() => handleChangeOrg(orgList)}>Fundacjom</button>
+                    <button className="btn who-we-help--button" onClick={() => handleChangeOrg(fundList)}>Organizacjom pozarządowym</button>
+                    <button className="btn who-we-help--button" onClick={() => handleChangeOrg(charList)}>Lokalnym zbiórkom</button>
                 </div> 
                 <p className="who-we-help-top__text">W naszej bazie znajdziesz listę zweryfikowanych Fundacji, 
                     z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.
