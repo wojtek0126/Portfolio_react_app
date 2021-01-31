@@ -1,0 +1,37 @@
+
+.step-bottom-container {
+    display: flex;
+    // flex-direction: row;
+    height: 40vh;
+}
+
+.step-bottom-left {
+    position: absolute;
+    width: 50%;
+    margin-left: 115px;
+    & p {
+        padding-top: 20px;
+    }
+    & form {
+        display: flex;
+        flex-direction: column;
+        & label {
+            padding: 20px 0;
+            & input {
+                margin-right: 5px;
+                border-radius: 1px;
+
+            }
+        }
+    }
+}
+
+.step-bottom-right {
+
+    & img {
+        width: 100vw;
+        height: 78vh;
+    }
+    // width: 50%;
+   
+}

@@ -20,23 +20,19 @@ const Login = () => {
         let isEmailValid = false;
         let isPasswordVaild = false;
        
-        if (passwordData.length < 6) {
-           
+        if (passwordData.length < 6) {           
             passwordErrorMessage.innerText = "Podane hasło jest nieprawidłowe";
             // passwordInputField.style.borderColor = "#DC143C";  
             isPasswordVaild = false;
                        
         }
-        else if (passwordData.length >= 6) {
-           
-            passwordErrorMessage.innerText = "";   
-            
+        else if (passwordData.length >= 6) {           
+            passwordErrorMessage.innerText = "";               
             passwordInputField.style.borderColor = "black";   
             isPasswordVaild = true;                       
         }
         if (/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(emailData) === true) {
-            //if email contains email chars
-         
+            //if email contains email chars         
            emailErrorMessage.innerText = "";
            emailInputField.style.borderColor = "black"; 
            isEmailValid = true;  
@@ -44,49 +40,12 @@ const Login = () => {
         }
         else if (/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(emailData) === false) {
             emailErrorMessage.innerText = "Podany email jest nieprawidłowy" 
-            isEmailValid = false;  
-                   
+            isEmailValid = false;                     
         }     
       
-        // if (isEmailValid === false){
-        //     console.log(emailInputField);
-        //     // nullifyInputValue(emailInputField);
-        //     // switchBorderColor(emailInputField, errorColor);  
-        //     // nullifyState(setEmailData);
-        //     // nullifyInputValue(emailInputField);  
-        //     // switchBorderColor(passwordInputField, validColor);        
-        // }
-        // else if (isEmailValid === false && isPasswordVaild === true) {
-        //     // switchBorderColor(emailInputField, errorColor);    
-        //     // switchBorderColor(passwordInputField, validColor); 
-        // }
-        // else if (isEmailValid === true) {
-        //     // switchBorderColor(emailInputField, validColor); 
-        //     // switchBorderColor(passwordInputField, validColor);
-        // }
-        // if (isPasswordVaild === false){
-        //     console.log(passwordInputField);
-        //     // nullifyInputValue(passwordInputField); 
-        //     // switchBorderColor(passwordInputField, errorColor);  
-        //     // nullifyState(setPasswordData);
-        //     // nullifyInputValue(emailInputField);
-        // } 
-        // else if (isPasswordVaild === false  && isEmailValid === true) {
-        //     // switchBorderColor(passwordInputField, errorColor);    
-        //     // switchBorderColor(emailInputField, validColor); 
-        // }
-        // else if (isPasswordVaild === true) {  
-        //     // switchBorderColor(passwordInputField, validColor); 
-        //     // switchBorderColor(emailInputField, validColor); 
-        // } 
+     
         if (isPasswordVaild === true && isEmailValid === true){
-            alert("przesłano pomyślnie");
-            // switchBorderColor(passwordInputField, validColor); 
-            // switchBorderColor(emailInputField, validColor); 
-            // nullifyState(setPasswordData);
-            // nullifyState(setEmailData);
-            // nullifyInputValue(emailInputField);
-            // nullifyInputValue(passwordInputField); 
+            alert("przesłano pomyślnie");        
         }      
             nullifyState(setPasswordData);
             nullifyState(setEmailData);
