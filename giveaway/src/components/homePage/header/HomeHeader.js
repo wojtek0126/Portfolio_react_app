@@ -5,23 +5,23 @@ import {Link} from 'react-router-dom';
 import HomeHeaderMenu from "C:/CodersLab/Portfolio_react_app/giveaway/src/components/atoms/commonRenders/HomeHeaderMenu.js";
 
 const HomeHeader = () => {   
-    // const headSection = document.getElementById();
+    let loggedIn = localStorage.getItem("loggedIn");    
+    let isLoggedIn = false;
+    if (loggedIn === "true") {
+        isLoggedIn = true;
+    }
+    else {
+        isLoggedIn = false;
+    }
+
     return (  
         <div className="header-container">
         <img src={header} className="header-left-side" alt="header-left-img" />
         <div className="header-right-side">
-            <div className="header-right-side--menu">
-                <div className="header-right-side--menu__top">
-                    <Link to="/login">
-                    <button className="btn menu-top-button" href="">Zaloguj</button>
-                    </Link> 
-                    <Link to="/signUp">
-                         <button className="btn menu-top-button" href="">Załóż konto</button>
-                    </Link>                   
-                </div>                    
-                <div className="header-right-side--menu__bottom">
-                    <HomeHeaderMenu homeOrLogin={"home"} />
-                </div>
+            <div className="header-right-side--menu">               
+              
+                    <HomeHeaderMenu homeOrLogin={"home"} loggedIn={isLoggedIn} />
+              
             </div>
             <div className="header-right-side--content">
                 <div className="header-right-side--content__text">

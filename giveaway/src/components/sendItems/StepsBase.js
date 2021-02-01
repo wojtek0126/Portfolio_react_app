@@ -2,16 +2,40 @@ import React, {useState} from 'react';
 import HomeHeaderMenu from '../atoms/commonRenders/HomeHeaderMenu';
 import Rhomb from './Rhomb';
 import SendStep1 from './sendStep1/SendStep1';
+import SendStep2 from './sendStep2/SendStep2';
+import SendStep3 from './sendStep3/SendStep3';
+import SendStep4 from './sendStep4/SendStep4';
 
 import Decoration from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/icons/Decoration.svg';
 import Sweater from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/images/sweater.jpg';
 
 
 const  StepsBase = () => {
-    const [step, setStep] = useState(1);
+    // const [step, setStep] = useState(1);
+    let currentStep = localStorage.getItem("NextStep");
 
-    const handleClick = () => {
-        setStep(step++);
+    const StepHandler = ({step}) => {
+       
+        if (step === "1") {
+            return (
+                <SendStep1 />
+            )
+        }
+        else if (step === "2") {
+            return (
+                <SendStep2 />
+            )
+        }
+        else if (step === "3") {
+            return (
+                <SendStep3 />
+            )
+        }
+        else if (step === "4") {
+            return (
+                <SendStep4 />
+            )
+        }
     }
 
     return (
@@ -21,18 +45,10 @@ const  StepsBase = () => {
                 <img src={Sweater} className="steps-left-side--img" alt="steps-top-left-img" />
                 </div>
                 <div className="step1-top-right">
-                <div className="login-menu-container" >
-                <div className="login-menu__top">
-                        {/* <Link to="/login"> */}
-                            <button className="btn menu-top-button" href="">Oddaj rzeczy</button>
-                        {/* </Link>  */}
-                        {/* <Link to="/signUp"> */}
-                            <button className="btn menu-top-button" href="">Wyloguj</button>
-                        {/* </Link>                    */}
-                    </div>  
-                <div className="login-menu__bottom ">
-                    <HomeHeaderMenu homeOrLogin={"login"}/>
-                </div>
+                <div className="login-menu-container" >                        
+              
+              <HomeHeaderMenu homeOrLogin={"notHome"} loggedIn={true}/>        
+
             </div>   
                     <div className="step1-top-right__content">
                         <h2>Oddaj rzeczy, których już nie chcesz<p>POTRZEBUJĄCYM</p></h2>                        
@@ -58,7 +74,7 @@ const  StepsBase = () => {
                         )
                     }} */}
                 
-                <SendStep1 />
+                <StepHandler step={currentStep} />
             </div>
 
         </div>

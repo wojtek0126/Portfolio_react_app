@@ -8,6 +8,7 @@ import {nullifyInputValue, nullifyState, switchBorderColor} from '../functionsSt
 const Login = () => {
     let [emailData, setEmailData] = useState([]);
     let [passwordData, setPasswordData] = useState([]);   
+    let [loggedIn, setLoggedIn] = useState(false);
 
     function handleLoginSubmit(e){
         e.preventDefault();
@@ -45,7 +46,9 @@ const Login = () => {
       
      
         if (isPasswordVaild === true && isEmailValid === true){
-            alert("przesłano pomyślnie");        
+            alert("przesłano pomyślnie");   
+            setLoggedIn(true);
+            localStorage.setItem("loggedIn", true);     
         }      
             nullifyState(setPasswordData);
             nullifyState(setEmailData);
@@ -64,18 +67,10 @@ const Login = () => {
 
     return (
         <div className="login-container">       
-            <div className="login-menu-container" >
-                <div className="login-menu__top">
-                        <Link to="/login">
-                            <button className="btn menu-top-button" href="">Zaloguj się</button>
-                        </Link> 
-                        <Link to="/signUp">
-                            <button className="btn menu-top-button" href="">Załóż konto</button>
-                        </Link>                   
-                    </div>  
-                <div className="login-menu__bottom ">
-                    <HomeHeaderMenu homeOrLogin={"login"}/>
-                </div>
+            <div className="login-menu-container" >                       
+              
+              <HomeHeaderMenu homeOrLogin={"notHome"} loggedIn={false}/>        
+      
             </div>   
             <div className="login-text-container">
                 <h1 className="login-text">Zaloguj się</h1>

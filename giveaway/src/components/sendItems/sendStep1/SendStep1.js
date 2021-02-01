@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
+import { nextStep } from '../../functionsStorage/functions';
 import bear from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/images/bear.jpg'
 
 const  SendStep1 = () => {
+
     return (           
             <div className="step-bottom-container">
                 <div className="step-bottom-left">
@@ -23,7 +25,7 @@ const  SendStep1 = () => {
                         <label>
                         <input type="checkbox"></input>inne
                         </label>
-                        <button className="btn form-submit-button">Dalej</button>
+                        <button onClick={() => nextStep(2)} className="btn form-submit-button">Dalej</button>
                     </form>
                     
                 </div>

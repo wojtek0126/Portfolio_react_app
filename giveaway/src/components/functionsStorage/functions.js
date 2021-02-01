@@ -32,3 +32,16 @@ export const compareTwoStrings = (string1, string2) => {
         return false
     }
 }
+
+export const loginCheckForMenuView = (localStorageitem) => {         
+    if (localStorage.getItem(localStorageitem) === "true") {
+        return true;
+    }
+    else {
+        return false;
+    }   
+}
+
+export const nextStep = (nextStepNumber) => {
+    localStorage.setItem("NextStep", nextStepNumber)
+}

@@ -6,18 +6,10 @@ import {Link} from 'react-router-dom';
 const LogOut = () => {
     return (
         <div className="login-container">       
-            <div className="login-menu-container" >
-                <div className="login-menu__top">
-                        <Link to="/login">
-                            <button className="btn menu-top-button" href="">Zaloguj się</button>
-                        </Link> 
-                        <Link to="/signUp">
-                            <button className="btn menu-top-button" href="">Załóż konto</button>
-                        </Link>                   
-                    </div>  
-                <div className="login-menu__bottom ">
-                    <HomeHeaderMenu homeOrLogin={"login"}/>
-                </div>
+            <div className="login-menu-container" >                   
+              
+              <HomeHeaderMenu homeOrLogin={"notHome"} loggedIn={false}/>        
+    
             </div>   
             <div className="login-text-container">
                 <h1 className="login-text">Wylogowanie nastąpiło pomyślnie</h1>

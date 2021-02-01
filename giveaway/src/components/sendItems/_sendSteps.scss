@@ -59,3 +59,44 @@ step1-container {
         margin-bottom: 0;
     }
 }
+
+.step-bottom-left {
+    width: 110%;
+}
+
+.step4-form__container {
+    display: flex;
+    // width: 110%;
+}
+
+.step4-form__left {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    & label {
+        display: flex;
+        width: 100px;
+        & input {
+            margin-left: 20px;
+        }
+    }
+}
+
+.step4-form__right {
+    display: flex;
+    flex-direction: column;
+    & label {
+        display: flex;
+        width: 200px;
+        & textarea {
+            width: 200px;
+        }
+        & input {
+            margin-left: 20px;
+        }
+    }
+}
+
+.step-form__buttons {
+    display: flex;
+}
