@@ -5,6 +5,9 @@ import SendStep1 from './sendStep1/SendStep1';
 import SendStep2 from './sendStep2/SendStep2';
 import SendStep3 from './sendStep3/SendStep3';
 import SendStep4 from './sendStep4/SendStep4';
+import SendSuccesful from './sendSuccesful/SendSuccesful';
+import SendSummary from './sendSummary/SendSummary';
+
 
 import Decoration from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/icons/Decoration.svg';
 import Sweater from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/images/sweater.jpg';
@@ -12,8 +15,9 @@ import Sweater from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/images
 
 const  StepsBase = () => {
     // const [step, setStep] = useState(1);
-    let currentStep = localStorage.getItem("NextStep");
-
+    // localStorage.setItem("step", 1)
+    let currentStep = localStorage.getItem("step");
+    console.log(currentStep);
     const StepHandler = ({step}) => {
        
         if (step === "1") {
@@ -34,6 +38,16 @@ const  StepsBase = () => {
         else if (step === "4") {
             return (
                 <SendStep4 />
+            )
+        }
+        else if (step === "5") {
+            return (
+                <SendSummary />
+            )
+        }
+        else if (step === "6") {
+            return (
+                <SendSuccesful />
             )
         }
     }

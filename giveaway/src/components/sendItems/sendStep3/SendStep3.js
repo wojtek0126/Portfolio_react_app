@@ -34,7 +34,7 @@ const  SendStep3 = () => {
                         <h4> Wpisz nazwę konkretnej organizacji(opcjonalnie)
                             <input type="text"></input>
                         </h4>
-                        <div className="step-form__buttons">
+                <div className="step-form__buttons">
                             <button onClick={() => nextStep(2)} className="btn form-submit-button">Wstecz</button>
                             <button onClick={() => nextStep(4)} className="btn form-submit-button">Dalej</button>
                         </div>

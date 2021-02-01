@@ -15,10 +15,8 @@ const HomeHeaderMenu = ({homeOrLogin, loggedIn}) => {
 
     const logout = () => {
         logged = false;
-        localStorage.setItem("loggedIn", false);
-        // location.reload();
-    }
-   
+        localStorage.setItem("loggedIn", false);      
+    }   
 
     if (homeOrLogin === "home" && logged === true) {
         return (
@@ -28,7 +26,7 @@ const HomeHeaderMenu = ({homeOrLogin, loggedIn}) => {
                         <Link2 to="/steps">
                             <button className="btn menu-top-button" href="">Oddaj rzeczy</button>
                         </Link2> 
-                        <Link2 to="/home">
+                        <Link2 to="/wylogowano">
                             <button onClick={logout} className="btn menu-top-button" href="">Wyloguj</button>
                         </Link2>                   
                     </div>  
@@ -92,7 +90,7 @@ const HomeHeaderMenu = ({homeOrLogin, loggedIn}) => {
                         <Link2 to="/steps">
                             <button className="btn menu-top-button" href="">Oddaj rzeczy</button>
                         </Link2> 
-                        <Link2 to="/home">
+                        <Link2 to="/wylogowano">
                             <button onClick={logout} className="btn menu-top-button" href="">Wyloguj</button>
                         </Link2>                   
                     </div>  

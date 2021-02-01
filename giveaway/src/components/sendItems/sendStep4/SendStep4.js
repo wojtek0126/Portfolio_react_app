@@ -46,7 +46,7 @@ const  SendStep4 = () => {
                                      
                         <div className="step-form__buttons">
                             <button onClick={() => nextStep(3)} className="btn form-submit-button">Wstecz</button>
-                            <button onClick={() => nextStep(4)} className="btn form-submit-button">Dalej</button>
+                            <button onClick={() => nextStep(5)} className="btn form-submit-button">Dalej</button>
                         </div>
                   
                     </form>

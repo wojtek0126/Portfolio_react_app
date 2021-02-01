@@ -3,6 +3,7 @@ import { nextStep } from '../../functionsStorage/functions';
 import bear from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/images/bear.jpg'
 
 const  SendStep1 = () => {
+    console.log(localStorage.getItem("step"));
 
     return (           
             <div className="step-bottom-container">
