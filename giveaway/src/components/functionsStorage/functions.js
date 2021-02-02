@@ -44,4 +44,5 @@ export const loginCheckForMenuView = (localStorageitem) => {
 
 export const nextStep = (nextStepNumber) => {
     localStorage.setItem("step", nextStepNumber);
+    window.location.reload();
 }

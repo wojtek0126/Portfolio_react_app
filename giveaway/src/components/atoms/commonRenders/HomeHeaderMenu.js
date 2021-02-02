@@ -10,8 +10,10 @@ const HomeHeaderMenu = ({homeOrLogin, loggedIn}) => {
     // let IsLoggedIn = localStorage.getItem("loggedIn");   
     
     let logged = loginCheckForMenuView("loggedIn");
-
+    let userName = localStorage.getItem("loginName");
     localStorage.setItem("NextStep", 1);
+
+  
 
     const logout = () => {
         logged = false;
@@ -23,6 +25,7 @@ const HomeHeaderMenu = ({homeOrLogin, loggedIn}) => {
             <>
             <div className="login-menu-container">
                  <div className="login-menu__top">
+                 <p>Witaj, {userName}</p>
                         <Link2 to="/steps">
                             <button className="btn menu-top-button" href="">Oddaj rzeczy</button>
                         </Link2> 
@@ -87,6 +90,7 @@ const HomeHeaderMenu = ({homeOrLogin, loggedIn}) => {
             <>
                 <div className="login-menu-container">
                  <div className="login-menu__top">
+                 <p>Witaj, {userName}</p>
                         <Link2 to="/steps">
                             <button className="btn menu-top-button" href="">Oddaj rzeczy</button>
                         </Link2> 

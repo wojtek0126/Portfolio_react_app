@@ -20,32 +20,32 @@ const  StepsBase = () => {
     console.log(currentStep);
     const StepHandler = ({step}) => {
        
-        if (step === "1") {
+        if (step === "1" || step === 1) {
             return (
                 <SendStep1 />
             )
         }
-        else if (step === "2") {
+        else if (step === "2" || step === 2) {
             return (
                 <SendStep2 />
             )
         }
-        else if (step === "3") {
+        else if (step === "3" || step === 3) {
             return (
                 <SendStep3 />
             )
         }
-        else if (step === "4") {
+        else if (step === "4" || step === 4) {
             return (
                 <SendStep4 />
             )
         }
-        else if (step === "5") {
+        else if (step === "5" || step === 5) {
             return (
                 <SendSummary />
             )
         }
-        else if (step === "6") {
+        else if (step === "6" || step === 6) {
             return (
                 <SendSuccesful />
             )

@@ -48,7 +48,8 @@ const Login = () => {
         if (isPasswordVaild === true && isEmailValid === true){
             alert("przesłano pomyślnie");   
             setLoggedIn(true);
-            localStorage.setItem("loggedIn", true);     
+            localStorage.setItem("loggedIn", true);    
+             localStorage.setItem("step", 1)
         }      
             nullifyState(setPasswordData);
             nullifyState(setEmailData);
@@ -56,9 +57,11 @@ const Login = () => {
             nullifyInputValue(passwordInputField);    
     }
 
-    const handleEmailChange = (e) => {     
+    const handleEmailChange = (e) => {  
+        let loginName = e.target.value   
         console.log(e.target.value);
         setEmailData(e.target.value)
+        localStorage.setItem("loginName", loginName);
     }
     const handlePasswordChange = (e) => {    
         console.log(e.target.value);
