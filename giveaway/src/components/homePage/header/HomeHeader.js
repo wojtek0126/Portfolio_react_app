@@ -1,8 +1,9 @@
 import React from 'react';
-import header from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/images/header.jpg';
-import Decoration from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/icons/Decoration.svg';
+import header from '../../../assets/images/header.jpg';
+import Decoration from '../../../assets/icons/Decoration.svg';
 import {Link} from 'react-router-dom';
-import HomeHeaderMenu from "C:/CodersLab/Portfolio_react_app/giveaway/src/components/atoms/commonRenders/HomeHeaderMenu.js";
+import HomeHeaderMenu from '../../atoms/commonRenders/HomeHeaderMenu';
+
 
 const HomeHeader = () => {   
     let loggedIn = localStorage.getItem("loggedIn");    

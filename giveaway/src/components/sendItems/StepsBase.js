@@ -9,8 +9,8 @@ import SendSuccesful from './sendSuccesful/SendSuccesful';
 import SendSummary from './sendSummary/SendSummary';
 
 
-import Decoration from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/icons/Decoration.svg';
-import Sweater from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/images/sweater.jpg';
+import Decoration from '../../assets/icons/Decoration.svg';
+import Sweater from '../../assets/images/sweater.jpg';
 
 
 const  StepsBase = () => {

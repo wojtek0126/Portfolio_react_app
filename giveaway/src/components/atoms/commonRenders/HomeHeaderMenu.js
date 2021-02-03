@@ -25,7 +25,7 @@ const HomeHeaderMenu = ({homeOrLogin, loggedIn}) => {
             <>
             <div className="login-menu-container">
                  <div className="login-menu__top">
-                 <p>Witaj, {userName}</p>
+                 <p className="login-menu__welcome">Witaj, {userName}</p>
                         <Link2 to="/steps">
                             <button className="btn menu-top-button" href="">Oddaj rzeczy</button>
                         </Link2> 
@@ -79,8 +79,7 @@ const HomeHeaderMenu = ({homeOrLogin, loggedIn}) => {
                             <button className="btn menu-bottom-button" href="">Kontakt</button>
                         </Link>         
                 </div>
-              </div>   
-                
+              </div>    
           
             </>
         )
@@ -90,7 +89,7 @@ const HomeHeaderMenu = ({homeOrLogin, loggedIn}) => {
             <>
                 <div className="login-menu-container">
                  <div className="login-menu__top">
-                 <p>Witaj, {userName}</p>
+                 <p className="login-menu__welcome">Witaj, {userName}</p>
                         <Link2 to="/steps">
                             <button className="btn menu-top-button" href="">Oddaj rzeczy</button>
                         </Link2> 

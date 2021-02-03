@@ -1,14 +1,9 @@
 import React, {useState} from 'react';
-import { nextStep } from '../../functionsStorage/functions';
-import bear from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/images/bear.jpg'
+import { nextStep, handleRadioChoice } from '../../functionsStorage/functions';
+import bear from '../../../assets/images/bear.jpg'
 
 const  SendStep1 = () => {
     console.log(localStorage.getItem("step"));    
-
-    const handleChoice = (e) => {
-      localStorage.setItem("itemName", e.target.id);
-      console.log(e.target.id);
-    }
 
     return (           
             <div className="step-bottom-container">
@@ -18,19 +13,19 @@ const  SendStep1 = () => {
                         
                         <h3>Zaznacz co chcesz oddać</h3>
                         <label>
-                            <input type="radio" name="radio"  id="ubrania, które nadają się do ponownego użycia" onChange={handleChoice}></input>ubrania, które nadają się do ponownego użycia
+                            <input type="radio" name="radio"  id="ubrania, które nadają się do ponownego użycia" onChange={handleRadioChoice(`step`)}></input>ubrania, które nadają się do ponownego użycia
                         </label>
                         <label>
-                            <input type="radio" name="radio" id="ubrania do wyrzucenia" onChange={handleChoice}></input>ubrania do wyrzucenia
+                            <input type="radio" name="radio" id="ubrania do wyrzucenia" onChange={handleRadioChoice(`step`)}></input>ubrania do wyrzucenia
                         </label>
                         <label>     
-                        <input type="radio" name="radio" id="zabawki" onChange={handleChoice}></input>zabawki 
+                        <input type="radio" name="radio" id="zabawki" onChange={handleRadioChoice(`step`)}></input>zabawki 
                         </label>
                         <label>
-                        <input type="radio" name="radio" id="książki"onChange={handleChoice}></input>książki
+                        <input type="radio" name="radio" id="książki"onChange={handleRadioChoice(`step`)}></input>książki
                         </label>
                         <label>
-                        <input type="radio" name="radio" id="inne" onChange={handleChoice}></input>inne
+                        <input type="radio" name="radio" id="inne" onChange={handleRadioChoice(`step`)}></input>inne
                         </label>  
                         
                         <button onClick={() => nextStep(2)} className="btn form-submit-button">Dalej</button>

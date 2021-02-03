@@ -1,4 +1,4 @@
-import Home from "C:/CodersLab/Portfolio_react_app/giveaway/src/components/homePage/Home.js";
+import Home from "./components/homePage/Home.js";
 import Login from "./components/login/Login";
 import SignUp from "./components/signUp/SignUp";
 import LogOut from "./components/login/logOut/LogOut";

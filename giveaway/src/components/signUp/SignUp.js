@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
-import Decoration from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/icons/Decoration.svg';
-import HomeHeaderMenu from "C:/CodersLab/Portfolio_react_app/giveaway/src/components/atoms/commonRenders/HomeHeaderMenu.js";
+import Decoration from '../../assets/icons/Decoration.svg';
+
 import {Link} from 'react-router-dom';
 import { compareTwoStrings, nullifyInputValue, nullifyStateString } from '../functionsStorage/functions';
+import HomeHeaderMenu from '../atoms/commonRenders/HomeHeaderMenu';
 
 const SignUp = () => {
     let [emailData, setEmailData] = useState("");

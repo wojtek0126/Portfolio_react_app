@@ -1,9 +1,9 @@
 import React from 'react';
-import Decoration from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/icons/Decoration.svg';
-import Icon1 from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/icons/Icon-1.svg';
-import Icon2 from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/icons/Icon-2.svg';
-import Icon3 from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/icons/Icon-3.svg';
-import Icon4 from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/icons/Icon-4.svg';
+import Decoration from '../../../assets/icons/Decoration.svg';
+import Icon1 from '../../../assets/icons/Icon-1.svg';
+import Icon2 from '../../../assets/icons/Icon-2.svg';
+import Icon3 from '../../../assets/icons/Icon-3.svg';
+import Icon4 from '../../../assets/icons/Icon-4.svg';
 import {Link} from 'react-router-dom';
 
 const SimpleSteps = () => {

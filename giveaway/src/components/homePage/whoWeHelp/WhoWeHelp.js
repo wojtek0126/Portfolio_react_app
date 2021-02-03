@@ -1,61 +1,32 @@
 import React, {useState, useEffect} from 'react';
-import Decoration from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/icons/Decoration.svg';
-import {getCharityOrgs, getOrganizations, getFoundations} from 'C:/CodersLab/Portfolio_react_app/giveaway/src/API/fetch.js';
+import Decoration from '../../../assets/icons/Decoration.svg';
 import {Link} from 'react-router-dom';
+import { getOrgs } from '../../../API/fetch';
+import { preparedForPagination, showHidePagination, handleChangeOrg, paginate, setPageNumbers, setClicked } from '../../functionsStorage/functions';
 
 const WhoWeHelp = () => {
-
+    //get data here
     let [orgList, setOrgList] = useState([]);
     let [fundList, setFundList] = useState([]);
     let [charList, setCharList] = useState([]);
     let [orgType, setOrgType] = useState(orgList);
-    //pagination
+    // for pagination
     let [currentPage, setCurrentpage] = useState(1);
     let orgsPerpage = 3;
 
     useEffect(() => {
-        getCharityOrgs(setCharList);
-        getOrganizations(setOrgList);
-        getFoundations(setFundList);      
+        //fetch objects withfrom db.json 
+        getOrgs(`localCharities`, setCharList);
+        getOrgs(`organizations`, setOrgList);
+        getOrgs(`foundations`, setFundList);      
     },[])
    
     useEffect(() => {
-        document.getElementById('startingDisplay').click()
+        setClicked('startingDisplay')
     },[orgList]);
   
 //pagination
-const preparedForPagination = (list) => {
-    const indexOfLastOrg = currentPage * orgsPerpage;
-    const indexOfFirstOrg = indexOfLastOrg - orgsPerpage;
-    const currentOrgs = list.slice(indexOfFirstOrg, indexOfLastOrg);
-    return currentOrgs
-}; 
-
-const pageNumbers = [];
-
-for (let index = 1; index <= Math.ceil(orgType.length / orgsPerpage); index++) {
-    pageNumbers.push(index);
-    
-}
-
-const paginate = (pageNumber) => {
-        setCurrentpage(pageNumber); 
-};
-
-const handleChangeOrg = (orgList) => {
-    setOrgType(orgList);
-    setCurrentpage(1);
-}
-
-const hidePagination = (targetId) => {    
-    const paginationList = document.getElementById(targetId);
-    paginationList.style.display = "none";
-}
-
-const showPagination = (targetId) => {    
-    const paginationList = document.getElementById(targetId);
-    paginationList.style.display = "inline";
-}
+const pageNumbers = setPageNumbers(orgType, orgsPerpage);
 
     return (        
         <div className="who-we-help-container" id="whoWeHelp">
@@ -63,19 +34,16 @@ const showPagination = (targetId) => {
                 <p>Komu pomagamy?</p>
                 <img src={Decoration} alt="decor" className="who-we-help-top__decoration" />
                 <div className="who-we-help-top__options">
-                    <button id="startingDisplay" className="btn who-we-help--button" onClick={() => handleChangeOrg(orgList)}>Fundacjom</button>
-                    <button className="btn who-we-help--button" onClick={() => handleChangeOrg(fundList)}>Organizacjom pozarządowym</button>
-                    <button className="btn who-we-help--button" onClick={() => handleChangeOrg(charList)}>Lokalnym zbiórkom</button>
+                    <button id="startingDisplay" className="btn who-we-help--button" onClick={() => handleChangeOrg(orgList, setOrgType, setCurrentpage)}>Fundacjom</button>
+                    <button className="btn who-we-help--button" onClick={() => handleChangeOrg(fundList, setOrgType, setCurrentpage)}>Organizacjom pozarządowym</button>
+                    <button className="btn who-we-help--button" onClick={() => handleChangeOrg(charList, setOrgType, setCurrentpage)}>Lokalnym zbiórkom</button>
                 </div> 
                 <p className="who-we-help-top__text">W naszej bazie znajdziesz listę zweryfikowanych Fundacji, 
                     z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.
                 </p>
             </div>
-            <div className="who-we-help__list">
-                {                   
-                        preparedForPagination(orgType).map((el, index) => {
-                         
-                            // else{
+            <div className="who-we-help__list">                {                   
+                        preparedForPagination(orgType, currentPage, orgsPerpage).map((el, index) => {                        
                                 return (                       
                                     <div className="who-we-help__list--container" key={index}>
                                         <div className="who-we-help__list--left">
@@ -86,39 +54,30 @@ const showPagination = (targetId) => {
                                             <p className="who-we-help__list--text">{el.items}</p>
                                         </div>                                     
                                     </div>  
-                                    )
-                            // }
-                   
+                                    )                       
                         }) 
-                }
-           
+                }           
             </div>
             <div className="who-we-help__list--paginate"> {
                     pageNumbers.map((number) => {
                         setTimeout(() => {
                             if (orgType === charList) {                              
-                                hidePagination("pagination")
+                                showHidePagination("pagination", "none")
                             }
                             else {
-                                showPagination("pagination")
+                                showHidePagination("pagination", "inline")
                             }
-                        }, 0);
-                    
+                        }, 0);                    
                         return ( 
                         <li id="pagination" className="who-we-help__list--paginate-list" key={number}>
                             <Link to="/whoWeHelp">
-                                <a onClick={() => paginate(number)} href="!#">{number}</a>
+                                <a onClick={() => paginate(number, setCurrentpage)} href="!#">{number}</a>
                             </Link>
                         </li> 
-                           )
-                        // <li key={number}> <a href="!#">{number}</a></li>
-                       
-                     
+                           )             
                     })
-                }</div>
-           
-        </div>
-        
+                }</div>           
+        </div>        
     )    
 }
 
