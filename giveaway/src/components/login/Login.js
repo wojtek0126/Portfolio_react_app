@@ -1,24 +1,13 @@
 import React, {useState} from 'react';
 import Decoration from '../../assets/icons/Decoration.svg';
 import {Link} from 'react-router-dom';
-import {handleLoginValidation, nullifyInputValue, nullifyState, switchBorderColor} from '../functionsStorage/functions';
+import {handleLoginValidation, handleValueInput} from '../functionsStorage/functions';
 import HomeHeaderMenu from '../atoms/commonRenders/HomeHeaderMenu';
 
 const Login = () => {
     let [emailData, setEmailData] = useState([]);
     let [passwordData, setPasswordData] = useState([]);   
     let [loggedIn, setLoggedIn] = useState(false);   
-
-    const handleEmailChange = (e) => {  
-        let loginName = e.target.value   
-        console.log(e.target.value);
-        setEmailData(e.target.value)
-        localStorage.setItem("loginName", loginName);
-    }
-    const handlePasswordChange = (e) => {    
-        console.log(e.target.value);
-        setPasswordData(e.target.value)
-    }  
 
     return (
         <div className="login-container">       
@@ -30,16 +19,18 @@ const Login = () => {
                 <img src={Decoration} alt="decor" className="who-we-help-top__decoration" />
             </div>           
             <form onSubmit={
-                 handleLoginValidation(passwordData, emailData, setLoggedIn, setPasswordData, setEmailData,
-                    `errorMessageEmail`, `errorMessagePassword`, `loginEmail`,`loginPassword`, `black`, `#DC143C`)           
+                 handleLoginValidation(passwordData, emailData,
+                     setLoggedIn, setPasswordData, setEmailData,
+                    `errorMessageEmail`, `errorMessagePassword`, `loginEmail`,`loginPassword`,
+                     `black`, `#DC143C`)           
                     }>
                     <div className="login-form-container">
                         <label>Email
-                            <input id="loginEmail" type="email" onChange={handleEmailChange}></input>
+                            <input id="loginEmail" type="email" onChange={handleValueInput(setEmailData, `loginName`)}></input>
                             <p id="errorMessageEmail" className="login-email--error-message"></p>
                         </label>
                         <label>Hasło
-                            <input id="loginPassword" type="password" onChange={handlePasswordChange}></input>
+                            <input id="loginPassword" type="password" onChange={handleValueInput(setPasswordData)}></input>
                             <p id="errorMessagePassword"className="login-password--error-message"></p>
                         </label>
                     </div>

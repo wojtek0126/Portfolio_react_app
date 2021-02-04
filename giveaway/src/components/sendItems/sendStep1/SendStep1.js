@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { nextStep, handleRadioChoice } from '../../functionsStorage/functions';
 import bear from '../../../assets/images/bear.jpg'
 
 const  SendStep1 = () => {
+    //local storage item check in console
     console.log(localStorage.getItem("step"));    
 
     return (           
@@ -26,11 +27,9 @@ const  SendStep1 = () => {
                         </label>
                         <label>
                         <input type="radio" name="radio" id="inne" onChange={handleRadioChoice(`step`)}></input>inne
-                        </label>  
-                        
+                        </label>                          
                         <button onClick={() => nextStep(2)} className="btn form-submit-button">Dalej</button>
-                    </form>
-                    
+                    </form>                    
                 </div>
                 <div className="step-bottom-right">
                     <img src={bear} alt="bear"/>

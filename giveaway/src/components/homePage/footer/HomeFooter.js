@@ -1,6 +1,6 @@
 import React from 'react';
-import Instagram from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/icons/Instagram.svg'
-import Facebook from 'C:/CodersLab/Portfolio_react_app/giveaway/src/assets/icons/Facebook.svg'
+import Instagram from '../../../assets/icons/Instagram.svg'
+import Facebook from '../../../assets/icons/Facebook.svg'
 
 const HomeFooter = () => {
     return (

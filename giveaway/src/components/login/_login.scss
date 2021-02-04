@@ -7,36 +7,6 @@
     height: 100vh;
 }
 
-.login-menu__welcome {
-    border: 1px solid white;
-    padding: 10px;
-    font-size: 10px;
-    margin-bottom: 4px;
-    margin-top: 0px;
-}
-
-
-.login-menu-container {
-   display: flex;
-   align-self: flex-end;
-   flex-direction: column;
-   margin: 20px;
-//    transform: translateY(-200px);
-}
-
-.login-menu__top {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-.login-menu__bottom {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-  
-}
-
 .login-text-container {
     display: flex;
     justify-content: center;

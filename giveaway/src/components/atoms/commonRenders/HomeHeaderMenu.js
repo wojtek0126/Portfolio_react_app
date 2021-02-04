@@ -1,24 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-scroll';
 import {Link as Link2} from 'react-router-dom';
-import { NavHashLink } from 'react-router-hash-link';
-import { loginCheckForMenuView } from '../../functionsStorage/functions';
+import {NavHashLink} from 'react-router-hash-link';
+import {loginCheckForMenuView, logOut} from '../../functionsStorage/functions';
 
-
-const HomeHeaderMenu = ({homeOrLogin, loggedIn}) => {  
-    // let [logged, setLogged] = useState(false)
-    // let IsLoggedIn = localStorage.getItem("loggedIn");   
+const HomeHeaderMenu = ({homeOrLogin}) => {  
+    // let [logged, setLogged] = useState(false)    
     
     let logged = loginCheckForMenuView("loggedIn");
     let userName = localStorage.getItem("loginName");
-    localStorage.setItem("NextStep", 1);
-
-  
-
-    const logout = () => {
-        logged = false;
-        localStorage.setItem("loggedIn", false);      
-    }   
+    localStorage.setItem("NextStep", 1);     
 
     if (homeOrLogin === "home" && logged === true) {
         return (
@@ -30,7 +21,7 @@ const HomeHeaderMenu = ({homeOrLogin, loggedIn}) => {
                             <button className="btn menu-top-button" href="">Oddaj rzeczy</button>
                         </Link2> 
                         <Link2 to="/wylogowano">
-                            <button onClick={logout} className="btn menu-top-button" href="">Wyloguj</button>
+                            <button onClick={logOut(logged, `loggedIn`)} className="btn menu-top-button" href="">Wyloguj</button>
                         </Link2>                   
                     </div>  
                 <div className="login-menu__bottom ">
@@ -79,8 +70,7 @@ const HomeHeaderMenu = ({homeOrLogin, loggedIn}) => {
                             <button className="btn menu-bottom-button" href="">Kontakt</button>
                         </Link>         
                 </div>
-              </div>    
-          
+              </div>           
             </>
         )
     }
@@ -94,7 +84,7 @@ const HomeHeaderMenu = ({homeOrLogin, loggedIn}) => {
                             <button className="btn menu-top-button" href="">Oddaj rzeczy</button>
                         </Link2> 
                         <Link2 to="/wylogowano">
-                            <button onClick={logout} className="btn menu-top-button" href="">Wyloguj</button>
+                            <button onClick={logOut(logged, `loggedIn`)} className="btn menu-top-button" href="">Wyloguj</button>
                         </Link2>                   
                     </div>  
                 <div className="login-menu__bottom ">

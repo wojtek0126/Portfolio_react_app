@@ -19,10 +19,8 @@ const HomeHeader = () => {
         <div className="header-container">
         <img src={header} className="header-left-side" alt="header-left-img" />
         <div className="header-right-side">
-            <div className="header-right-side--menu">               
-              
-                    <HomeHeaderMenu homeOrLogin={"home"} loggedIn={isLoggedIn} />
-              
+            <div className="header-right-side--menu">                     
+                    <HomeHeaderMenu homeOrLogin={"home"} loggedIn={isLoggedIn} />              
             </div>
             <div className="header-right-side--content">
                 <div className="header-right-side--content__text">

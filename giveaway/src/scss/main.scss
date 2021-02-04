@@ -3,19 +3,22 @@
 @import './settings/general';
 @import './settings/buttons';
 
+//import common menu styles
+@import '../components/atoms/commonRenders/_commonMenu.scss';
+
 //partials home
-@import 'C:/codersLab/portfolio_react_app/giveaway/src/components/homePage/header/home_header';
-@import 'C:/CodersLab/Portfolio_react_app/giveaway/src/components/homePage/threeColumns/home_three_columns';
-@import 'C:/CodersLab/Portfolio_react_app/giveaway/src/components/homePage/simpleSteps/home_simple_steps';
-@import 'C:/CodersLab/Portfolio_react_app/giveaway/src/components/homePage/about/home_about';
-@import 'C:/CodersLab/Portfolio_react_app/giveaway/src/components/homePage/whoWeHelp/home_who_we_help';
-@import 'C:/CodersLab/Portfolio_react_app/giveaway/src/components/homePage/contact/home_contact';
-@import 'C:/CodersLab/Portfolio_react_app/giveaway/src/components/homePage/footer/home_footer';
-@import 'C:/CodersLab/Portfolio_react_app/giveaway/src/components/login/_login.scss';
-@import 'C:/CodersLab/Portfolio_react_app/giveaway/src/components/signUp/_signUp.scss';
+@import '../components/homePage/header/home_header';
+@import '../components/homePage/threeColumns/home_three_columns';
+@import '../components/homePage/simpleSteps/home_simple_steps';
+@import '../components/homePage/about/home_about';
+@import '../components/homePage/whoWeHelp/home_who_we_help';
+@import '../components/homePage/contact/home_contact';
+@import '../components/homePage/footer/home_footer';
+@import '../components/login/_login.scss';
+@import '../components/signUp/_signUp.scss';
 
 //partials giveaway form
-@import 'C:/CodersLab/Portfolio_react_app/giveaway/src/components/sendItems/_sendSteps.scss';
-@import 'C:/CodersLab/Portfolio_react_app/giveaway/src/components/sendItems/_rhombs.scss';
-@import 'C:/CodersLab/Portfolio_react_app/giveaway/src/components/sendItems/sendStep1/_sendStep1.scss'
+@import '../components/sendItems/_sendSteps.scss';
+@import '../components/sendItems/_rhombs.scss';
+@import '../components/sendItems/sendStep1/_sendStep1.scss'
 
