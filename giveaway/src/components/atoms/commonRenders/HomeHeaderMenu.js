@@ -4,14 +4,17 @@ import {Link as Link2} from 'react-router-dom';
 import {NavHashLink} from 'react-router-hash-link';
 import {loginCheckForMenuView, logOut} from '../../functionsStorage/functions';
 
-const HomeHeaderMenu = ({homeOrLogin}) => {  
+const HomeHeaderMenu = ({homeOrLogin, loggedIn}) => {  
     // let [logged, setLogged] = useState(false)    
     
     let logged = loginCheckForMenuView("loggedIn");
+    console.log(logged, "to spr");
+    console.log(localStorage.getItem("loggedIn"), "to sprddddddddddddddddd");
     let userName = localStorage.getItem("loginName");
+    console.log(userName, "user to spr");
     localStorage.setItem("NextStep", 1);     
 
-    if (homeOrLogin === "home" && logged === true) {
+    if (homeOrLogin === "home" && loggedIn === true || loggedIn === "true" ) {
         return (
             <>
             <div className="login-menu-container">
@@ -43,7 +46,7 @@ const HomeHeaderMenu = ({homeOrLogin}) => {
             </>
         )
     }
-    else if (homeOrLogin === "home" && logged === false) {
+    else if (homeOrLogin === "home" && loggedIn === false || loggedIn === "false") {
         return (
             <>
              <div className="login-menu-container">
@@ -52,7 +55,7 @@ const HomeHeaderMenu = ({homeOrLogin}) => {
                             <button className="btn menu-top-button" href="">Zaloguj</button>
                         </Link2> 
                         <Link2 to="/signUp">
-                            <button className="btn menu-top-button" href="">Zarejestruj się</button>
+                            <button className="btn menu-top-button" href="">Załóż konto</button>
                         </Link2>                   
                     </div>  
                 <div className="login-menu__bottom ">
@@ -74,7 +77,7 @@ const HomeHeaderMenu = ({homeOrLogin}) => {
             </>
         )
     }
-    else if (homeOrLogin !== "home" && logged === true) {
+    else if (homeOrLogin !== "home" && loggedIn === true || loggedIn === "true") {
         return (
             <>
                 <div className="login-menu-container">
@@ -108,7 +111,7 @@ const HomeHeaderMenu = ({homeOrLogin}) => {
             </>
         )
     }
-    else if (homeOrLogin !== "home" && logged === false) {
+    else if (homeOrLogin !== "home" && loggedIn === false || loggedIn === "false") {
         return (
             <>
     <div className="login-menu-container">
@@ -117,7 +120,7 @@ const HomeHeaderMenu = ({homeOrLogin}) => {
                             <button className="btn menu-top-button" href="">Zaloguj się</button>
                         </Link2> 
                         <Link2 to="/signUp">
-                            <button className="btn menu-top-button" href="">Zarejestruj</button>
+                            <button className="btn menu-top-button" href="">Załóż konto</button>
                         </Link2>                   
                     </div>  
                 <div className="login-menu__bottom ">

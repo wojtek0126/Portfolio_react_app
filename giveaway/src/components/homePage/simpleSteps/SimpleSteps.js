@@ -8,7 +8,7 @@ import {Link} from 'react-router-dom';
 
 const SimpleSteps = () => {
     return (
-        <div className="simple-steps-container" id="simpleSteps">
+        <div className="simple-steps-container container-full" id="simpleSteps">
             <div className="simple-steps-top">
                 <p className="simple-steps-top--text">Wystarczą 4 proste kroki</p>
                 <img src={Decoration} alt="decor" className="simple-steps-top--decoration" />

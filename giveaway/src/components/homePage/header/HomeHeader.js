@@ -6,9 +6,9 @@ import HomeHeaderMenu from '../../atoms/commonRenders/HomeHeaderMenu';
 
 
 const HomeHeader = () => {   
-    let loggedIn = localStorage.getItem("loggedIn");    
-    let isLoggedIn = false;
-    if (loggedIn === "true") {
+    let isLoggedIn = localStorage.getItem("loggedIn");    
+    console.log(isLoggedIn, "logged w homeHeader")
+    if (isLoggedIn === "true") {
         isLoggedIn = true;
     }
     else {
@@ -17,14 +17,14 @@ const HomeHeader = () => {
 
     return (  
         <div className="header-container">
-        <img src={header} className="header-left-side" alt="header-left-img" />
-        <div className="header-right-side">
-            <div className="header-right-side--menu">                     
+        <img src={header} className="header-left-side container-half" alt="header-left-img" />
+        <div className="header-right-side container-half">
+            <div className="login-menu-container">                     
                     <HomeHeaderMenu homeOrLogin={"home"} loggedIn={isLoggedIn} />              
             </div>
             <div className="header-right-side--content">
                 <div className="header-right-side--content__text">
-                    <h2>Zacznij pomagać!<br/> Oddaj niechciane rzeczy w zaufane ręce</h2>                    
+                    <h2 className="decorated-text--large">Zacznij pomagać!<br/> Oddaj niechciane rzeczy w zaufane ręce</h2>                    
                     <img src={Decoration} alt="decor" className="header-right-side--content__decoration" />
                     </div>
                 <div className="header-right-side--content__buttons">

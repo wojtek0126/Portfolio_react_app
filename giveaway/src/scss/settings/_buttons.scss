@@ -10,52 +10,72 @@
 
 //home header buttons
 .menu-top-button {
+    // width: 98px;
+    height: 36px;
     padding: 10px;
     margin: 1px;
     color: $color_greyish;
-    font-size: 0.6em;
-    border: 1px solid $color_white; 
+    font-size: 14px;
+    font-weight: 400;
+    border: 0.75px solid $color_white; 
     &:hover {
-        border: 1px solid $color3_yellowish;    
+        border: 0.75px solid $color3_yellowish;    
     }
 }
 
 .menu-bottom-button {
     padding: 10px 20px;     
     margin: 1px; 
-    border: 1px solid $color_white;   
-    font-size: 0.8em;   
-    height: 52px;  
+    border: 0.75px solid $color_white;   
+    font-size: 18px; 
+    font-weight: 400;  
+    height: 42px;  
     &:hover {
-     border: 1px solid $color_black;    
+     border: 0.75px solid $color_black;    
     } 
  }
 
 
 .header-button {
-    border: 1px solid $color_black; 
+    border: 0.75px solid $color_black; 
     text-transform: uppercase;
-    padding: 10px 30px;
-    font-size: 1.4em;
-    width: 200px;
+    // padding: 10px 30px;
+    font-size: 36px;
+    width: 310px;
+    height: 120px;
+    text-align: center;
 }
 
 .who-we-help--button {
-    border: 1px solid $color_black;     
+    border: 0.75px solid $color_black;     
     padding: 10px 30px;
-    font-size: 1.2em;
-    width: 200px;
+    font-size: 24px;
+    font-weight: 400;
+    width: 208px;
     text-align: center;
 }
 
 .form-submit-button {
     padding: 10px 20px;     
     margin: 1px; 
-    border: 1px solid $color_black;   
-    font-size: 0.8em;  
+    border: 0.75px solid $color_black;   
+    font-size: 18px;  
+    font-weight: 300;
     background-color: $color_white;  
+    // width: 180px;
     width: -moz-fit-content; 
     // &:hover {
     //  border: 1px solid $color_black;    
     // } 
+ }
+
+ .steps-button {
+    padding: 10px 20px;     
+    margin: 1px; 
+    border: 0.75px solid $color_black;   
+    font-size: 24px;  
+    font-weight: 300;
+    background-color: $color_white;  
+    width: 180px;
+    width: -moz-fit-content; 
  }

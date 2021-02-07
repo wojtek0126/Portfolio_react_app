@@ -54,8 +54,8 @@ const  SendSummary = () => {
                         </div>                          
                       </div>      
                 <div className="step-form__buttons">
-                            <button onClick={() => nextStep(4)} className="btn form-submit-button">Wstecz</button>
-                            <button onClick={() => nextStep(6)} className="btn form-submit-button">Zatwierdź</button>
+                            <button onClick={() => nextStep(4)} className="btn steps-button">Wstecz</button>
+                            <button onClick={() => nextStep(6)} className="btn steps-button">Zatwierdź</button>
                         </div> 
                 </div>
                 <div className="step-bottom-right">

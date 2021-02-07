@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 
 const LogOut = () => {
     return (
-        <div className="login-container">       
+        <div className="login-container container-full">       
             <div className="login-menu-container" >                   
               
               <HomeHeaderMenu homeOrLogin={"notHome"} loggedIn={false}/>        

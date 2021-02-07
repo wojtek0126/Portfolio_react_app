@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Decoration from '../../assets/icons/Decoration.svg';
 import {Link} from 'react-router-dom';
 import {handleSignUpSubmit, handleValueInput} from '../functionsStorage/functions';
@@ -8,12 +8,16 @@ const SignUp = () => {
     let [emailData, setEmailData] = useState("");
     let [passwordData, setPasswordData] = useState("");  
     let [passwordRepeatData, setPasswordRepeatData] = useState(""); 
-    let [loggedIn, setLoggedIn] = useState(false);     
+    let [loggedIn, setLoggedIn] = useState(false);   
+    
+    useEffect(() => {
+        localStorage.setItem("loggedIn", loggedIn);
+    }, [])
    
     return (
-        <div className="login-container">       
+        <div className="login-container container-full">       
             <div className="login-menu-container" >            
-              <HomeHeaderMenu homeOrLogin={"notHome"} loggedIn={false}/>
+              <HomeHeaderMenu homeOrLogin={"notHome"} loggedIn={loggedIn}/>
             </div>   
             <div className="login-text-container">
                 <h1 className="login-text">Załóż konto</h1>
@@ -21,7 +25,7 @@ const SignUp = () => {
             </div>           
             <form onSubmit={handleSignUpSubmit(passwordData, passwordRepeatData, emailData,
              setLoggedIn, setPasswordData, setPasswordRepeatData,setEmailData,
-             `errorEmail`, `errorPassword`, `errorRepeatPassword`, `loginEmail`,`loginPassword`, `loginPasswordRepeat`, 
+             `errorEmail`, `errorPassword`, `errorRepeatPassword`, `loginEmail2`,`loginPassword2`, `loginPasswordRepeat`, 
              `black`, `#DC143C`
             )}>
                     <div className="login-form-container">

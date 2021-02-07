@@ -9,10 +9,10 @@ const  SendStep4 = () => {
                 <div className="step-bottom-left">
                     <p>Krok 4/4</p>
                     <form>
-                        <h3>Podaj adres oraz termin odbiorurzeczy przez kuriera</h3>                              
+                        <p>Podaj adres oraz termin odbiorurzeczy przez kuriera</p>                              
                         <div className="step4-form__container">
                             <div className="step4-form__left">
-                                <p>Adres odbioru:</p>
+                                <span className="step3-paragraph">Adres odbioru:</span>
                                     <label>Ulica
                                         <input type="text" onChange={handleChoice("street")} ></input>
                                     </label>
@@ -29,7 +29,7 @@ const  SendStep4 = () => {
                                     </label>
                                 </div>                        
                                 <div className="step4-form__right">
-                                    <p>Termin odbioru:</p>
+                                    <span className="step3-paragraph">Termin odbioru:</span>
                                     <label>Data
                                         <input type="date" onChange={handleChoice("date")}></input>
                                     </label>
@@ -42,8 +42,8 @@ const  SendStep4 = () => {
                                 </div>  
                             </div>                                     
                         <div className="step-form__buttons">
-                            <button onClick={() => nextStep(3)} className="btn form-submit-button">Wstecz</button>
-                            <button onClick={() => nextStep(5)} className="btn form-submit-button">Dalej</button>
+                            <button onClick={() => nextStep(3)} className="btn steps-button">Wstecz</button>
+                            <button onClick={() => nextStep(5)} className="btn steps-button">Dalej</button>
                         </div>                  
                     </form>                    
                 </div>

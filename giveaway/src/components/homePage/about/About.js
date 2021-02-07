@@ -6,14 +6,14 @@ import People from '../../../assets/images/People.jpg';
 const About = () => {
     return (
         <div className="about-container" id="aboutUs">
-            <div className="about-left-side">
-                <p>O nas</p>
+            <div className="about-left-side container-half">
+                <p className="about-decorated-text--large">O nas</p>
                 <img src={Decoration} alt="decor" className="about-left-side__decoration" />
                 <p className="about-left-side__text">Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. 
                     Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
                 <img src={Signature} alt="signature" className="about-left-side__signature" />
             </div>         
-            <img src={People} className="about-right-side__img" alt="about-right-img" />            
+            <img src={People} className="about-right-side__img container-half" alt="about-right-img" />            
         </div>
     )
 }

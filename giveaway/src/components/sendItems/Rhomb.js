@@ -5,7 +5,7 @@ const Rhomb = ({number, textRhomb}) => {
         <div className="rhomb-container">
             <div className="rhomb-content">
                 <p>{number}</p>
-                <span>{textRhomb}</span>
+                <div className="rhomb-text">{textRhomb}</div>
             </div>
             
         </div>

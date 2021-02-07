@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import Decoration from '../../../assets/icons/Decoration.svg';
 import {Link} from 'react-router-dom';
-import { getOrgs } from '../../../API/fetch';
 import { preparedForPagination, showHidePagination, handleChangeOrg, paginate, setPageNumbers, setClicked } from '../../functionsStorage/functions';
+import { getOrgs } from '../../../API/fetch';
 
 const WhoWeHelp = () => {
     //get data here
@@ -13,7 +13,7 @@ const WhoWeHelp = () => {
     // for pagination
     let [currentPage, setCurrentpage] = useState(1);
     let orgsPerpage = 3;
-
+    
     useEffect(() => {
         //fetch objects withfrom db.json 
         getOrgs(`localCharities`, setCharList);
@@ -22,16 +22,16 @@ const WhoWeHelp = () => {
     },[])
    
     useEffect(() => {
-        setClicked('startingDisplay')
+        setClicked('startingDisplay');
     },[orgList]);
   
 //pagination
 const pageNumbers = setPageNumbers(orgType, orgsPerpage);
 
     return (        
-        <div className="who-we-help-container" id="whoWeHelp">
+        <div className="who-we-help-container container-full" id="whoWeHelp">
             <div className="who-we-help-top">
-                <p>Komu pomagamy?</p>
+                <p className="about-decorated-text--large">Komu pomagamy?</p>
                 <img src={Decoration} alt="decor" className="who-we-help-top__decoration" />
                 <div className="who-we-help-top__options">
                     <button id="startingDisplay" className="btn who-we-help--button" onClick={() => handleChangeOrg(orgList, setOrgType, setCurrentpage)}>Fundacjom</button>
@@ -48,10 +48,10 @@ const pageNumbers = setPageNumbers(orgType, orgsPerpage);
                                     <div className="who-we-help__list--container" key={index}>
                                         <div className="who-we-help__list--left">
                                             <p className="who-we-help__list--name">{el.name}</p>
-                                            <p className="who-we-help__list--text">{el.description}</p> 
+                                            <p className="who-we-help__list--text-left">{el.description}</p> 
                                         </div>  
                                         <div className="who-we-help__list--right"> 
-                                            <p className="who-we-help__list--text">{el.items}</p>
+                                            <p className="who-we-help__list--text-right">{el.items}</p>
                                         </div>                                     
                                     </div>  
                                     )                       

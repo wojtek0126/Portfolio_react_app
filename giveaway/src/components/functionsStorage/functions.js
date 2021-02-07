@@ -35,8 +35,9 @@ export const compareTwoStrings = (string1, string2) => {
 }
 
 // check if user logged in by local storage
-export const loginCheckForMenuView = (localStorageitem) => {         
-    if (localStorage.getItem(localStorageitem) === "true") {
+export const loginCheckForMenuView = (localStorageitem) => {  
+    let value = localStorage.getItem(localStorageitem)       
+    if (value === "true" || value === true ) {
         return true;
     }
     else {
@@ -59,7 +60,7 @@ export const setPageNumbers = (orgType, orgsPerpage) => {
     return pageNumbers;
 }
   
-// }
+// prep for pagination
 export const preparedForPagination = (list, currentPage, numberPerPage) => {
     const indexOfLastOrg = currentPage * numberPerPage;
     const indexOfFirstOrg = indexOfLastOrg - numberPerPage;
@@ -127,12 +128,14 @@ export const handleRadioChoice = param => (e) => {
     setLoggedIn, setPasswordData, setEmailData, emailErrorMessageId, passwordErrorMessageId, emailInputId, passwordInputId
     , errorColor1, validColor1) => (e) =>{
         e.preventDefault();
-        const emailErrorMessage = document.querySelector(emailErrorMessageId);
-        const passwordErrorMessage = document.querySelector(passwordErrorMessageId);
-        const emailInputField = document.getElementById(emailInputId);
-        const passwordInputField = document.getElementById(passwordInputId);
-        const errorColor = errorColor1;
-        const validColor = validColor1;
+        
+                const emailErrorMessage = document.getElementById(emailErrorMessageId);
+                const passwordErrorMessage = document.getElementById(passwordErrorMessageId);
+                const emailInputField = document.getElementById(emailInputId);
+                const passwordInputField = document.getElementById(passwordInputId);
+                const errorColor = errorColor1;
+                const validColor = validColor1;   
+        
         let isEmailValid = false;
         let isPasswordVaild = false;
        
@@ -160,11 +163,16 @@ export const handleRadioChoice = param => (e) => {
         }           
      
         if (isPasswordVaild === true && isEmailValid === true){
-            alert("przesłano pomyślnie");   
+           alert("przesłano pomyślnie");   
             setLoggedIn(true);
             localStorage.setItem("loggedIn", true);    
              localStorage.setItem("step", 1)
-        }      
+        } 
+        else {
+            console.log("login nieudany")
+            setLoggedIn(false);
+            localStorage.setItem("loggedIn", false);
+        }     
             nullifyState(setPasswordData);
             nullifyState(setEmailData);
             nullifyInputValue(emailInputField);
@@ -177,15 +185,16 @@ export const handleRadioChoice = param => (e) => {
         localStorage.setItem(locStorKey, false);      
     } 
 
+
     //signup validation
     export const handleSignUpSubmit = (passwordData, passwordRepeatData, emailData, setLoggedIn,
         setPasswordData, setPasswordRepeatData, setEmailData, emailErrMessageId, passwordErrMessageId, passwordRepeatErrMessageId,
         emailInputId, passwordInputId, passwordRepeatInputId
         , errorColor2, validColor2) => (e) => {
         e.preventDefault();
-        const emailErrorMessage = document.querySelector(emailErrMessageId);
-        const passwordErrorMessage = document.querySelector(passwordErrMessageId);
-        const confirmPasswordErrorMessage = document.querySelector(passwordRepeatErrMessageId);
+        const emailErrorMessage = document.getElementById(emailErrMessageId);
+        const passwordErrorMessage = document.getElementById(passwordErrMessageId);
+        const confirmPasswordErrorMessage = document.getElementById(passwordRepeatErrMessageId);
         const emailInputField = document.getElementById(emailInputId);        
         const passwordInputField = document.getElementById(passwordInputId);
         const passwordRepeatInputField = document.getElementById(passwordRepeatInputId);

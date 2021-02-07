@@ -35,9 +35,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60%;
+    // width: 60%;
     margin-top: 40px;
     margin-bottom: 50px;
+    font-size: 22px;
+    font-weight: 400;
 }
 
 .who-we-help__list--container {
@@ -61,10 +63,24 @@
 
 .who-we-help__list--name {
     margin: 0;
+    font-family: $font-alt;
+    font-size: 26px;
+    font-weight: 300;
 }
 
-.who-we-help__list--text {
-    margin: 0;    
+.who-we-help__list--text-left {
+    margin: 0;  
+    font-family: $font-alt;
+    font-size: 18px;  
+    font-weight: 300;
+    font-style: italic;
+}
+
+.who-we-help__list--text-right {
+    margin: 0; 
+    font-family: $font-alt;
+    font-size: 18px;  
+    font-weight: 300;   
 }
 
 .who-we-help__list--underline {
@@ -80,6 +96,8 @@
   border: 1px solid $color_black;
     & a {
         text-decoration: none;
-        padding: 5px;       
+        padding: 5px;  
+        font-size: 18px;  
+        font-weight: 400;   
     }
 }

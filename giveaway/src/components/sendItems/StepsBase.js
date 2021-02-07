@@ -53,21 +53,22 @@ const  StepsBase = () => {
     }
 
     return (
-        <div className="step1-container">
-            <div className="step1-top">
-                <div className="step1-top-left">
+        <div className="steps-container">
+            <div className="steps-top">
+                <div className="steps-top-left">
                 <img src={Sweater} className="steps-left-side--img" alt="steps-top-left-img" />
                 </div>
-                <div className="step1-top-right">
+                <div className="steps-top-right">
                 <div className="login-menu-container" >                        
               
               <HomeHeaderMenu homeOrLogin={"notHome"} loggedIn={true}/>        
 
             </div>   
-                    <div className="step1-top-right__content">
-                        <h2>Oddaj rzeczy, których już nie chcesz<p>POTRZEBUJĄCYM</p></h2>                        
-                        <img src={Decoration} alt="decor" className="header-right-side--content__decoration" />
-                        <div className="header-right-side--content__rhombs">
+                    <div className="steps-top-right__content">
+                        <p>Oddaj rzeczy, których już nie chcesz<br/>POTRZEBUJĄCYM</p>                        
+                        <img src={Decoration} alt="decor" className="steps-right-side--content__decoration" />
+                        <span>Wystarczą 4 proste kroki:</span>
+                        <div className="steps-right-side--content__rhombs">
                             <Rhomb number={1} textRhomb={"Wybierz rzeczy"} />
                             <Rhomb number={2} textRhomb={"Spakuj je w worki"}/>
                             <Rhomb number={3} textRhomb={"Wybierz fundację"} />
@@ -76,21 +77,13 @@ const  StepsBase = () => {
                     </div>
                 </div>
             </div>
-            <div className="step1-middle">
+            <div className="steps-middle ">
                 <h1>Ważne!</h1>
                 <h3>Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy wiedzieli komu najlepiej je przekazać.</h3>
             </div>
-            <div className="step1-bottom">
-                
-                    {/* {if (step === 1) {
-                        return (
-                            <SendStep1 />
-                        )
-                    }} */}
-                
+            <div className="steps-bottom">          
                 <StepHandler step={currentStep} />
             </div>
-
         </div>
     )
 }

@@ -20,6 +20,11 @@
     }
 }
 
+.simple-steps-top--text {
+    font-size: 38px;
+    font-weight: 400;
+}
+
 .simple-steps-top--decoration {      
     transform: scale(0.7);
 }
@@ -51,6 +56,8 @@
     padding-bottom: 10px;
     margin-top: 0;
     width: 60%;
+    font-size: 18px;
+    font-weight: 400;
 }
 
 .simple-steps-middle__underlined--underline {
@@ -64,6 +71,8 @@
 .simple-steps-middle__bottom-text {
     margin-bottom: 30px;
     width: 60%;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .simple-steps-bottom {
