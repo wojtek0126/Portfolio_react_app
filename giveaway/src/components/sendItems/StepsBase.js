@@ -18,6 +18,8 @@ const  StepsBase = () => {
     // localStorage.setItem("step", 1)
     let currentStep = localStorage.getItem("step");
     console.log(currentStep);
+    console.log(localStorage.getItem("loggedIn"), "logged z local w steps");
+    
     const StepHandler = ({step}) => {
        
         if (step === "1" || step === 1) {

@@ -4,6 +4,8 @@ import SignUp from "./components/signUp/SignUp";
 import LogOut from "./components/login/logOut/LogOut";
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import StepsBase from "./components/sendItems/StepsBase";
+import LoginSuccesful from "./components/login/LoginSuccesful.js";
+import SignUpSuccesful from "./components/signUp/SignUpSuccesful.js";
 // import SendStep1 from "./components/sendItems/sendStep1/SendStep1";
 // import SendStep2 from "./components/sendItems/sendStep2/SendStep2";
 // import SendStep3 from "./components/sendItems/sendStep3/SendStep3";
@@ -21,6 +23,8 @@ function App() {
           <Route path="/signUp" component={SignUp} />
           {/* /wylogowano below is eqivalent to /logOut, in polish lang due to project requirements */}
           <Route path="/wylogowano" component={LogOut} /> 
+          <Route path="/loginSuccesful" component={LoginSuccesful} /> 
+          <Route path="/signUpSuccesful" component={SignUpSuccesful} /> 
           <Route path="/steps" component={StepsBase} />      
           <Route path="/" component={Home} />  
         </Switch>         

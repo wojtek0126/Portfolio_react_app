@@ -8,6 +8,7 @@ import Contact from "./contact/Contact.js";
 import HomeFooter from "./footer/HomeFooter.js";
 
 const Home = () => {
+    console.log(localStorage.getItem("loggedIn"), "czy jest zalogowane zmienna z localstorage");
     return (
        <>
         <HomeHeader />

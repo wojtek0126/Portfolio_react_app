@@ -113,5 +113,36 @@
       "items": "jedzenie mało używane, denaturat"
     }
   ],
-  "messages": []
+  "messages": [],
+  "loggedIn": [
+    {
+      "loggedIn": true,
+      "id": 1
+    }
+  ],
+  "users": [
+    {
+      "userEmail": "ddd@fr.pl",
+      "userPassword": "FFFFFF",
+      "id": 1
+    },
+    {
+      "userEmail": "qaz@ee.pl",
+      "userPassword": "ssssss",
+      "orders": [],
+      "id": 2
+    },
+    {
+      "userEmail": "wewe@ee.pl",
+      "userPassword": "wwwwww",
+      "orders": [],
+      "id": 3
+    },
+    {
+      "userEmail": "qqq@bh.ll",
+      "userPassword": "xxxxxx",
+      "orders": [],
+      "id": 4
+    }
+  ]
 }

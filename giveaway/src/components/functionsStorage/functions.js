@@ -1,3 +1,4 @@
+import { postRegister, replaceItem, sendItem, setLoggedFetch } from "../../API/fetch";
 
 //nullify state array after submit for submitHandlers in forms
 export const nullifyState = (setStateToClear) => {
@@ -123,6 +124,15 @@ export const handleRadioChoice = param => (e) => {
     document.getElementById(buttonId).click()
   }
 
+  //patch login bool with this
+  export const fetchLogged = (bool) => {
+    let loggedInIs = {
+        loggedIn: bool
+    }
+    setLoggedFetch(loggedInIs);
+  }
+
+
   //login validation
   export const handleLoginValidation = (passwordData, emailData, 
     setLoggedIn, setPasswordData, setEmailData, emailErrorMessageId, passwordErrorMessageId, emailInputId, passwordInputId
@@ -163,28 +173,43 @@ export const handleRadioChoice = param => (e) => {
         }           
      
         if (isPasswordVaild === true && isEmailValid === true){
-           alert("przesłano pomyślnie");   
+           console.log("przesłano pomyślnie");   
             setLoggedIn(true);
             localStorage.setItem("loggedIn", true);    
              localStorage.setItem("step", 1)
+            fetchLogged(true);
+            window.location.href="/loginSuccesful";
         } 
         else {
             console.log("login nieudany")
             setLoggedIn(false);
             localStorage.setItem("loggedIn", false);
+        fetchLogged(false);
         }     
             nullifyState(setPasswordData);
             nullifyState(setEmailData);
             nullifyInputValue(emailInputField);
-            nullifyInputValue(passwordInputField);    
+            nullifyInputValue(passwordInputField);   
+           
+
     }
 
     //logging out with local storage
     export const logOut = (logged, locStorKey) => {
         logged = false;
-        localStorage.setItem(locStorKey, false);      
+        localStorage.setItem(locStorKey, false);  
+        // fetchLogged(false);    
     } 
 
+    //signup new user, send data to API
+    const registerNewuser = (userEmail, userPassword) => {
+        const userData = {          
+            "userEmail": userEmail,
+            "userPassword": userPassword,
+            "orders": []
+        }
+        postRegister(userData);
+    }
 
     //signup validation
     export const handleSignUpSubmit = (passwordData, passwordRepeatData, emailData, setLoggedIn,
@@ -250,11 +275,16 @@ export const handleRadioChoice = param => (e) => {
             isPasswordConfirmed = false;
          }      
         if (isPasswordVaild === true && isEmailValid === true && isPasswordConfirmed === true && isEmptyInput === false){
-            alert("przesłano pomyślnie"); 
+            console.log("przesłano pomyślnie"); 
             setLoggedIn(true);
             localStorage.setItem("loggedIn", true);    
-            localStorage.setItem("step", 1)
-            //fetch post here       
+            localStorage.setItem("step", 1);
+            fetchLogged(true);
+            //fetch post here 
+            registerNewuser(emailData, passwordData); 
+            setTimeout(() => {
+                window.location.href="/signUpSuccesful";   
+            },10);             
         }      
             nullifyStateString(setPasswordData);
             nullifyStateString(setEmailData);
@@ -314,7 +344,7 @@ export const handleRadioChoice = param => (e) => {
             else{
                 alert("dane prawidłowe, wiadomość wysłana pomyślnie");
                 //sending to API
-                sendMessage(newMessage);
+               sendMessage(newMessage);
             }            
         }
         validateNameInput(nameData, emailData, messageData);           

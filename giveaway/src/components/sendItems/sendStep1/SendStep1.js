@@ -1,12 +1,15 @@
 import React from 'react';
 import { nextStep, handleRadioChoice } from '../../functionsStorage/functions';
 import bear from '../../../assets/images/bear.jpg'
+import Contact from '../../homePage/contact/Contact';
+import HomeFooter from '../../homePage/footer/HomeFooter';
 
 const  SendStep1 = () => {
     //local storage item check in console
     console.log(localStorage.getItem("step"));    
 
-    return (           
+    return (   
+        <>        
             <div className="step-bottom-container container-full">
                 <div className="step-bottom-left">
                     <p>Krok 1/4</p>
@@ -33,7 +36,11 @@ const  SendStep1 = () => {
                 <div className="step-bottom-right">
                     <img className="container-full" src={bear} alt="bear"/>
                 </div>
-            </div>       
+                    
+            </div>   
+            <Contact />
+            <HomeFooter />
+            </>    
     )
 }
 
