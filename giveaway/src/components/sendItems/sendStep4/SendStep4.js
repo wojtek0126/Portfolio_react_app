@@ -1,5 +1,5 @@
 import React from 'react';
-import { handleChoice, nextStep } from '../../functionsStorage/functions';
+import { fetchSetStep, handleChoice, nextStep } from '../../functionsStorage/functions';
 import bear from '../../../assets/images/bear.jpg'
 
 const  SendStep4 = () => {  
@@ -42,13 +42,13 @@ const  SendStep4 = () => {
                                 </div>  
                             </div>                                     
                         <div className="step-form__buttons">
-                            <button onClick={() => nextStep(3)} className="btn steps-button">Wstecz</button>
-                            <button onClick={() => nextStep(5)} className="btn steps-button">Dalej</button>
+                            <button onClick={() => fetchSetStep(3)} className="btn steps-button">Wstecz</button>
+                            <button onClick={() => fetchSetStep(5)} className="btn steps-button">Dalej</button>
                         </div>                  
                     </form>                    
                 </div>
                 <div className="step-bottom-right">
-                    <img src={bear} alt="bear"/>
+                    <img src={bear} alt="bear" className="container-full"/>
                 </div>
             </div>       
     )

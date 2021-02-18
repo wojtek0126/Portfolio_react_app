@@ -13,53 +13,10 @@ const HomeHeaderMenu = ({homeOrLogin, loggedIn}) => {
         // temp.push(logged);
     
     }, [])
-   console.log(logged, "logged state homhederMenu")
-//     let [logged, setLogged] = useState([]);
-//     let [loggedData, setLoggedData] = useState("");
-//     let temp = [];
-//     let loggedBoolArray = [];
-//     useEffect(() => {
-//      getItems(`loggedIn`, setLogged);  
-//         temp.push(logged);
-//     }, [])
-//    console.log(logged, "logged state")
-//    console.log(temp, "temp")
-//     // useEffect(() => {
-           
-//     //     }
-//     //     else {
-//     //         console.log("pffffffffffffff");
-//     //     }
-//     // }, [])
-   
+   console.log(logged, "logged state homhederMenu");
 
-//     useEffect(() => {  
-//         logged.map((e) => {
-//             loggedBoolArray.push(e);
-//             console.log(e, "elem")
-//             console.log(loggedBoolArray, "logged array w homeHeader r");
-//         })
-       
-//         // for (let i = 0;i <= logged.length; i++) {
-//         //     loggedBoolArray.push(logged[i]);
-//         //  }
-    
-//     }, [logged])
-   
-//     console.log(loggedBoolArray, "logged array w homeHeader outside effect");
-    // let [logged, setLogged] = useState("");
-    
-    // useEffect(() => {
-    //   setLogged(localStorage.getItem("loggedIn"));
-    // }, [])     
-    
-    // localStorage.setItem("loggedIn")
-    // let logged = loginCheckForMenuView("loggedIn");
-    // let loggedFromLocal = loginCheckForMenuView("loggedIn");
-    // console.log(loggedIn, "to spr z propsa");
-    // console.log(localStorage.getItem("loggedIn"), "localstor w homeheader");
     let userName = localStorage.getItem("loginName");
-    // console.log(logged, "user to spr");
+   
     localStorage.setItem("NextStep", 1);     
 
     if (homeOrLogin === "home" && loggedIn === true || loggedIn === "true" ) {

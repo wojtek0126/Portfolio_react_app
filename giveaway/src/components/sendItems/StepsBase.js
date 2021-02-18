@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import HomeHeaderMenu from '../atoms/commonRenders/HomeHeaderMenu';
 import Rhomb from './Rhomb';
 import SendStep1 from './sendStep1/SendStep1';
@@ -11,14 +11,21 @@ import SendSummary from './sendSummary/SendSummary';
 
 import Decoration from '../../assets/icons/Decoration.svg';
 import Sweater from '../../assets/images/sweater.jpg';
+import {getCurrentstep} from '../../API/fetch';
 
 
 const  StepsBase = () => {
+    let [step, setStep] = useState(1);
+
+    useEffect(() => {
+       getCurrentstep(setStep);
+       console.log(step, "step z fetch w useeffect");
+    }, [])
     // const [step, setStep] = useState(1);
     // localStorage.setItem("step", 1)
-    let currentStep = localStorage.getItem("step");
-    console.log(currentStep);
-    console.log(localStorage.getItem("loggedIn"), "logged z local w steps");
+    // let currentStep = localStorage.getItem("step");
+    console.log(step, "step z fetch");
+    // console.log(localStorage.getItem("loggedIn"), "logged z local w steps");
     
     const StepHandler = ({step}) => {
        
@@ -84,7 +91,7 @@ const  StepsBase = () => {
                 <h3>Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy wiedzieli komu najlepiej je przekazać.</h3>
             </div>
             <div className="steps-bottom">          
-                <StepHandler step={currentStep} />
+                <StepHandler step={step} />
             </div>
         </div>
     )

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { nextStep } from '../../functionsStorage/functions';
+import { fetchSetStep, nextStep } from '../../functionsStorage/functions';
 import bear from '../../../assets/images/bear.jpg'
 import Icon1 from '../../../assets/icons/Icon-1.svg';
 import Icon4 from '../../../assets/icons/Icon-4.svg';
@@ -24,7 +24,7 @@ const  SendSummary = () => {
 
     const handleConfirm = () => {
         setOrderData(order);
-        nextStep(6);
+        fetchSetStep(6);
     }
 
     return (           
@@ -54,8 +54,8 @@ const  SendSummary = () => {
                         </div>                          
                       </div>      
                 <div className="step-form__buttons">
-                            <button onClick={() => nextStep(4)} className="btn steps-button">Wstecz</button>
-                            <button onClick={() => nextStep(6)} className="btn steps-button">Zatwierdź</button>
+                            <button onClick={() => fetchSetStep(4)} className="btn steps-button">Wstecz</button>
+                            <button onClick={handleConfirm} className="btn steps-button">Zatwierdź</button>
                         </div> 
                 </div>
                 <div className="step-bottom-right">

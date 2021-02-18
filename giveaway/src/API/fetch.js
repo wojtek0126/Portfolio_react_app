@@ -2,11 +2,29 @@
 import {API} from "./variables";
 import {Messages_API} from "./variables";
 
-export const getItems = (itemsToGet, successCallback) => {
-    fetch(`${API}/${itemsToGet}`)
+//need to minimize and purify these functions
+
+
+// export const getItems = (itemsToGet, successCallback) => {
+//     fetch(`${API}/${itemsToGet}`)
+//         .then(response => response.json())
+//         .then(data => {
+//             successCallback(data);
+//             if (data.error === false && typeof successCallback === "function") {
+//                 successCallback(data);
+//             }
+//         })
+//         .catch(error => {
+//             console.log(error);           
+//         });
+// }
+
+//get current step from json for order form
+export const getCurrentstep = (successCallback) => {
+    fetch(`${API}/currentStep`)
         .then(response => response.json())
         .then(data => {
-            successCallback(data);
+            successCallback(data[0].currentStep);
             if (data.error === false && typeof successCallback === "function") {
                 successCallback(data);
             }
@@ -81,8 +99,48 @@ export const postRegister = (registerData, successCallback) => {
         .catch(err => console.log(err));
 };
 
+//post order for currently logged user
+export const postOrder = (userId, registerData, successCallback) => {
+    fetch(`${API}/users/${userId}/orders`, {
+        headers: {
+            // "Authorization": API_KEY,
+            "Content-Type": "application/json",
+        },
+        method: "POST",
+        body: JSON.stringify(registerData)
+    })
+        .then(r => r.json())
+        .then(data => {            
+            if (data.error === false && typeof successCallback === "function") {
+                successCallback(data);             
+            }
+        })
+        .catch(err => console.log(err));
+};
+
+
+// sets if user is logged in or not
 export const setLoggedFetch = (itemData, successCallback) => {
     fetch(`${API}/loggedIn/1`, {
+        headers: {
+            // "Authorization": API_KEY,
+            "Content-Type": "application/json",
+        },
+        method: "PATCH",
+        body: JSON.stringify(itemData)
+    })
+        .then(r => r.json())
+        .then(data => {            
+            if (data.error === false && typeof successCallback === "function") {
+                successCallback(data);             
+            }
+        })
+        .catch(err => console.log(err));
+};
+
+//sets step number in order send steps using json
+export const setStepFetch = (itemData, successCallback) => {
+    fetch(`${API}/currentStep/1`, {
         headers: {
             // "Authorization": API_KEY,
             "Content-Type": "application/json",

@@ -17,8 +17,6 @@ const Login = () => {
     //     initClearErrorMessageEmail.innerHTML = "";
     //     initClearErrorMessagePassword.innerHTML = "";
     // },0);
-     
-
 
     return (
         <div className="login-container container-full">       

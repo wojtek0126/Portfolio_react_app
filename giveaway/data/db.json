@@ -120,6 +120,12 @@
       "id": 1
     }
   ],
+  "currentStep": [
+    {
+      "currentStep": 1,
+      "id": 1
+    }
+  ],
   "users": [
     {
       "userEmail": "ddd@fr.pl",
@@ -143,6 +149,12 @@
       "userPassword": "xxxxxx",
       "orders": [],
       "id": 4
+    },
+    {
+      "userEmail": "uuuuuutt@rrr.ll",
+      "userPassword": "vvvvvv",
+      "orders": [],
+      "id": 5
     }
   ]
 }

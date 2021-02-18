@@ -18,8 +18,6 @@ const LoginSuccesful = () => {
 
     fetchLogged(true);
 
-
-
     return (
         <div className="login-container container-full">       
             <div className="login-menu-container" >                   

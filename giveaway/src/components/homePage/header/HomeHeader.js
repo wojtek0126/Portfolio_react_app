@@ -11,46 +11,10 @@ const HomeHeader = () => {
    
     useEffect(() => {
         getLoggedBool(setLogged);    
-    }, [])
-
-   console.log(logged, "logged state homheder")
-
- 
-
-    // useEffect(() => {
-           
-    //     }
-    //     else {
-    //         console.log("pffffffffffffff");
-    //     }
-    // }, [])
-   
-
-    // const setArray = (state, array) => {  
-    //     state.map((e) => {
-    //         array.push(e);
-    //         console.log(e, "elem");
-    //         setLoggedData(e);        
-    //     })
-      
-    // }
-    // setTimeout(() => {
-        
-    // },100)
-   
-    
-    // let [logged, setLogged] = useState("");
-    
-    // useEffect(() => {
-        // setArray(logged, loggedBoolArray);
-    //   setLogged(localStorage.getItem("loggedIn"));
-    //   console.log(loggedBoolArray, "logged array w homeHeader outside effect");
-    // }, [])  
-
-     
-    // let isLoggedIn = logged;  
+    }, [])  
   
-    console.log(logged, "props do homeheadermenu z  homheder")
+    console.log(logged, "props do homeheadermenu z  home header");
+
     return (  
         <div className="header-container">
         <img src={header} className="header-left-side container-half" alt="header-left-img" />

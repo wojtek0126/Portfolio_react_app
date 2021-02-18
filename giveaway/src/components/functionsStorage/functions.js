@@ -1,4 +1,4 @@
-import { postRegister, replaceItem, sendItem, setLoggedFetch } from "../../API/fetch";
+import { postRegister, replaceItem, sendItem, setLoggedFetch, setStepFetch } from "../../API/fetch";
 
 //nullify state array after submit for submitHandlers in forms
 export const nullifyState = (setStateToClear) => {
@@ -47,10 +47,10 @@ export const loginCheckForMenuView = (localStorageitem) => {
 }
 
 //switch to next step in simple steps
-export const nextStep = (nextStepNumber) => {
-    localStorage.setItem("step", nextStepNumber);
-    window.location.reload();
-}
+// export const nextStep = (nextStepNumber) => {
+//     setStepFetch(nextStepNumber);
+//     window.location.reload();
+// }
 
 //pagination
 export const setPageNumbers = (orgType, orgsPerpage) => {
@@ -105,8 +105,15 @@ export  const handleChoice = param => (e) => {
 }   
 
 //for radio boxes in simple steps form
-export const handleRadioChoice = param => (e) => {
+//for step 1
+export const handleRadioChoice1 = param => (e) => {
     // e.preventDefault();
+    localStorage.setItem(param, e.target.id);
+    console.log(e.target.id);
+  }
+//for step 3
+  export const handleRadioChoice2 = param => (e) => {  
+    e.preventDefault(); 
     localStorage.setItem(param, e.target.id);
     console.log(e.target.id);
   }
@@ -131,6 +138,14 @@ export const handleRadioChoice = param => (e) => {
     }
     setLoggedFetch(loggedInIs);
   }
+
+    //change - fetch - patch order step number with this
+    export const fetchSetStep = (number) => {
+        let step = {
+            "currentStep": number
+        }
+        setStepFetch(step);
+      }
 
 
   //login validation
@@ -173,18 +188,20 @@ export const handleRadioChoice = param => (e) => {
         }           
      
         if (isPasswordVaild === true && isEmailValid === true){
-           console.log("przesłano pomyślnie");   
-            setLoggedIn(true);
-            localStorage.setItem("loggedIn", true);    
-             localStorage.setItem("step", 1)
+            console.log("przesłano pomyślnie");   
+            // setLoggedIn(true);
+            // localStorage.setItem("loggedIn", true);    
+            // localStorage.setItem("step", 1);
             fetchLogged(true);
+            fetchSetStep(1);
+
             window.location.href="/loginSuccesful";
         } 
         else {
-            console.log("login nieudany")
+            console.log("login nieudany");
             setLoggedIn(false);
             localStorage.setItem("loggedIn", false);
-        fetchLogged(false);
+            fetchLogged(false);
         }     
             nullifyState(setPasswordData);
             nullifyState(setEmailData);
@@ -202,7 +219,7 @@ export const handleRadioChoice = param => (e) => {
     } 
 
     //signup new user, send data to API
-    const registerNewuser = (userEmail, userPassword) => {
+    const registerNewUser = (userEmail, userPassword) => {
         const userData = {          
             "userEmail": userEmail,
             "userPassword": userPassword,
@@ -280,11 +297,13 @@ export const handleRadioChoice = param => (e) => {
             localStorage.setItem("loggedIn", true);    
             localStorage.setItem("step", 1);
             fetchLogged(true);
+            fetchSetStep(1);
             //fetch post here 
-            registerNewuser(emailData, passwordData); 
+            registerNewUser(emailData, passwordData); 
             setTimeout(() => {
                 window.location.href="/signUpSuccesful";   
-            },10);             
+            },10); 
+                       
         }      
             nullifyStateString(setPasswordData);
             nullifyStateString(setEmailData);
