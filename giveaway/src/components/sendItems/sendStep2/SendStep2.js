@@ -1,10 +1,17 @@
 import React from 'react';
-import { fetchSetStep, handleChoice, nextStep } from '../../functionsStorage/functions';
+import { fetchSetStep, handleChoice, setStep } from '../../functionsStorage/functions';
 import bear from '../../../assets/images/bear.jpg'
+import Contact from '../../homePage/contact/Contact';
+import HomeFooter from '../../homePage/footer/HomeFooter';
+// import { setStep } from '../../../API/fetch';
 
 const  SendStep2 = () => {  
-
-    return (           
+    // let step = {
+    //     "currentStep": 4
+    // }
+    // setStepFetch(step);
+    return (     
+        <>      
             <div className="step-bottom-container">
                 <div className="step-bottom-left">
                     <p>Krok 2/4</p>
@@ -20,15 +27,18 @@ const  SendStep2 = () => {
                                        </select>
                               </label>   
                            <div className="step-form__buttons">
-                            <button onClick={() => fetchSetStep(1)} className="btn steps-button">Wstecz</button>
-                            <button onClick={() => fetchSetStep(3)} className="btn steps-button">Dalej</button>
+                            <button onClick={setStep(1)} className="btn steps-button yellow-hover-btn">Wstecz</button>
+                            <button onClick={setStep(3)} className="btn steps-button yellow-hover-btn">Dalej</button>
                         </div>
                     </form>                    
                 </div>
                 <div className="step-bottom-right">
                     <img src={bear} alt="bear" className="container-full"/>
                 </div>
-            </div>       
+            </div>  
+            <Contact />
+            <HomeFooter />  
+            </>   
     )
 }
 

@@ -89,11 +89,11 @@
 }
 
 
-.who-we-help__list--paginate-list {
+.who-we-help__list--paginate-list { 
   display: inline;
   list-style: none;  
   margin: 3px;
-  border: 1px solid $color_black;
+  border: none;
     & a {
         text-decoration: none;
         padding: 5px;  

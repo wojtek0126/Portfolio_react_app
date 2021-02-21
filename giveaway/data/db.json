@@ -122,7 +122,7 @@
   ],
   "currentStep": [
     {
-      "currentStep": 1,
+      "currentStep": 3,
       "id": 1
     }
   ],
@@ -155,6 +155,12 @@
       "userPassword": "vvvvvv",
       "orders": [],
       "id": 5
+    },
+    {
+      "userEmail": "ftftft@ff.pl",
+      "userPassword": "dddddd",
+      "orders": [],
+      "id": 6
     }
   ]
 }

@@ -140,12 +140,12 @@ export const handleRadioChoice1 = param => (e) => {
   }
 
     //change - fetch - patch order step number with this
-    export const fetchSetStep = (number) => {
+    export const setStep = (stepNumber) => {
         let step = {
-            "currentStep": number
+            "currentStep": stepNumber
         }
         setStepFetch(step);
-      }
+    }
 
 
   //login validation
@@ -193,7 +193,7 @@ export const handleRadioChoice1 = param => (e) => {
             // localStorage.setItem("loggedIn", true);    
             // localStorage.setItem("step", 1);
             fetchLogged(true);
-            fetchSetStep(1);
+            setStep(1);
 
             window.location.href="/loginSuccesful";
         } 
@@ -297,7 +297,7 @@ export const handleRadioChoice1 = param => (e) => {
             localStorage.setItem("loggedIn", true);    
             localStorage.setItem("step", 1);
             fetchLogged(true);
-            fetchSetStep(1);
+            setStep(1);
             //fetch post here 
             registerNewUser(emailData, passwordData); 
             setTimeout(() => {

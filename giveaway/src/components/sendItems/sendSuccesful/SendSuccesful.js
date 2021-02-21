@@ -1,10 +1,13 @@
 import React from 'react';
 import bear from '../../../assets/images/bear.jpg'
 import Decoration from '../../../assets/icons/Decoration.svg';
+import Contact from '../../homePage/contact/Contact';
+import HomeFooter from '../../homePage/footer/HomeFooter';
 
 const  SendSuccesful = () => {  
 
-    return (           
+    return (   
+        <>        
             <div className="step-bottom-container">
                 <div className="step-bottom-left">
                   <p>Dziękujemy za przesłanie formularza. Na maila prześlemy wszelkie informacje o odbiorze</p>
@@ -13,7 +16,10 @@ const  SendSuccesful = () => {
                 <div className="step-bottom-right">
                     <img src={bear} alt="bear"/>
                 </div>
-            </div>       
+            </div> 
+               <Contact />
+               <HomeFooter />  
+               </>         
     )
 }
 

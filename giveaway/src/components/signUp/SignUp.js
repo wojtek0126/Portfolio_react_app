@@ -39,13 +39,13 @@ const SignUp = () => {
                         </label>
                     </div>
                     <div className="login-form-buttons-container" >    
-                        <button className="btn form-submit-button" onClick={handleSignUpSubmit(passwordData, passwordRepeatData, emailData,
+                        <button className="btn form-submit-button yellow-hover-btn" onClick={handleSignUpSubmit(passwordData, passwordRepeatData, emailData,
              setLoggedIn, setPasswordData, setPasswordRepeatData,setEmailData,
              `errorEmail`, `errorPassword`, `errorRepeatPassword`, `loginEmail2`,`loginPassword2`, `loginPasswordRepeat`, 
              `black`, `#DC143C`
             )}>Załóż konto</button>                    
                         <Link to="/login">
-                            <button className="btn form-submit-button">Zaloguj się</button>
+                            <button className="btn form-submit-button yellow-hover-btn">Zaloguj się</button>
                         </Link>                          
                     </div>                               
             </form>

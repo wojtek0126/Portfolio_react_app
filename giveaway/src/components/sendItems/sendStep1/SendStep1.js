@@ -1,36 +1,44 @@
 import React from 'react';
-import { nextStep, handleRadioChoice1, fetchSetStep } from '../../functionsStorage/functions';
+import { nextStep, handleRadioChoice1, fetchSetStep, handleRadioChoice2, setStep } from '../../functionsStorage/functions';
 import bear from '../../../assets/images/bear.jpg'
 import Contact from '../../homePage/contact/Contact';
 import HomeFooter from '../../homePage/footer/HomeFooter';
+// import { setStep } from '../../../API/fetch';
 
 const  SendStep1 = () => {
     //local storage item check in console
     console.log(localStorage.getItem("step"));    
+    // const setStep = (stepNumber) => {
+    //     let step = {
+    //         "currentStep": 2
+    //     }
+    //     setStepFetch(step);
+    // }
 
+  
     return (   
         <>        
             <div className="step-bottom-container container-full">
                 <div className="step-bottom-left">
                     <p>Krok 1/4</p>
-                    <form>                        
+                    <form className="step1-form">                        
                         <p>Zaznacz co chcesz oddać</p>
                         <label>
-                            <input type="radio" name="radio"  id="ubrania, które nadają się do ponownego użycia" onChange={handleRadioChoice1(`step`)}></input>ubrania, które nadają się do ponownego użycia
+                            <button className="radio-choice-button yellow-hover-btn" onClick={handleRadioChoice2(`step`)}></button>ubrania, które nadają się do ponownego użycia
                         </label>
                         <label>
-                            <input type="radio" name="radio" id="ubrania do wyrzucenia" onChange={handleRadioChoice1(`step`)}></input>ubrania do wyrzucenia
+                            <button className="radio-choice-button yellow-hover-btn" onClick={handleRadioChoice2(`step`)}></button>ubrania do wyrzucenia
                         </label>
                         <label>     
-                        <input type="radio" name="radio" id="zabawki" onChange={handleRadioChoice1(`step`)}></input>zabawki 
+                        <button className="radio-choice-button yellow-hover-btn" onClick={handleRadioChoice2(`step`)}></button>zabawki 
                         </label>
                         <label>
-                        <input type="radio" name="radio" id="książki"onChange={handleRadioChoice1(`step`)}></input>książki
+                        <button className="radio-choice-button yellow-hover-btn" onClick={handleRadioChoice2(`step`)}></button>książki
                         </label>
                         <label>
-                        <input type="radio" name="radio" id="inne" onChange={handleRadioChoice1(`step`)}></input>inne
+                        <button className="radio-choice-button yellow-hover-btn" onClick={handleRadioChoice2(`step`)}></button>inne
                         </label>                          
-                        <button className="btn steps-button" onClick={() => fetchSetStep(2)} >Dalej</button>
+                        <button className="btn steps-button yellow-hover-btn" onClick={setStep(2)} >Dalej</button>
                     </form>                    
                 </div>
                 <div className="step-bottom-right">

@@ -29,10 +29,10 @@ const HomeHeader = () => {
                     </div>
                 <div className="header-right-side--content__buttons">
                     <Link to="/login">
-                        <button className="btn header-button" href="">oddaj rzeczy</button>
+                        <button className="btn header-button yellow-hover-btn" href="">oddaj rzeczy</button>
                     </Link>
                     <Link to="/login">
-                        <button className="btn header-button" href="">zorganizuj zbiórkę</button>
+                        <button className="btn header-button yellow-hover-btn" href="">zorganizuj zbiórkę</button>
                     </Link>              
                 </div>
             </div>

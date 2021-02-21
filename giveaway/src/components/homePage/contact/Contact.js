@@ -34,7 +34,7 @@ const Contact = () => {
                             <textarea id="messageField" className="contact-form-input--input" onChange={handleValueInput(setMessageData)}></textarea>
                         </label> 
                     </div>                               
-                    <button className="btn form-submit-button">Wyślij</button>
+                    <button className="btn form-submit-button yellow-hover-btn">Wyślij</button>
                 </form>
             </div>
         </div>

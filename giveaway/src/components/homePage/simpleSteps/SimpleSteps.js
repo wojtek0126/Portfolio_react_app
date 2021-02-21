@@ -41,7 +41,7 @@ const SimpleSteps = () => {
             </div>
             <div className="simple-steps-bottom">
                 <Link to="/login">
-                    <button className="btn header-button">oddaj rzeczy</button>
+                    <button className="btn header-button yellow-hover-btn">oddaj rzeczy</button>
                 </Link>
              
             </div>

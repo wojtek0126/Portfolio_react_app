@@ -21,4 +21,18 @@
 
 .footer-icons--icon {
     height: 70%;
+    &:hover {
+        background-color: rgb(0, 238, 255);
+        transform: scale(1.2);
+        // border-radius: 4px;
+        border: none;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+}
 }

@@ -51,7 +51,7 @@
     padding: 10px 30px;
     font-size: 24px;
     font-weight: 400;
-    width: 208px;
+    width: 235px;
     text-align: center;
 }
 
@@ -79,3 +79,47 @@
     width: 180px;
     width: -moz-fit-content; 
  }
+
+ .choice-button {
+    padding: 10px 20px;     
+    margin: 1px; 
+    border: 0.75px solid $color_black;   
+    font-size: 18px;  
+    font-weight: 300;
+    background-color: $color_white; 
+    width: -moz-fit-content; 
+    width: 200px;
+    height: 60px;
+    font-size: 16px;
+ }
+
+ .radio-choice-button {
+     margin-right: 10px;
+     width: 30px;
+     height: 30px;
+     border: 1px solid $color_black;
+     border-radius: 2px;
+     -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+     -ms-border-radius: 2px;
+     -o-border-radius: 2px;
+     &:hover {
+         background-color: $color3_yellowish;
+     }
+     &:focus {
+        background-color: $color3_yellowish;
+     }
+
+}
+
+.yellow-hover-btn {     
+    border: 1px solid $color_black;
+    padding: 10px;
+    &:hover {
+        background-color: $color3_yellowish;
+    }
+    &:focus {
+        background-color: $color3_yellowish;
+    }
+}
+

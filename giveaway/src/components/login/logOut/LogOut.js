@@ -29,7 +29,7 @@ const LogOut = () => {
             </div>     
             <div className="login-form-buttons-container" >                        
                 <Link to="/home">
-                    <button className="btn form-submit-button" >Strona główna</button>
+                    <button className="btn form-submit-button yellow-hover-btn" >Strona główna</button>
                 </Link>                     
             </div>              
         </div>

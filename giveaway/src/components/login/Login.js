@@ -40,9 +40,9 @@ const Login = () => {
                     </div>
                     <div className="login-form-buttons-container" >                                     
                         <Link to="/signUp">
-                             <button className="btn form-submit-button">Załóż konto</button>
+                             <button className="btn form-submit-button yellow-hover-btn">Załóż konto</button>
                         </Link>   
-                        <button className="btn form-submit-button" onClick={
+                        <button className="btn form-submit-button yellow-hover-btn" onClick={
                  handleLoginValidation(passwordData, emailData,
                      setLoggedIn, setPasswordData, setEmailData,
                     `errorMessageEmail`, `errorMessagePassword`, `loginEmail`,`loginPassword`,

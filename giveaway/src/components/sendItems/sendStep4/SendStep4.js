@@ -1,28 +1,40 @@
 import React from 'react';
-import { fetchSetStep, handleChoice, nextStep } from '../../functionsStorage/functions';
+import { handleChoice, nextStep, setStep } from '../../functionsStorage/functions';
 import bear from '../../../assets/images/bear.jpg'
+import Contact from '../../homePage/contact/Contact';
+import HomeFooter from '../../homePage/footer/HomeFooter';
+import { setStepFetch } from '../../../API/fetch';
 
 const  SendStep4 = () => {  
-
-    return (           
+    // const fetchSetStep = (number) => (e) => {
+    //     // e.preventDefault();
+    //     let step = {
+    //         "currentStep": number
+    //     }
+    //     setStepFetch(step);
+    //     // window.location.reload();
+    //   }
+    //   fetchSetStep(5);
+    return (   
+        <>        
             <div className="step-bottom-container">
-                <div className="step-bottom-left">
+                <div className="step4-bottom-left">
                     <p>Krok 4/4</p>
                     <form>
                         <p>Podaj adres oraz termin odbiorurzeczy przez kuriera</p>                              
                         <div className="step4-form__container">
                             <div className="step4-form__left">
                                 <span className="step3-paragraph">Adres odbioru:</span>
-                                    <label>Ulica
+                                    <label className="step4-label">Ulica
                                         <input type="text" onChange={handleChoice("street")} ></input>
                                     </label>
-                                    <label>Miasto
+                                    <label className="step4-label">Miasto
                                         <input type="text" onChange={handleChoice("city")}></input>
                                     </label>
-                                    <label>Kod pocztowy
+                                    <label className="step4-label">Kod pocztowy
                                         <input id="zip" name="zip" type="text" pattern="[0-9]*" onChange={handleChoice("postCode")}></input>
                                     </label>
-                                    <label>Numer telefonu
+                                    <label className="step4-label">Numer telefonu
                                         <input input type="tel" id="phone" name="phone"
                                             pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                                             required onChange={handleChoice("tel")}></input>
@@ -30,27 +42,30 @@ const  SendStep4 = () => {
                                 </div>                        
                                 <div className="step4-form__right">
                                     <span className="step3-paragraph">Termin odbioru:</span>
-                                    <label>Data
+                                    <label className="step4-label">Data
                                         <input type="date" onChange={handleChoice("date")}></input>
                                     </label>
-                                    <label>Godzina
+                                    <label className="step4-label">Godzina
                                         <input type="time" onChange={handleChoice("time")}></input>
                                     </label>
-                                    <label>Uwagi do kuriera
+                                    <label className="step4-label">Uwagi do kuriera
                                         <textarea onChange={handleChoice("extraNotes")}></textarea>
                                     </label>                                    
                                 </div>  
                             </div>                                     
                         <div className="step-form__buttons">
-                            <button onClick={() => fetchSetStep(3)} className="btn steps-button">Wstecz</button>
-                            <button onClick={() => fetchSetStep(5)} className="btn steps-button">Dalej</button>
+                            <button onClick={setStep(3)} className="btn steps-button yellow-hover-btn">Wstecz</button>
+                            <button onClick={setStep(5)} className="btn steps-button yellow-hover-btn">Dalej</button>
                         </div>                  
                     </form>                    
                 </div>
                 <div className="step-bottom-right">
                     <img src={bear} alt="bear" className="container-full"/>
                 </div>
-            </div>       
+            </div>  
+               <Contact />
+               <HomeFooter />  
+               </>        
     )
 }
 

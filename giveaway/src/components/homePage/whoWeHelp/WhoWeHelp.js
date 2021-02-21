@@ -34,9 +34,9 @@ const pageNumbers = setPageNumbers(orgType, orgsPerpage);
                 <p className="about-decorated-text--large">Komu pomagamy?</p>
                 <img src={Decoration} alt="decor" className="who-we-help-top__decoration" />
                 <div className="who-we-help-top__options">
-                    <button id="startingDisplay" className="btn who-we-help--button" onClick={() => handleChangeOrg(orgList, setOrgType, setCurrentpage)}>Fundacjom</button>
-                    <button className="btn who-we-help--button" onClick={() => handleChangeOrg(fundList, setOrgType, setCurrentpage)}>Organizacjom pozarządowym</button>
-                    <button className="btn who-we-help--button" onClick={() => handleChangeOrg(charList, setOrgType, setCurrentpage)}>Lokalnym zbiórkom</button>
+                    <button id="startingDisplay" className="btn who-we-help--button yellow-hover-btn" onClick={() => handleChangeOrg(orgList, setOrgType, setCurrentpage)}>Fundacjom</button>
+                    <button className="btn who-we-help--button yellow-hover-btn" onClick={() => handleChangeOrg(fundList, setOrgType, setCurrentpage)}>Organizacjom pozarządowym</button>
+                    <button className="btn who-we-help--button yellow-hover-btn" onClick={() => handleChangeOrg(charList, setOrgType, setCurrentpage)}>Lokalnym zbiórkom</button>
                 </div> 
                 <p className="who-we-help-top__text">W naszej bazie znajdziesz listę zweryfikowanych Fundacji, 
                     z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.
@@ -71,7 +71,7 @@ const pageNumbers = setPageNumbers(orgType, orgsPerpage);
                         return ( 
                         <li id="pagination" className="who-we-help__list--paginate-list" key={number}>
                             <Link to="/whoWeHelp">
-                                <a onClick={() => paginate(number, setCurrentpage)} href="!#">{number}</a>
+                                <button className="btn yellow-hover-btn" onClick={() => paginate(number, setCurrentpage)} href="!#">{number}</button>
                             </Link>
                         </li> 
                            )             
