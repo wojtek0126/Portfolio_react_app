@@ -3,11 +3,12 @@ import { nextStep, handleRadioChoice1, fetchSetStep, handleRadioChoice2, setStep
 import bear from '../../../assets/images/bear.jpg'
 import Contact from '../../homePage/contact/Contact';
 import HomeFooter from '../../homePage/footer/HomeFooter';
+import { Link } from 'react-router-dom';
 // import { setStep } from '../../../API/fetch';
 
 const  SendStep1 = () => {
     //local storage item check in console
-    console.log(localStorage.getItem("step"));    
+    // console.log(localStorage.getItem("step"));    
     // const setStep = (stepNumber) => {
     //     let step = {
     //         "currentStep": 2
@@ -37,12 +38,14 @@ const  SendStep1 = () => {
                         </label>
                         <label>
                         <button className="radio-choice-button yellow-hover-btn" onClick={handleRadioChoice2(`step`)}></button>inne
-                        </label>                          
-                        <button className="btn steps-button yellow-hover-btn" onClick={setStep(2)} >Dalej</button>
+                        </label>   
+                        <Link to="/step2">
+                         <button className="btn steps-button yellow-hover-btn" type="submit" onClick={() => setStep(3)} >Dalej</button>
+                        </Link>                          
                     </form>                    
                 </div>
                 <div className="step-bottom-right">
-                    <img className="container-full" src={bear} alt="bear"/>
+                    <img className="container-full" src={bear} alt="bear" className="steps-bear-img"/>
                 </div>
                     
             </div>   

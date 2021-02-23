@@ -59,7 +59,7 @@ img {
     }
 }
 
-.simple-steps-decoration {
+.simple-steps-decoration1 {
     margin-left: 10px;
     transform: scale(0.5) translate(155px, 20px);
     margin-right: 60px;
@@ -67,6 +67,17 @@ img {
     -moz-transform: scale(0.5) translate(155px, 20px);
     -ms-transform: scale(0.5) translate(155px, 20px);
     -o-transform: scale(0.5) translate(155px, 20px);
+    background-color: $color_whiteish;
+}
+
+.simple-steps-decoration2 {
+    margin-left: 10px;
+    transform: scale(0.5) translate(155px, 20px);
+    margin-right: 75px;
+    -webkit-transform: scale(0.5) translate(165px, 5px);
+    -moz-transform: scale(0.5) translate(165px, 5px);
+    -ms-transform: scale(0.5) translate(165px, 5px);
+    -o-transform: scale(0.5) translate(165px, 5px);
     background-color: $color_whiteish;
 }
 

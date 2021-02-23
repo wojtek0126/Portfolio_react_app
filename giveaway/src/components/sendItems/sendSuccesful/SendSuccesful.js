@@ -9,12 +9,12 @@ const  SendSuccesful = () => {
     return (   
         <>        
             <div className="step-bottom-container">
-                <div className="step-bottom-left">
-                  <p>Dziękujemy za przesłanie formularza. Na maila prześlemy wszelkie informacje o odbiorze</p>
-                  <img src={Decoration} alt="decor" className="header-right-side--content__decoration" />        
+                <div className="step-succesful-message">
+                  <p className="step-successful-text">Dziękujemy za przesłanie formularza. Na maila prześlemy wszelkie informacje o odbiorze</p>
+                  <img src={Decoration} alt="decor" className="step-success__decoration" />        
                 </div>
                 <div className="step-bottom-right">
-                    <img src={bear} alt="bear"/>
+                    <img src={bear} alt="bear" className="steps-bear-img"/>
                 </div>
             </div> 
                <Contact />

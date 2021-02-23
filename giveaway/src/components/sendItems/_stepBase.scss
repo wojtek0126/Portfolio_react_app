@@ -3,15 +3,13 @@
     width: 100vw;
     height: 90vh;
     display: flex;
-    flex-direction: column;
-    
-    
+    flex-direction: column;       
 }
 
 .steps-top {
     display: flex;
     flex-direction: row;
-    // margin-bottom: -25px;   
+    margin-bottom: -3px;       
 }
 
 .steps-top-left {
@@ -80,6 +78,10 @@
         font-size: 22px;
         font-weight: 400;
     }
+    & a {
+        text-decoration: none;
+        color: $color_black;
+    }
 }
 
 // .step2-form {    
@@ -147,6 +149,7 @@
 //     display: flex;
 // }
 
-.container-full {
+.steps-bear-img {
     height: 100vh;
+    max-width: 100vw;
 }

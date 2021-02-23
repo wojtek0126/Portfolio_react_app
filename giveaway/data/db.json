@@ -120,18 +120,7 @@
       "id": 1
     }
   ],
-  "currentStep": [
-    {
-      "currentStep": 3,
-      "id": 1
-    }
-  ],
   "users": [
-    {
-      "userEmail": "ddd@fr.pl",
-      "userPassword": "FFFFFF",
-      "id": 1
-    },
     {
       "userEmail": "qaz@ee.pl",
       "userPassword": "ssssss",
@@ -161,6 +150,12 @@
       "userPassword": "dddddd",
       "orders": [],
       "id": 6
+    },
+    {
+      "userEmail": "ss@ww.ll",
+      "userPassword": "yyyyyy",
+      "orders": [],
+      "id": 7
     }
   ]
 }

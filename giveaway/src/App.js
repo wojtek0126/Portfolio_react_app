@@ -6,12 +6,12 @@ import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import StepsBase from "./components/sendItems/StepsBase";
 import LoginSuccesful from "./components/login/LoginSuccesful.js";
 import SignUpSuccesful from "./components/signUp/SignUpSuccesful.js";
-// import SendStep1 from "./components/sendItems/sendStep1/SendStep1";
-// import SendStep2 from "./components/sendItems/sendStep2/SendStep2";
-// import SendStep3 from "./components/sendItems/sendStep3/SendStep3";
-// import SendStep4 from "./components/sendItems/sendStep4/SendStep4";
-// import SendSummary from "./components/sendItems/sendSummary/SendSummary";
-// import SendSuccesful from "./components/sendItems/sendSuccesful/SendSuccesful";
+import StepsBase2 from "./components/sendItems/StepBase2.js";
+import StepsBase3 from "./components/sendItems/StepBase3.js";
+import StepsBase4 from "./components/sendItems/StepBase4.js";
+import StepsBase5 from "./components/sendItems/StepBase5.js";
+import StepsBase6 from "./components/sendItems/StepBase6.js";
+
 
 function App() {
   return (
@@ -20,12 +20,16 @@ function App() {
         <Switch>
           <Route path="/home" component={Home} />           
           <Route path="/login" component={Login} />
-          <Route path="/signUp" component={SignUp} />
-          {/* /wylogowano below is eqivalent to /logOut, in polish lang due to project requirements */}
-          <Route path="/wylogowano" component={LogOut} /> 
+          <Route path="/signUp" component={SignUp} />        
+          <Route path="/logout" component={LogOut} /> 
           <Route path="/loginSuccesful" component={LoginSuccesful} /> 
           <Route path="/signUpSuccesful" component={SignUpSuccesful} /> 
-          <Route path="/steps" component={StepsBase} />      
+          <Route path="/step1" component={StepsBase} />  
+          <Route path="/step2" component={StepsBase2} /> 
+          <Route path="/step3" component={StepsBase3} /> 
+          <Route path="/step4" component={StepsBase4} />           
+          <Route path="/stepSummary" component={StepsBase5} /> 
+          <Route path="/stepsSuccess" component={StepsBase6} />     
           <Route path="/" component={Home} />  
         </Switch>         
       </Router> 

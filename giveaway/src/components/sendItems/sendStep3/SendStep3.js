@@ -3,6 +3,7 @@ import { nextStep, handleChoice, handleOverrideRadioWithText, handleRadioChoice2
 import bear from '../../../assets/images/bear.jpg'
 import Contact from '../../homePage/contact/Contact';
 import HomeFooter from '../../homePage/footer/HomeFooter';
+import { Link } from 'react-router-dom';
 
 const  SendStep3 = () => {   
      
@@ -33,13 +34,17 @@ const  SendStep3 = () => {
                             <input type="text" onChange={handleOverrideRadioWithText(`receiver`)}></input>
                         </p>
                 <div className="step-form__buttons">
-                            <button onClick={setStep(2)} className="btn steps-button yellow-hover-btn">Wstecz</button>
-                            <button onClick={setStep(4)} className="btn steps-button yellow-hover-btn">Dalej</button>
+                <Link to="/step2">
+                    <button className="btn steps-button yellow-hover-btn">Wstecz</button>
+                </Link>
+                <Link to="/step4">
+                    <button className="btn steps-button yellow-hover-btn">Dalej</button>
+                </Link>                           
                         </div>
                     </form>                    
                 </div>
                 <div className="step-bottom-right">
-                    <img src={bear} alt="bear" className="container-full"/>
+                    <img src={bear} alt="bear" className="steps-bear-img"/>
                 </div>
             </div>  
             <Contact />

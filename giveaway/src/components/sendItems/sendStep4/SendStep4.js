@@ -4,6 +4,7 @@ import bear from '../../../assets/images/bear.jpg'
 import Contact from '../../homePage/contact/Contact';
 import HomeFooter from '../../homePage/footer/HomeFooter';
 import { setStepFetch } from '../../../API/fetch';
+import { Link } from 'react-router-dom';
 
 const  SendStep4 = () => {  
     // const fetchSetStep = (number) => (e) => {
@@ -37,7 +38,7 @@ const  SendStep4 = () => {
                                     <label className="step4-label">Numer telefonu
                                         <input input type="tel" id="phone" name="phone"
                                             pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                            required onChange={handleChoice("tel")}></input>
+                                            onChange={handleChoice("tel")}></input>
                                     </label>
                                 </div>                        
                                 <div className="step4-form__right">
@@ -54,13 +55,17 @@ const  SendStep4 = () => {
                                 </div>  
                             </div>                                     
                         <div className="step-form__buttons">
-                            <button onClick={setStep(3)} className="btn steps-button yellow-hover-btn">Wstecz</button>
-                            <button onClick={setStep(5)} className="btn steps-button yellow-hover-btn">Dalej</button>
+                        <Link to="/step3">
+                            <button className="btn steps-button yellow-hover-btn">Wstecz</button>
+                        </Link>
+                        <Link to="/stepSummary">
+                            <button className="btn steps-button yellow-hover-btn">Dalej</button>
+                        </Link>                       
                         </div>                  
                     </form>                    
                 </div>
                 <div className="step-bottom-right">
-                    <img src={bear} alt="bear" className="container-full"/>
+                    <img src={bear} alt="bear" className="steps-bear-img"/>
                 </div>
             </div>  
                <Contact />

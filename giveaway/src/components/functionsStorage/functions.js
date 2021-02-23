@@ -140,11 +140,17 @@ export const handleRadioChoice1 = param => (e) => {
   }
 
     //change - fetch - patch order step number with this
-    export const setStep = (stepNumber) => {
+    export const setStep = (stepNumber) => (e) => {
+        e.preventDefault();
         let step = {
             "currentStep": stepNumber
         }
-        setStepFetch(step);
+        setTimeout(() => {
+            setStepFetch(step);
+            // window.location.reload();  
+        }, 20);   
+        window.location.reload();  
+          
     }
 
 

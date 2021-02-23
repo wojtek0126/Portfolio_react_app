@@ -25,10 +25,10 @@ const HomeHeaderMenu = ({homeOrLogin, loggedIn}) => {
             <div className="login-menu-container">
                  <div className="login-menu__top">
                  <p className="login-menu__welcome">Witaj, {userName}</p>
-                        <Link2 to="/steps">
+                        <Link2 to="/step1">
                             <button className="btn menu-top-button" href="">Oddaj rzeczy</button>
                         </Link2> 
-                        <Link2 to="/wylogowano">
+                        <Link2 to="/logout">
                             <button onClick={logOut(logged, `loggedIn`)} className="btn menu-top-button" href="">Wyloguj</button>
                         </Link2>                   
                     </div>  
@@ -88,10 +88,10 @@ const HomeHeaderMenu = ({homeOrLogin, loggedIn}) => {
                 <div className="login-menu-container">
                  <div className="login-menu__top">
                  <p className="login-menu__welcome">Witaj, {userName}</p>
-                        <Link2 to="/steps">
+                        <Link2 to="/step1">
                             <button className="btn menu-top-button" href="">Oddaj rzeczy</button>
                         </Link2> 
-                        <Link2 to="/wylogowano">
+                        <Link2 to="/logout">
                             <button onClick={logOut(logged, `loggedIn`)} className="btn menu-top-button" href="">Wyloguj</button>
                         </Link2>                   
                     </div>  

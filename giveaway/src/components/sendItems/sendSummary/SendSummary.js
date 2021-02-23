@@ -5,6 +5,7 @@ import Icon1 from '../../../assets/icons/Icon-1.svg';
 import Icon4 from '../../../assets/icons/Icon-4.svg';
 import Contact from '../../homePage/contact/Contact';
 import HomeFooter from '../../homePage/footer/HomeFooter';
+import { Link } from 'react-router-dom';
 
 const  SendSummary = () => {  
     let [orderData, setOrderData] = useState([]);
@@ -27,8 +28,8 @@ const  SendSummary = () => {
 
     const handleConfirm = (order, confirmStep = 6) => {
         setOrderData(order);
-
         setStep(confirmStep);
+        window.location.reload();
     }
 
     return (       
@@ -39,17 +40,16 @@ const  SendSummary = () => {
                       <div className="step-summary">
                             
                             <div className="step-summary-items">
-                                <img src={Icon1} alt="ic1" className="simple-steps-decoration"/>
+                                <img src={Icon1} alt="ic1" className="simple-steps-decoration1"/>
                                 <div className="step-summary__list">
                                     <span>Oddajesz:</span>
                                     <p>{order.bags} worki, {order.itemName}, {order.receiver}</p>
                                 </div>                               
                             </div>                            
                                 <div className="step-summary-items">
-                                <img src={Icon4} alt="ic4" className="simple-steps-decoration" />
-                                    <div className="step-summary__list">
-                                        <span>Do lokalizacji:</span>
-                                        <p> {order.localization}</p>
+                                <img src={Icon4} alt="ic4" className="simple-steps-decoration2" />
+                                    <div className="step-summary__list">                                       
+                                        <p>Do lokalizacji: {order.localization}</p>
                                     </div>                                 
                         </div>    
                       </div>
@@ -67,14 +67,18 @@ const  SendSummary = () => {
                         </div>                          
                       </div>      
                         <div className="step-form__buttons">
-                            <button onClick={setStep(4)} className="btn steps-button yellow-hover-btn">Wstecz</button>
-                            <button onClick={() => handleConfirm(order)} className="btn steps-button yellow-hover-btn">Zatwierdź</button>
+                        <Link to="/step4">
+                         <button className="btn steps-button yellow-hover-btn">Wstecz</button>
+                        </Link>
+                        <Link to="/stepsSuccess">
+                         <button className="btn steps-button yellow-hover-btn">Zatwierdź</button>
+                        </Link>                           
                         </div> 
                 </div>
                </div> 
             
                 <div className="step-bottom-right">
-                    <img src={bear} alt="bear"/>
+                    <img src={bear} alt="bear" className="steps-bear-img" />
                 </div>
             </div>  
                <Contact />

@@ -1,69 +1,18 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import HomeHeaderMenu from '../atoms/commonRenders/HomeHeaderMenu';
 import Rhomb from './Rhomb';
 import SendStep1 from './sendStep1/SendStep1';
-import SendStep2 from './sendStep2/SendStep2';
-import SendStep3 from './sendStep3/SendStep3';
-import SendStep4 from './sendStep4/SendStep4';
-import SendSuccesful from './sendSuccesful/SendSuccesful';
-import SendSummary from './sendSummary/SendSummary';
-
-
 import Decoration from '../../assets/icons/Decoration.svg';
 import Sweater from '../../assets/images/sweater.jpg';
-import {getCurrentstep} from '../../API/fetch';
-
+import StepsMiddlePart from './sendItemsFragments/StepsMiddlePart';
+import StepsTopPart from './sendItemsFragments/StepsTopPart';
 
 const  StepsBase = () => {
-    let [step, setStep] = useState(1);
-
-    useEffect(() => {
-       getCurrentstep(setStep);
-       console.log(step, "step z fetch w useeffect");
-    }, [])
-    // const [step, setStep] = useState(1);
-    // localStorage.setItem("step", 1)
-    // let currentStep = localStorage.getItem("step");
-    console.log(step, "step z fetch");
-    // console.log(localStorage.getItem("loggedIn"), "logged z local w steps");
-    
-    const StepHandler = ({step}) => {
-       
-        if (step === "1" || step === 1) {
-            return (
-                <SendStep1 />
-            )
-        }
-        else if (step === "2" || step === 2) {
-            return (
-                <SendStep2 />
-            )
-        }
-        else if (step === "3" || step === 3) {
-            return (
-                <SendStep3 />
-            )
-        }
-        else if (step === "4" || step === 4) {
-            return (
-                <SendStep4 />
-            )
-        }
-        else if (step === "5" || step === 5) {
-            return (
-                <SendSummary />
-            )
-        }
-        else if (step === "6" || step === 6) {
-            return (
-                <SendSuccesful />
-            )
-        }
-    }
 
     return (
         <div className="steps-container">
-            <div className="steps-top">
+            <StepsTopPart homeOrLogin={"notHome"} loggedIn={true}/>
+            {/* <div className="steps-top">
                 <div className="steps-top-left">
                 <img src={Sweater} className="steps-left-side--img" alt="steps-top-left-img" />
                 </div>
@@ -85,13 +34,11 @@ const  StepsBase = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="steps-middle ">
-                <h1>Ważne!</h1>
-                <h3>Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy wiedzieli komu najlepiej je przekazać.</h3>
-            </div>
-            <div className="steps-bottom">          
-                <StepHandler step={step} />
+            </div> */}
+            <StepsMiddlePart text={`Uzupełnij szczegóły dotyczące Twoich rzeczy. 
+            Dzięki temu będziemy wiedzieli komu najlepiej je przekazać.`}/>           
+            <div className="steps-bottom">           
+                 <SendStep1 />
             </div>
         </div>
     )

@@ -1,0 +1,27 @@
+.step-successful-text {
+    width: 39vw;
+    text-align: center;
+    margin-top: 240px;
+}
+
+.step-succesful-message {
+    position: absolute;
+    // width: 50%;
+    margin-left: 115px;
+    display: flex;
+    flex-direction: column;
+    & p {
+        padding-top: 20px;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 2;
+    }
+    & img {
+        transform: scale(0.5);
+        -webkit-transform: scale(0.5);
+        -moz-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+        -o-transform: scale(0.5);
+    }
+}
+
