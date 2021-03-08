@@ -1,21 +1,13 @@
 import React from 'react';
-import { handleChoice, nextStep, setStep } from '../../functionsStorage/functions';
-import bear from '../../../assets/images/bear.jpg'
 import Contact from '../../homePage/contact/Contact';
 import HomeFooter from '../../homePage/footer/HomeFooter';
-import { setStepFetch } from '../../../API/fetch';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
+import BearImage from '../sendItemsFragments/BearImage';
+import StepsNavButton from '../sendItemsFragments/StepsNavButton';import InputField from '../sendItemsFragments/InputField';
+import TextArea from '../sendItemsFragments/TextArea';
 
 const  SendStep4 = () => {  
-    // const fetchSetStep = (number) => (e) => {
-    //     // e.preventDefault();
-    //     let step = {
-    //         "currentStep": number
-    //     }
-    //     setStepFetch(step);
-    //     // window.location.reload();
-    //   }
-    //   fetchSetStep(5);
+
     return (   
         <>        
             <div className="step-bottom-container">
@@ -25,48 +17,30 @@ const  SendStep4 = () => {
                         <p>Podaj adres oraz termin odbiorurzeczy przez kuriera</p>                              
                         <div className="step4-form__container">
                             <div className="step4-form__left">
-                                <span className="step3-paragraph">Adres odbioru:</span>
-                                    <label className="step4-label">Ulica
-                                        <input type="text" onChange={handleChoice("street")} ></input>
-                                    </label>
-                                    <label className="step4-label">Miasto
-                                        <input type="text" onChange={handleChoice("city")}></input>
-                                    </label>
-                                    <label className="step4-label">Kod pocztowy
-                                        <input id="zip" name="zip" type="text" pattern="[0-9]*" onChange={handleChoice("postCode")}></input>
-                                    </label>
-                                    <label className="step4-label">Numer telefonu
-                                        <input input type="tel" id="phone" name="phone"
-                                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                            onChange={handleChoice("tel")}></input>
-                                    </label>
+                                <span className="step3-paragraph">Adres odbioru:</span>                            
+                                    <InputField label={`Ulica`} type={"text"} savePoint={"street"} />                             
+                                    <InputField label={`Miasto`} type={"text"} savePoint={"city"} />                            
+                                    <InputField label={`Kod pocztowy`} type={"text"} savePoint={"postCode"} pattern={"[0-9]*"} />                               
+                                    <InputField label={`Numer telefonu`} type={"tel"} savePoint={"tel"} pattern={"[0-9]{3}-[0-9]{3}-[0-9]{4}"} />
                                 </div>                        
                                 <div className="step4-form__right">
-                                    <span className="step3-paragraph">Termin odbioru:</span>
-                                    <label className="step4-label">Data
-                                        <input type="date" onChange={handleChoice("date")}></input>
-                                    </label>
-                                    <label className="step4-label">Godzina
-                                        <input type="time" onChange={handleChoice("time")}></input>
-                                    </label>
-                                    <label className="step4-label">Uwagi do kuriera
-                                        <textarea onChange={handleChoice("extraNotes")}></textarea>
-                                    </label>                                    
+                                    <span className="step3-paragraph">Termin odbioru:</span>                                 
+                                    <InputField label={`Data`} type={"date"} savePoint={"date"} />                                   
+                                    <InputField label={`Godzina`} type={"time"} savePoint={"time"} />                                  
+                                    <TextArea label={`Uwagi do kuriera`} savePoint={"extraNotes"} />                                  
                                 </div>  
                             </div>                                     
                         <div className="step-form__buttons">
                         <Link to="/step3">
-                            <button className="btn steps-button yellow-hover-btn">Wstecz</button>
+                            <StepsNavButton text={`Wstecz`} />
                         </Link>
                         <Link to="/stepSummary">
-                            <button className="btn steps-button yellow-hover-btn">Dalej</button>
+                            <StepsNavButton text={`Dalej`} />
                         </Link>                       
                         </div>                  
                     </form>                    
                 </div>
-                <div className="step-bottom-right">
-                    <img src={bear} alt="bear" className="steps-bear-img"/>
-                </div>
+              <BearImage />
             </div>  
                <Contact />
                <HomeFooter />  

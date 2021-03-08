@@ -1,45 +1,39 @@
 import React from 'react';
-import { fetchSetStep, handleChoice, setStep } from '../../functionsStorage/functions';
-import bear from '../../../assets/images/bear.jpg'
 import Contact from '../../homePage/contact/Contact';
 import HomeFooter from '../../homePage/footer/HomeFooter';
 import { Link } from 'react-router-dom';
-// import { setStep } from '../../../API/fetch';
+import BearImage from '../sendItemsFragments/BearImage';
+import StepsNavButton from '../sendItemsFragments/StepsNavButton';
+import SelectOptionsField from '../sendItemsFragments/SelectOptionsField';
 
 const  SendStep2 = () => {  
-    // let step = {
-    //     "currentStep": 4
-    // }
-    // setStepFetch(step);
+  
     return (     
         <>      
             <div className="step-bottom-container">
                 <div className="step-bottom-left">
                     <p>Krok 2/4</p>
                     <form className="step2-form">
-                        <p>Podaj liczbę 60l worków, w które spakowałeś rzeczy</p>                    
-                          <label>Liczba 60l worków
-                          <select  onChange={handleChoice("bags")}>
-                                           <option>1</option>
-                                           <option>2</option>
-                                           <option>3</option>
-                                           <option>4</option>
-                                           <option>5</option>
-                                       </select>
-                              </label>   
+                        <p>Podaj liczbę 60l worków, w które spakowałeś rzeczy</p>                          
+                           <SelectOptionsField fieldClassName={`step2-form--input`} sNametext={`Liczba 60l worków`}
+                           savePoint={`bags`}
+                           option1={1}
+                           option2={2}
+                           option3={3}
+                           option4={4}
+                           option5={5}
+                           />
                            <div className="step-form__buttons">
                             <Link to="/step1">
-                                <button  className="btn steps-button yellow-hover-btn">Wstecz</button>
+                                <StepsNavButton text={`Wstecz`} />
                             </Link>
                             <Link to="/step3">
-                                <button className="btn steps-button yellow-hover-btn">Dalej</button>
+                                <StepsNavButton text={`Dalej`} />
                             </Link>
                         </div>
                     </form>                    
                 </div>
-                <div className="step-bottom-right">
-                    <img src={bear} alt="bear" className="steps-bear-img" />
-                </div>
+              <BearImage />
             </div>  
             <Contact />
             <HomeFooter />  

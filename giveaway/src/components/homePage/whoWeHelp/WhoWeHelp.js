@@ -1,8 +1,10 @@
 import React, {useState, useEffect} from 'react';
-import Decoration from '../../../assets/icons/Decoration.svg';
 import {Link} from 'react-router-dom';
-import { preparedForPagination, showHidePagination, handleChangeOrg, paginate, setPageNumbers, setClicked } from '../../functionsStorage/functions';
-import { getOrgs } from '../../../API/fetch';
+import {preparedForPagination, showHidePagination, handleChangeOrg, paginate, setPageNumbers, setClicked} from '../../functionsStorage/functions';
+import {getOrgs} from '../../../API/fetch';
+import MediumButton from '../../atoms/buttons/MediumButton';
+import PaginateButton from '../../atoms/buttons/PaginateButton';
+import LargeTxtWithDecor from '../homePageFragments/LargeTxtWithDecor';
 
 const WhoWeHelp = () => {
     //get data here
@@ -15,7 +17,7 @@ const WhoWeHelp = () => {
     let orgsPerpage = 3;
     
     useEffect(() => {
-        //fetch objects withfrom db.json 
+        //fetch objects with from db.json 
         getOrgs(`localCharities`, setCharList);
         getOrgs(`organizations`, setOrgList);
         getOrgs(`foundations`, setFundList);      
@@ -30,13 +32,12 @@ const pageNumbers = setPageNumbers(orgType, orgsPerpage);
 
     return (        
         <div className="who-we-help-container container-full" id="whoWeHelp">
-            <div className="who-we-help-top">
-                <p className="about-decorated-text--large">Komu pomagamy?</p>
-                <img src={Decoration} alt="decor" className="who-we-help-top__decoration" />
-                <div className="who-we-help-top__options">
-                    <button id="startingDisplay" className="btn who-we-help--button yellow-hover-btn" onClick={() => handleChangeOrg(orgList, setOrgType, setCurrentpage)}>Fundacjom</button>
-                    <button className="btn who-we-help--button yellow-hover-btn" onClick={() => handleChangeOrg(fundList, setOrgType, setCurrentpage)}>Organizacjom pozarządowym</button>
-                    <button className="btn who-we-help--button yellow-hover-btn" onClick={() => handleChangeOrg(charList, setOrgType, setCurrentpage)}>Lokalnym zbiórkom</button>
+            <div className="who-we-help-top">               
+                <LargeTxtWithDecor text={`Komu pomagamy?`} />
+                <div className="who-we-help-top__options">     
+                    <MediumButton  id={"startingDisplay"} text={`Fundacjom`} onClick={() => handleChangeOrg(orgList, setOrgType, setCurrentpage)} />
+                    <MediumButton  text={`Organizacjom pozarządowym`} onClick={() => handleChangeOrg(fundList, setOrgType, setCurrentpage)} />
+                    <MediumButton  text={`Lokalnym zbiórkom`} onClick={() => handleChangeOrg(charList, setOrgType, setCurrentpage)} />
                 </div> 
                 <p className="who-we-help-top__text">W naszej bazie znajdziesz listę zweryfikowanych Fundacji, 
                     z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.
@@ -71,7 +72,7 @@ const pageNumbers = setPageNumbers(orgType, orgsPerpage);
                         return ( 
                         <li id="pagination" className="who-we-help__list--paginate-list" key={number}>
                             <Link to="/whoWeHelp">
-                                <button className="btn yellow-hover-btn" onClick={() => paginate(number, setCurrentpage)} href="!#">{number}</button>
+                                <PaginateButton numberOfPage={number} onClick={() => paginate(number, setCurrentpage)} />                                
                             </Link>
                         </li> 
                            )             

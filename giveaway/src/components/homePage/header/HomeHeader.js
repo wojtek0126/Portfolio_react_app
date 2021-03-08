@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
-import header from '../../../assets/images/header.jpg';
-import Decoration from '../../../assets/icons/Decoration.svg';
 import {Link} from 'react-router-dom';
-import HomeHeaderMenu from '../../atoms/commonRenders/HomeHeaderMenu';
-import { getItems, getLoggedBool } from '../../../API/fetch';
-
+import {getLoggedBool} from '../../../API/fetch';
+import AppMenu from '../../appMenu/AppMenu';
+import BigUppercaseBtn from '../../atoms/buttons/BigUppercaseBtn';
+import HomeHeaderImage from '../homePageFragments/HomeHeaderImage';
+import LargeTxtWithDecor from '../homePageFragments/LargeTxtWithDecor';
 
 const HomeHeader = () => { 
     let [logged, setLogged] = useState("");
@@ -17,22 +17,19 @@ const HomeHeader = () => {
 
     return (  
         <div className="header-container">
-        <img src={header} className="header-left-side container-half" alt="header-left-img" />
+            <HomeHeaderImage />
         <div className="header-right-side container-half">
             <div className="login-menu-container">                     
-                    <HomeHeaderMenu homeOrLogin={"home"} loggedIn={logged} />              
+                    <AppMenu homeOrLogin={"home"} loggedIn={logged} />              
             </div>
-            <div className="header-right-side--content">
-                <div className="header-right-side--content__text">
-                    <h2 className="decorated-text--large">Zacznij pomagać!<br/> Oddaj niechciane rzeczy w zaufane ręce</h2>                    
-                    <img src={Decoration} alt="decor" className="header-right-side--content__decoration" />
-                    </div>
+            <div className="header-right-side--content">                
+                    <LargeTxtWithDecor text={`Zacznij pomagać!`} textSecondLine={` Oddaj niechciane rzeczy w zaufane ręce`} />
                 <div className="header-right-side--content__buttons">
                     <Link to="/login">
-                        <button className="btn header-button yellow-hover-btn" href="">oddaj rzeczy</button>
+                        <BigUppercaseBtn text={`oddaj rzeczy`} />
                     </Link>
                     <Link to="/login">
-                        <button className="btn header-button yellow-hover-btn" href="">zorganizuj zbiórkę</button>
+                        <BigUppercaseBtn text={`zorganizuj zbiórkę`} />                     
                     </Link>              
                 </div>
             </div>

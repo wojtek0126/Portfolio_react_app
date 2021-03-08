@@ -1,19 +1,19 @@
 import React from 'react';
-import Decoration from '../../../assets/icons/Decoration.svg';
-import Signature from '../../../assets/icons/Signature.svg';
-import People from '../../../assets/images/People.jpg';
+import Decoration from '../../atoms/commonIcons/Decoration';
+import FacesImage from '../homePageFragments/FacesImage';
+import LargeTxtWithDecor from '../homePageFragments/LargeTxtWithDecor';
+import SignatureImage from '../homePageFragments/SignatureImage';
 
 const About = () => {
     return (
         <div className="about-container" id="aboutUs">
             <div className="about-left-side container-half">
-                <p className="about-decorated-text--large">O nas</p>
-                <img src={Decoration} alt="decor" className="about-left-side__decoration" />
+              <LargeTxtWithDecor text={`O nas`} />
                 <p className="about-left-side__text">Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. 
                     Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
-                <img src={Signature} alt="signature" className="about-left-side__signature" />
+                <SignatureImage />
             </div>         
-            <img src={People} className="about-right-side__img container-half" alt="about-right-img" />            
+            <FacesImage />         
         </div>
     )
 }

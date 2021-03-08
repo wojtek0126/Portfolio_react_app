@@ -1,8 +1,10 @@
 import React, {useState, useEffect} from 'react';
-import Decoration from '../../assets/icons/Decoration.svg';
 import {Link} from 'react-router-dom';
 import {handleEmailInput, handleSignUpSubmit, handleValueInput} from '../functionsStorage/functions';
-import HomeHeaderMenu from '../atoms/commonRenders/HomeHeaderMenu';
+import AppMenu from '../appMenu/AppMenu';
+import SmallButton from '../atoms/buttons/SmallButton';
+import LargeTxtWithDecor from '../homePage/homePageFragments/LargeTxtWithDecor';
+import LoginSignUpInput from '../login/loginFragments/LoginSignUpInput';
 
 const SignUp = () => {
     let [emailData, setEmailData] = useState("");
@@ -17,35 +19,26 @@ const SignUp = () => {
     return (
         <div className="login-container container-full">       
             <div className="login-menu-container" >            
-              <HomeHeaderMenu homeOrLogin={"notHome"} loggedIn={loggedIn}/>
+              <AppMenu homeOrLogin={"notHome"} loggedIn={loggedIn}/>
             </div>   
             <div className="login-text-container">
-                <h1 className="login-text">Załóż konto</h1>
-                <img src={Decoration} alt="decor" className="who-we-help-top__decoration" />
+                <LargeTxtWithDecor text={`Załóż konto`} />            
             </div>           
             <form >
-                    <div className="login-form-container">
-                        <label className="login-form-top">Email
-                            <input id="loginEmail2" type="email" onChange={handleEmailInput(setEmailData, `loginName`)}></input>
-                            <p id="errorEmail" className="login-email--error-message"></p>
-                        </label>
-                        <label>Hasło
-                            <input id="loginPassword2" type="password" onChange={handleValueInput(setPasswordData)}></input>
-                            <p id="errorPassword" className="login-password--error-message"></p>
-                        </label>
-                        <label>Powtórz hasło
-                            <input id="loginPasswordRepeat" type="password" onChange={handleValueInput(setPasswordRepeatData)}></input>
-                            <p id="errorRepeatPassword" className="login-confirm-password--error-message"></p>
-                        </label>
-                    </div>
-                    <div className="login-form-buttons-container" >    
-                        <button className="btn form-submit-button yellow-hover-btn" onClick={handleSignUpSubmit(passwordData, passwordRepeatData, emailData,
-             setLoggedIn, setPasswordData, setPasswordRepeatData,setEmailData,
-             `errorEmail`, `errorPassword`, `errorRepeatPassword`, `loginEmail2`,`loginPassword2`, `loginPasswordRepeat`, 
-             `black`, `#DC143C`
-            )}>Załóż konto</button>                    
+            <LoginSignUpInput onChangeEmail={handleEmailInput(setEmailData, `loginName`)}
+                              onChangePassword={handleValueInput(setPasswordData)}
+                              onChangeRepeat={handleValueInput(setPasswordRepeatData)} 
+                              errEmailId={ `errorEmail`} errPassId={`errorPassword`} errRepeatPassId={`errorRepeatPassword`} 
+                              emailId={`loginEmail2`} passId={`loginPassword2`} repeatPassId={`loginPasswordRepeat`}
+                              />                 
+                    <div className="login-form-buttons-container" >                
+                        <SmallButton text={`Załóż konto`} onClick={handleSignUpSubmit(passwordData, passwordRepeatData, emailData,
+                         setLoggedIn, setPasswordData, setPasswordRepeatData,setEmailData,
+                         `errorEmail`, `errorPassword`, `errorRepeatPassword`, `loginEmail2`,`loginPassword2`, `loginPasswordRepeat`, 
+                         `black`, `#DC143C`
+                        )} />                
                         <Link to="/login">
-                            <button className="btn form-submit-button yellow-hover-btn">Zaloguj się</button>
+                           <SmallButton text={`Zaloguj się`} />
                         </Link>                          
                     </div>                               
             </form>

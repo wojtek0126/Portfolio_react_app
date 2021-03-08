@@ -141,7 +141,7 @@ export const handleRadioChoice1 = param => (e) => {
 
     //change - fetch - patch order step number with this
     export const setStep = (stepNumber) => (e) => {
-        e.preventDefault();
+        // e.preventDefault();
         let step = {
             "currentStep": stepNumber
         }
@@ -240,6 +240,9 @@ export const handleRadioChoice1 = param => (e) => {
         emailInputId, passwordInputId, passwordRepeatInputId
         , errorColor2, validColor2) => (e) => {
         e.preventDefault();
+        // setTimeout(() => {
+
+        // }, 10)
         const emailErrorMessage = document.getElementById(emailErrMessageId);
         const passwordErrorMessage = document.getElementById(passwordErrMessageId);
         const confirmPasswordErrorMessage = document.getElementById(passwordRepeatErrMessageId);
@@ -252,6 +255,9 @@ export const handleRadioChoice1 = param => (e) => {
         let isPasswordVaild = false;
         let isPasswordConfirmed = false;
         let isEmptyInput = true;
+        // if (passwordErrorMessage === null) {
+        //     window.location.reload();
+        // }
 
        if (emailData === null || passwordData === null || passwordRepeatData === null) {
            isEmptyInput = true;         

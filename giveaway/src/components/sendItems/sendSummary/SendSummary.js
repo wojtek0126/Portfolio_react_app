@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
-import { fetchSetStep, nextStep, setStep } from '../../functionsStorage/functions';
-import bear from '../../../assets/images/bear.jpg'
+import {setStep} from '../../functionsStorage/functions';
 import Icon1 from '../../../assets/icons/Icon-1.svg';
 import Icon4 from '../../../assets/icons/Icon-4.svg';
 import Contact from '../../homePage/contact/Contact';
 import HomeFooter from '../../homePage/footer/HomeFooter';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
+import BearImage from '../sendItemsFragments/BearImage';
+import StepsNavButton from '../sendItemsFragments/StepsNavButton';
 
 const  SendSummary = () => {  
     let [orderData, setOrderData] = useState([]);
@@ -68,18 +69,15 @@ const  SendSummary = () => {
                       </div>      
                         <div className="step-form__buttons">
                         <Link to="/step4">
-                         <button className="btn steps-button yellow-hover-btn">Wstecz</button>
+                            <StepsNavButton text={`Wstecz`} />
                         </Link>
                         <Link to="/stepsSuccess">
-                         <button className="btn steps-button yellow-hover-btn">Zatwierdź</button>
+                            <StepsNavButton text={`Zatwierdź`} />
                         </Link>                           
                         </div> 
                 </div>
-               </div> 
-            
-                <div className="step-bottom-right">
-                    <img src={bear} alt="bear" className="steps-bear-img" />
-                </div>
+               </div>             
+              <BearImage />
             </div>  
                <Contact />
                <HomeFooter />  

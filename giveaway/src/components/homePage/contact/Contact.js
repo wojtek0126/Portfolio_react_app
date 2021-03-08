@@ -1,8 +1,11 @@
 import React, {useState} from 'react';
-import Decoration from '../../../assets/icons/Decoration.svg';
-import BackgroundContactForm from '../../../assets/images/Background-Contact-Form.jpg';
 import {handleMessageSubmit, handleValueInput} from '../../functionsStorage/functions';
-import { sendMessage } from '../../../API/fetch';
+import {sendMessage} from '../../../API/fetch';
+import SmallButton from '../../atoms/buttons/SmallButton';
+import ContactFormImage from '../homePageFragments/ContactFormImage';
+import LargeTxtWithDecor from '../homePageFragments/LargeTxtWithDecor';
+import InputField2 from '../../atoms/formElements/InputField2';
+import TextArea2 from '../../atoms/formElements/Textarea2';
 
 const Contact = () => {
     let [nameData, setNameData] = useState([]);
@@ -12,29 +15,25 @@ const Contact = () => {
     return (
         <div className="contact-container container-full" id="contact">
             <div className="contact-left-side">
-                <img className="contact-left-side__image" src={BackgroundContactForm} alt="form-background"/>                
+              <ContactFormImage />             
             </div>
-            <div className="contact-right-side">
-                <p className="about-decorated-text--large">Skontaktuj się z nami</p>
-                    <img src={Decoration} alt="decor" className="who-we-help-top__decoration" />
+            <div className="contact-right-side">               
+                 <LargeTxtWithDecor text={`Skontaktuj się z nami`} />
                 <form className="contact-form" onSubmit={handleMessageSubmit(nameData, emailData, messageData,
                                                                             `nameField`, `emailField`, `messageField`, 
                                                                              sendMessage,
                                                                              setNameData, setEmailData, setMessageData)}>
                     <div className="contact-form-fields">
-                        <label className="contact-form-input--label">Wpisz swoje imię
-                            <input id="nameField" className="contact-form-input--input" type="name" name="firstName" onChange={handleValueInput(setNameData)}></input>
-                            </label>
-                        <label className="contact-form-input--label">Wpisz swój email
-                            <input id="emailField" className="contact-form-input--input" type="email" onChange={handleValueInput(setEmailData)}></input>
-                        </label>                                             
+                        <InputField2 id={"nameField"} classNameLabel={"contact-form-input--label"} label={`Wpisz swoje imię`}
+                         classNameInput={"contact-form-input--input"} type={"name"} name={`firstName`} onChange={handleValueInput(setNameData)} />                     
+                        <InputField2 id={"emailField"} classNameLabel={"contact-form-input--label"} label={`Wpisz swój email`}
+                         classNameInput={"contact-form-input--input"} type={"email"} onChange={handleValueInput(setEmailData)} />                                            
                     </div>      
-                    <div className="contact-form-fields">
-                    <label className="contact-form-input--label">Wpisz swoją wiadomość
-                            <textarea id="messageField" className="contact-form-input--input" onChange={handleValueInput(setMessageData)}></textarea>
-                        </label> 
+                    <div className="contact-form-fields">                  
+                        <TextArea2 id={"messageField"} label={`Wpisz swoją wiadomość`}
+                         classNameLabel={"contact-form-input--label"} classNameInput={"contact-form-input--input"} onChange={handleValueInput(setMessageData)} />
                     </div>                               
-                    <button className="btn form-submit-button yellow-hover-btn">Wyślij</button>
+                    <SmallButton text={`Wyślij`} />
                 </form>
             </div>
         </div>
