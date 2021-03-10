@@ -38,3 +38,9 @@ body {
 .container-w60 {
     max-width: 40vw;
 }
+
+@media (max-width: 750px) {
+    body {
+        margin-left: 0px;
+    }
+}

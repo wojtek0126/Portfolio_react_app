@@ -26,3 +26,34 @@
      flex-direction: row;
      justify-content: end;   
  }
+
+ .burger {
+     display: none;
+     width: 55px;
+     height: 45px;
+     border: 3px solid $color_black;
+     border: 3px solid $color_black;
+    //  display: flex;
+     justify-content: center;
+     align-items: center;    
+      &:before {
+          content: "MENU";     
+          font-weight: bolder;  
+         
+        
+    }
+}
+
+@media (max-width: 750px) {
+    .burger {
+        display: flex;
+    }
+
+    .menu-top-button {
+        display: none;
+    }
+
+    .login-menu__bottom {
+        display: none;
+    }
+}

@@ -67,3 +67,29 @@
     font-size: 38px;
     font-weight: 400;
 }
+
+@media (max-width: 750px) {
+    .decorated-text--large {
+        font-size: 33px;     
+    }
+
+    .header-left-side {
+        display: none;
+     }
+
+     .header-right-side {
+        //  margin-left: 65px;
+     }
+}
+
+@media (max-width: 750px) {
+    .decorated-text--large {
+        width: 42vw;
+    }
+
+    .header-right-side--content__text {      
+        // margin-left: -20px;
+    }
+
+}
+

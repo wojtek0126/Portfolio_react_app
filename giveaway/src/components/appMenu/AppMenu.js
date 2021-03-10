@@ -6,24 +6,26 @@ import {logOut} from '../functionsStorage/functions';
 import {getLoggedBool} from '../../API/fetch';
 import MenuButtonSmall from './MenuButtonSmall';
 import MenuButtonLarger from './MenuButtonLarger';
+import Burger from './RWD/Burger';
 
 
 //prop loggedIn is taken from components: login, signup, logout, homeheader, steps(all) - from where menu is
 const AppMenu = ({homeOrLogin, loggedIn}) => {  
     let [logged, setLogged] = useState([]);
+
     useEffect(() => {
         getLoggedBool(setLogged);       
     
     }, [])
+    
    console.log(logged, "logged state homhederMenu");
 
     let userName = localStorage.getItem("loginName");
    
     localStorage.setItem("NextStep", 1);     
-
    
         return (          
-            <div className="login-menu-container">
+            <div className="login-menu-container">                
                 <div className="login-menu__top">
                    {(() => {
                if (loggedIn === true || loggedIn === "true" ) {
@@ -52,6 +54,7 @@ const AppMenu = ({homeOrLogin, loggedIn}) => {
                   )
               }            
             })()}
+                <Burger />
             </div>            
                 <div className="login-menu__bottom ">
                 {(() => {

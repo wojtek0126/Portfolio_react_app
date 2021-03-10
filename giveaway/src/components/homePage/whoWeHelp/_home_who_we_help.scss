@@ -101,3 +101,9 @@
         font-weight: 400;   
     }
 }
+
+@media (max-width: 750px) {
+    .who-we-help-container {      
+        margin-top: 0;    
+    }
+}

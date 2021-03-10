@@ -28,3 +28,20 @@
     font-weight: 300;
     width: 25vw;
 }
+
+@media (max-width: 750px) {
+    .three-columns-container { 
+        flex-direction: column;
+        width: 85%;
+        margin: auto;
+        margin-left: 20px;
+    }
+    .three-columns-column--text {
+        margin: auto;
+    }
+
+    .three-columns-column--heading {
+        width: 60vw;
+    }
+}
+
