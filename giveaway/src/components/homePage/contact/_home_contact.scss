@@ -9,9 +9,7 @@
 .contact-left-side__image {
     opacity: 0.5;
     width: 100vw;
- 
-    
-
+    height: 100vh;
 }
 
 .contact-right-side {
@@ -59,13 +57,50 @@
 }
 
 @media (max-width: 750px) {
+    .contact-container {        
+        height: unset; 
+        position: relative;  
+        flex-direction: column;     
+    }
+
     .contact-left-side {
-        display: none;
+        display: block;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .contact-left-side__image {
+        height: 50vh;
+        opacity: 0.3;
     }
 
     .contact-right-side {
         position: unset;
-        margin-top: -500px;
+        width: 100vw;
+        // margin-top: -500px;
+    }
+
+    .contact-paragraph-above-decor {
+        // margin-left: 50px;
+        // margin-top: 95px;
+
+    }
+
+    .contact-form-fields {      
+        flex-direction: column;
+       
+    }
+
+    .contact-form {     
+        // align-items: baseline;
+        // flex-direction: column;
+        // margin-left: 75px;     
+        z-index: 1;
+    }
+   
+
+    .contact-form-input--label {      
+        // margin: 10px 0;        
     }
  
 }

@@ -7,7 +7,8 @@ import SimpleStep from '../homePageFragments/SimpleStep';
 const SimpleSteps = () => {
     return (
         <div className="simple-steps-container container-full" id="simpleSteps">        
-            <LargeTxtWithDecor text={`Wystarczą 4 proste kroki`} />
+            <LargeTxtWithDecor text={`Wystarczą 4 proste kroki`} className={`decorated-text--large`} 
+            wrapperClass={`header-right-side--content__text`}/>
             <div className="simple-steps-middle">              
                 <SimpleStep headTxt={`Wybierz rzeczy`} mainTxt={`ubrania, zabawki, sprzęt i inne`} icon={`shirt`} />
                 <SimpleStep headTxt={`Spakuj je`} mainTxt={`skorzystaj z worków na śmieci`} icon={`bag`} />

@@ -32,16 +32,32 @@
 @media (max-width: 750px) {
     .three-columns-container { 
         flex-direction: column;
-        width: 85%;
-        margin: auto;
-        margin-left: 20px;
+        padding: 0;
+        // border-top: 0.5px solid $color_black;
+        // border-bottom: 0.5px solid $color_black;
+        // width: 85%;
+        // margin: auto;
+        // margin-left: 20px;
     }
     .three-columns-column--text {
-        margin: auto;
+        // margin: auto;
+        width: 90vw;
     }
 
     .three-columns-column--heading {
-        width: 60vw;
+        width: unset;
+    }
+
+    .three-columns-column {
+        border-top: 0.5px solid $color_black;
+        border-bottom: 0.5px solid $color_black;
+    }
+
+    .three-columns-column--number {
+        font-size: 70px;
+        margin-top: 20px;
+        margin-bottom: 0;
+        font-weight: 300;
     }
 }
 

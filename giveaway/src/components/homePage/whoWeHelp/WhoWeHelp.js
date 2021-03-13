@@ -33,7 +33,8 @@ const pageNumbers = setPageNumbers(orgType, orgsPerpage);
     return (        
         <div className="who-we-help-container container-full" id="whoWeHelp">
             <div className="who-we-help-top">               
-                <LargeTxtWithDecor text={`Komu pomagamy?`} />
+                <LargeTxtWithDecor text={`Komu pomagamy?`} className={`decorated-text--large`} 
+                wrapperClass={`header-right-side--content__text`}/>
                 <div className="who-we-help-top__options">     
                     <MediumButton  id={"startingDisplay"} text={`Fundacjom`} onClick={() => handleChangeOrg(orgList, setOrgType, setCurrentpage)} />
                     <MediumButton  text={`Organizacjom pozarządowym`} onClick={() => handleChangeOrg(fundList, setOrgType, setCurrentpage)} />
@@ -70,11 +71,15 @@ const pageNumbers = setPageNumbers(orgType, orgsPerpage);
                             }
                         }, 0);                    
                         return ( 
-                        <li id="pagination" className="who-we-help__list--paginate-list" key={number}>
+                        <div id="pagination" className="who-we-help__list--paginate-list" key={number}>
                             <Link to="/whoWeHelp">
-                                <PaginateButton numberOfPage={number} onClick={() => paginate(number, setCurrentpage)} />                                
+                                <PaginateButton id={"pagination"}
+                                 numberOfPage={number}
+                                 className={"btn yellow-hover-btn"}
+                                 href={"!#"}
+                                 onClick={() => paginate(number, setCurrentpage)} />                                
                             </Link>
-                        </li> 
+                        </div> 
                            )             
                     })
                 }</div>           

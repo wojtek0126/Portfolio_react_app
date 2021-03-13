@@ -6,6 +6,7 @@ import ContactFormImage from '../homePageFragments/ContactFormImage';
 import LargeTxtWithDecor from '../homePageFragments/LargeTxtWithDecor';
 import InputField2 from '../../atoms/formElements/InputField2';
 import TextArea2 from '../../atoms/formElements/Textarea2';
+import HomeFooter from '../footer/HomeFooter';
 
 const Contact = () => {
     let [nameData, setNameData] = useState([]);
@@ -18,7 +19,8 @@ const Contact = () => {
               <ContactFormImage />             
             </div>
             <div className="contact-right-side">               
-                 <LargeTxtWithDecor text={`Skontaktuj się z nami`} />
+                 <LargeTxtWithDecor text={`Skontaktuj się z nami`} className={`decorated-text--large`}
+                 wrapperClass={`header-right-side--content__text contact-paragraph-above-decor`} />
                 <form className="contact-form" onSubmit={handleMessageSubmit(nameData, emailData, messageData,
                                                                             `nameField`, `emailField`, `messageField`, 
                                                                              sendMessage,
@@ -36,6 +38,7 @@ const Contact = () => {
                     <SmallButton text={`Wyślij`} />
                 </form>
             </div>
+            <HomeFooter />
         </div>
     )
 }

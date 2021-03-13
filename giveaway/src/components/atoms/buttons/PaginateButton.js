@@ -1,9 +1,10 @@
 import React from 'react';
 
-const PaginateButton = ({onClick, numberOfPage}) => {
+const PaginateButton = ({onClick, numberOfPage, id, className, href}) => {
     return (
-        <button className="btn yellow-hover-btn" onClick={onClick} href="!#">{numberOfPage}</button>
+        <button className={className} id={id} onClick={onClick} href={href}>{numberOfPage}</button>
     )
 }
 
 export default PaginateButton;
+

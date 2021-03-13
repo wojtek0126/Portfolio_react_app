@@ -104,6 +104,43 @@
 
 @media (max-width: 750px) {
     .who-we-help-container {      
-        margin-top: 0;    
+        // margin-top: -60px; 
+        // margin-left: -10px;  
+        margin-bottom: -70px; 
+        height: unset;
     }
+
+    .who-we-help-top__options {        
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .who-we-help-top__text {
+        width: 90vw;
+        font-size: 18px;
+    }
+
+    .who-we-help__list--text-left {
+        max-width: 120px;
+        font-size: 12px;  
+     
+    }
+    
+    .who-we-help__list--text-right {
+        max-width: 120px;
+        font-size: 12px;  
+        text-align: end;
+        
+    }
+
+    .who-we-help__list--name {       
+        font-size: 18px;       
+    }
+
+
+    // margin-top: -260px;
+    // margin-left: -25px;
+    // width: 60vw;
 }

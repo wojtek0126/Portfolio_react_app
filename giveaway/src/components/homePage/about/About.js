@@ -7,7 +7,7 @@ const About = () => {
     return (
         <div className="about-container" id="aboutUs">
             <div className="about-left-side">
-              <LargeTxtWithDecor text={`O nas`} />
+              <LargeTxtWithDecor text={`O nas`} className={`decorated-text--large`} wrapperClass={`header-right-side--content__text`}/>
                 <p className="about-left-side__text">Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. 
                     Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
                 <SignatureImage />

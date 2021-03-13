@@ -23,7 +23,8 @@ const HomeHeader = () => {
                     <AppMenu homeOrLogin={"home"} loggedIn={logged} />              
             </div>
             <div className="header-right-side--content">                
-                    <LargeTxtWithDecor text={`Zacznij pomagać!`} textSecondLine={` Oddaj niechciane rzeczy w zaufane ręce`} />
+                    <LargeTxtWithDecor text={`Zacznij pomagać!`} textSecondLine={` Oddaj niechciane rzeczy w zaufane ręce`} 
+                      className={`decorated-text--large`} wrapperClass={`header-right-side--content__text`} />
                 <div className="header-right-side--content__buttons">
                     <Link to="/login">
                         <BigUppercaseBtn text={`oddaj rzeczy`} />
