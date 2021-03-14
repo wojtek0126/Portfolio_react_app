@@ -1,15 +1,14 @@
-import React, {useState} from 'react';
-import {setStep} from '../../functionsStorage/functions';
+import React from 'react';
+// import {setStep} from '../../functionsStorage/functions';
 import Icon1 from '../../../assets/icons/Icon-1.svg';
 import Icon4 from '../../../assets/icons/Icon-4.svg';
 import Contact from '../../homePage/contact/Contact';
-import HomeFooter from '../../homePage/footer/HomeFooter';
 import {Link} from 'react-router-dom';
 import BearImage from '../sendItemsFragments/BearImage';
 import StepsNavButton from '../sendItemsFragments/StepsNavButton';
 
 const  SendSummary = () => {  
-    let [orderData, setOrderData] = useState([]);
+    // let [orderData, setOrderData] = useState([]);
     // let [userId, setUserId] = useState([]);
     const order = 
     {
@@ -27,11 +26,11 @@ const  SendSummary = () => {
     }
     console.log(order);
 
-    const handleConfirm = (order, confirmStep = 6) => {
-        setOrderData(order);
-        setStep(confirmStep);
-        window.location.reload();
-    }
+    // const handleConfirm = (order, confirmStep = 6) => {
+    //     setOrderData(order);
+    //     setStep(confirmStep);
+    //     window.location.reload();
+    // }
 
     return (       
         <>    
@@ -79,8 +78,7 @@ const  SendSummary = () => {
                </div>             
               <BearImage />
             </div>  
-               <Contact />
-               <HomeFooter />  
+               <Contact />              
                </>        
     )
 }

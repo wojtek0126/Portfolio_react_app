@@ -5,7 +5,6 @@ import SimpleSteps from "./simpleSteps/SimpleSteps.js";
 import About from "./about/About.js";
 import WhoWeHelp from "./whoWeHelp/WhoWeHelp.js";
 import Contact from "./contact/Contact.js";
-import HomeFooter from "./footer/HomeFooter.js";
 
 const Home = () => {
     console.log(localStorage.getItem("loggedIn"), "czy jest zalogowane zmienna z localstorage");
@@ -16,8 +15,7 @@ const Home = () => {
         <SimpleSteps />       
         <About />
         <WhoWeHelp />
-        <Contact />
-        {/* <HomeFooter /> */}
+        <Contact />     
        </>
     )
 }

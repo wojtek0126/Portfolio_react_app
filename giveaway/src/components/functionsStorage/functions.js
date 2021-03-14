@@ -1,4 +1,4 @@
-import { postRegister, replaceItem, sendItem, setLoggedFetch, setStepFetch } from "../../API/fetch";
+import { postRegister, setLoggedFetch, setStepFetch } from "../../API/fetch";
 
 //nullify state array after submit for submitHandlers in forms
 export const nullifyState = (setStateToClear) => {
@@ -164,8 +164,8 @@ export const handleRadioChoice1 = param => (e) => {
                 const passwordErrorMessage = document.getElementById(passwordErrorMessageId);
                 const emailInputField = document.getElementById(emailInputId);
                 const passwordInputField = document.getElementById(passwordInputId);
-                const errorColor = errorColor1;
-                const validColor = validColor1;   
+                // const errorColor = errorColor1;
+                // const validColor = validColor1;   
         
         let isEmailValid = false;
         let isPasswordVaild = false;
@@ -249,8 +249,8 @@ export const handleRadioChoice1 = param => (e) => {
         const emailInputField = document.getElementById(emailInputId);        
         const passwordInputField = document.getElementById(passwordInputId);
         const passwordRepeatInputField = document.getElementById(passwordRepeatInputId);
-        const errorColor = errorColor2;
-        const validColor = validColor2;
+        // const errorColor = errorColor2;
+        // const validColor = validColor2;
         let isEmailValid = false;
         let isPasswordVaild = false;
         let isPasswordConfirmed = false;

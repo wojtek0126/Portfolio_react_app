@@ -1,6 +1,5 @@
 import React from 'react';
 import Contact from '../../homePage/contact/Contact';
-import HomeFooter from '../../homePage/footer/HomeFooter';
 import DecorWithTxtBig from '../../molecules/DecorWithTxtBig';
 import BearImage from '../sendItemsFragments/BearImage';
 
@@ -14,8 +13,7 @@ const  SendSuccesful = () => {
                 </div>
             <BearImage />
             </div> 
-               <Contact />
-               <HomeFooter />  
+               <Contact />            
                </>         
     )
 }

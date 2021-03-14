@@ -14,7 +14,7 @@ const SignUp = () => {
     
     useEffect(() => {
         localStorage.setItem("loggedIn", loggedIn);
-    }, [])
+    }, [loggedIn])
    
     return (
         <div className="login-container container-full">       

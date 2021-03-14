@@ -24,36 +24,106 @@
      width: 683px;
      display: flex;
      flex-direction: row;
-     justify-content: end;   
+     justify-content: flex-end;   
  }
 
  .burger {
-     display: none;
-     width: 55px;
-     height: 45px;
-     border: 3px solid $color_black;
-     border: 3px solid $color_black;
-    //  display: flex;
-     justify-content: center;
-     align-items: center;    
-      &:before {
-          content: "MENU";     
-          font-weight: bolder;  
-         
-        
-    }
+     display: none;      
+}
+
+.burger1-clicked {
+    transition: 1s;
+    width: 55px;
+    display: block;
+    border-bottom: 5px solid $color_black;
+    transform: rotate(35deg) translate(5px, 1px);
+    -webkit-transform: rotate(35deg) translate(5px, 1px);
+    -moz-transform: rotate(35deg) translate(5px, 1px);
+    -ms-transform: rotate(35deg) translate(5px, 1px);
+    -o-transform: rotate(35deg) translate(5px, 1px);
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.burger2-clicked {
+    transition: 1s;
+    width: 55px;
+    border-bottom: 5px solid $color_black;
+    display: block;
+    transform: rotate(-35deg) translate(1px, -2px);
+    -webkit-transform: rotate(-35deg) translate(1px, -2px);
+    -moz-transform: rotate(-35deg) translate(1px, -2px);
+    -ms-transform: rotate(-35deg) translate(1px, -2px);
+    -o-transform: rotate(-35deg) translate(1px, -2px);
 }
 
 @media (max-width: 750px) {
     .burger {
+        // transition: 1s;
+        // -webkit-transition: 1s;
+        // -moz-transition: 1s;
+        // -ms-transition: 1s;
+        // -o-transition: 1s;
         display: flex;
+        width: 55px;
+        height: 37px;    
+       flex-direction: column;
+        justify-content: center;
+        align-items: center;    
+        & .burger-border-top {
+            width: 55px;
+            height: 14px;
+            border-top: 5px solid $color_black;                                      
     }
-
-    .menu-top-button {
-        display: none;
-    }
-
-    .login-menu__bottom {
-        display: none;
-    }
+    & .burger-border-bottom {
+        width: 55px;
+        height: 14px;
+        border-bottom: 5px solid $color_black;                                      
 }
+
+
+
+}
+
+.burger-clicked {
+    height: 37px;  
+    width: 50px;
+    border-left: 5px solid $color_black;
+    border-right: 5px solid $color_black;
+}
+
+.burger1 {
+    width: 55px;
+    height: 0;
+    border-bottom: 5px solid $color_black;
+    display: block;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.burger2 {
+    transition: 1s;
+    display: block;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.menu-top-button {
+    display: none;
+}
+
+.login-menu__bottom {
+    display: none;
+}
+}
+
+// rotate(
+// -35deg
+// ) translate(1px, -2px) bur2

@@ -1,6 +1,5 @@
 import React from 'react';
 import Contact from '../../homePage/contact/Contact';
-import HomeFooter from '../../homePage/footer/HomeFooter';
 import { Link } from 'react-router-dom';
 import BearImage from '../sendItemsFragments/BearImage';
 import StepsNavButton from '../sendItemsFragments/StepsNavButton';
@@ -35,8 +34,7 @@ const  SendStep2 = () => {
                 </div>
               <BearImage />
             </div>  
-            <Contact />
-            <HomeFooter />  
+            <Contact />       
             </>   
     )
 }

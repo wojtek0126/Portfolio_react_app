@@ -8,22 +8,22 @@ const SimpleStep = ({headTxt, mainTxt, icon}) => {
     return (
         <div className="simple-steps-middle__align">
                {(() => {
-              if (icon == "shirt"){
+              if (icon === "shirt"){
                   return (
                     <ShirtIcon />
                   )
               };
-              if (icon == "bag"){
+              if (icon === "bag"){
                 return (
                   <BagIcon />
                 )
             };
-            if (icon == "search"){
+            if (icon === "search"){
                 return (
                   <SearchIcon />
                 )
             }; 
-            if (icon == "delivery"){
+            if (icon === "delivery"){
                 return (
                   <DeliveryIcon />
                 )
