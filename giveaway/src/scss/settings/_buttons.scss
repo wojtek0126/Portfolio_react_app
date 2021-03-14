@@ -138,7 +138,7 @@
     }
 
     .menu-bottom-button {
-        width: 100vw;
+        width: 105vw;
         background-color: rgba(0, 0, 0, 0.8);
         color: $color_reddish;
     }
@@ -150,4 +150,12 @@
         border: 0.75px solid $color3_yellowish;
     }
 }
+
+@media (min-width: 560px) {
+
+    .menu-bottom-button {
+        width: 94vw;   
+    }
+}
+
 
