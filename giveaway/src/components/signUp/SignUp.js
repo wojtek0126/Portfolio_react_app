@@ -22,7 +22,7 @@ const SignUp = () => {
               <AppMenu homeOrLogin={"notHome"} loggedIn={loggedIn}/>
             </div>   
             <div className="login-text-container">
-                <LargeTxtWithDecor text={`Załóż konto`} />            
+                <LargeTxtWithDecor text={`Załóż konto`} wrapperClass={`large-decor-text-mobile`} />            
             </div>           
             <form >
             <LoginSignUpInput onChangeEmail={handleEmailInput(setEmailData, `loginName`)}

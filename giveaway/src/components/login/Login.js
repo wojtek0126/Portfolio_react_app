@@ -17,7 +17,7 @@ const Login = () => {
     //     const initClearErrorMessagePassword = document.getElementById(`errorMessagePassword`);
     //     initClearErrorMessageEmail.innerHTML = "";
     //     initClearErrorMessagePassword.innerHTML = "";
-    // },0);
+    // },0);    
 
     return (
         <div className="login-container container-full">       
@@ -25,7 +25,7 @@ const Login = () => {
                 <AppMenu homeOrLogin={"notHome"} loggedIn={loggedIn}/> 
             </div>   
             <div className="login-text-container">
-                <LargeTxtWithDecor text={`Zaloguj się`} />
+                <LargeTxtWithDecor text={`Zaloguj się`} wrapperClass={`large-decor-text-mobile`} />
             </div>           
             <form >
             <LoginSignUpInput onChangeEmail={handleEmailInput(setEmailData, `loginName`)}

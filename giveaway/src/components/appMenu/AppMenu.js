@@ -10,13 +10,33 @@ import Burger from './RWD/Burger';
 
 
 //prop loggedIn is taken from components: login, signup, logout, homeheader, steps(all) - from where menu is
-const AppMenu = ({homeOrLogin, loggedIn}) => {  
+const AppMenu = ({homeOrLogin, loggedIn, containerClass, topClass, bottomClass}) => {  
     let [logged, setLogged] = useState([]);
 
     useEffect(() => {
         getLoggedBool(setLogged);       
     
     }, [])
+
+    const handleClick = () => {
+        const burgerContainer = document.getElementById("hamburger");
+        const burger1  = document.getElementById("burger-1");
+        const burger2  = document.getElementById("burger-2");
+        const menuContainer = document.getElementById("menuContainer");
+        const menuTop = document.getElementById("menuTop");
+        const menuBottom = document.getElementById("menuBottom");
+        burger1.classList.toggle("burger1-clicked");
+        burger2.classList.toggle("burger2-clicked"); 
+        burger1.classList.toggle("burger1");    
+        burger2.classList.toggle("burger2"); 
+        burgerContainer.classList.toggle("burger-clicked");  
+        menuContainer.classList.toggle("login-menu-container"); 
+        menuContainer.classList.toggle("login-menu-container-mobile"); 
+        menuTop.classList.toggle("menu-top-mobile"); 
+        // menuTop.classList.toggle("menu__top"); 
+        menuBottom.classList.toggle("login-menu__bottom");
+        menuBottom.classList.toggle("menu-bottom-mobile"); 
+    }
     
    console.log(logged, "logged state homhederMenu");
 
@@ -25,8 +45,9 @@ const AppMenu = ({homeOrLogin, loggedIn}) => {
     localStorage.setItem("NextStep", 1);     
    
         return (          
-            <div className="login-menu-container">                
-                <div className="login-menu__top">
+            <div className="login-menu-container" id="menuContainer">  
+              <Burger onClick={handleClick} />              
+                <div className="login-menu__top" id="menuTop">
                    {(() => {
                if (loggedIn === true || loggedIn === "true" ) {
                   return (
@@ -53,10 +74,9 @@ const AppMenu = ({homeOrLogin, loggedIn}) => {
                         </>
                   )
               }            
-            })()}
-                <Burger />
+            })()}              
             </div>            
-                <div className="login-menu__bottom ">
+                <div className="login-menu__bottom" id="menuBottom">
                 {(() => {
               if (homeOrLogin === "home"){
                   return (

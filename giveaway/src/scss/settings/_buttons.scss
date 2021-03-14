@@ -136,5 +136,18 @@
         height: 60px;
         margin: 2px;
     }
+
+    .menu-bottom-button {
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: $color_reddish;
+    }
+
+    .menu-top-button {
+        margin-top: 8px;
+        width: 80px;
+        font-size: 9px;
+        border: 0.75px solid $color3_yellowish;
+    }
 }
 

@@ -63,3 +63,16 @@
 .login-form-top {
     margin-top: 40px;
 }
+
+@media (max-width: 750px) {
+    .large-decor-text-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    }
+
+    .login-text-container {
+        text-align: center;
+        }
+}

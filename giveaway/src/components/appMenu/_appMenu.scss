@@ -32,40 +32,44 @@
 }
 
 .burger1-clicked {
-    transition: 1s;
-    width: 55px;
+    transition: 0.3s;
+    width: 25px;
     display: block;
-    border-bottom: 5px solid $color_black;
-    transform: rotate(35deg) translate(5px, 1px);
-    -webkit-transform: rotate(35deg) translate(5px, 1px);
-    -moz-transform: rotate(35deg) translate(5px, 1px);
-    -ms-transform: rotate(35deg) translate(5px, 1px);
-    -o-transform: rotate(35deg) translate(5px, 1px);
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    -ms-transition: 1s;
-    -o-transition: 1s;
+    border-bottom: 4px solid $color_black;
+    transform: rotate(35deg) translate(2px, 1px);
+    -webkit-transform: rotate(35deg) translate(2px, 1px);
+    -moz-transform: rotate(35deg) translate(2px, 1px);
+    -ms-transform: rotate(35deg) translate(2px, 1px);
+    -o-transform: rotate(35deg) translate(2px, 1px);
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
 }
 
 .burger2-clicked {
-    transition: 1s;
-    width: 55px;
-    border-bottom: 5px solid $color_black;
+    transition: 0.3s;
+    width: 25px;
+    border-bottom: 4px solid $color_black;
     display: block;
     transform: rotate(-35deg) translate(1px, -2px);
     -webkit-transform: rotate(-35deg) translate(1px, -2px);
     -moz-transform: rotate(-35deg) translate(1px, -2px);
     -ms-transform: rotate(-35deg) translate(1px, -2px);
     -o-transform: rotate(-35deg) translate(1px, -2px);
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
 }
 
 @media (max-width: 750px) {
     .burger {
-        // transition: 1s;
-        // -webkit-transition: 1s;
-        // -moz-transition: 1s;
-        // -ms-transition: 1s;
-        // -o-transition: 1s;
+        transition: 1s;
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        -ms-transition: 1s;
+        -o-transition: 1s;
         display: flex;
         width: 55px;
         height: 37px;    
@@ -73,14 +77,14 @@
         justify-content: center;
         align-items: center;    
         & .burger-border-top {
-            width: 55px;
+            width: 39px;
             height: 14px;
-            border-top: 5px solid $color_black;                                      
+            border-top: 4px solid $color_black;                                      
     }
     & .burger-border-bottom {
-        width: 55px;
+        width: 39px;
         height: 14px;
-        border-bottom: 5px solid $color_black;                                      
+        border-bottom: 4px solid $color_black;                                      
 }
 
 
@@ -88,42 +92,87 @@
 }
 
 .burger-clicked {
-    height: 37px;  
-    width: 50px;
-    border-left: 5px solid $color_black;
-    border-right: 5px solid $color_black;
+    height: 40px;  
+    width: 39px;
+    border-left: 4px solid $color_black;
+    border-right: 4px solid $color_black;
 }
 
 .burger1 {
     width: 55px;
     height: 0;
-    border-bottom: 5px solid $color_black;
+    border-bottom: 4px solid $color_black;
     display: block;
-    transition: 1s;
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    -ms-transition: 1s;
-    -o-transition: 1s;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
 }
 
 .burger2 {
-    transition: 1s;
+    transition: 0.3s;
     display: block;
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    -ms-transition: 1s;
-    -o-transition: 1s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
 }
 
-.menu-top-button {
+.login-menu__top {
     display: none;
 }
 
 .login-menu__bottom {
     display: none;
 }
+
+// .mobile-menu__top {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: flex-end;
+// }
+
+.mobile-menu__bottom {
+    width: 683px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;   
+}
+
+.login-menu-container-mobile {
+    display: flex;
+    align-self: flex-end;
+    flex-direction: column;
+    margin: 20px; 
+    align-items: flex-end;
+}
+
+.menu-top-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.menu-bottom-mobile {  
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;  
+    z-index: 3;
+    width: 90vw;
+    margin-bottom: -273px;;
+}
+
+.burger-clicked {
+
+}
+
 }
 
 // rotate(
 // -35deg
 // ) translate(1px, -2px) bur2
+// "login-menu-container"
+// "login-menu-container-mobile"
+// "menu-top-mobile"
+// "menu-bottom-mobile"

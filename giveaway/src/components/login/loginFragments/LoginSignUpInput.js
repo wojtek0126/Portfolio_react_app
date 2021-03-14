@@ -31,8 +31,7 @@ useEffect(() => {
               } 
               else {
                   return null;
-              }             
-             
+              }                
             })()} 
              </div>      
         </>
