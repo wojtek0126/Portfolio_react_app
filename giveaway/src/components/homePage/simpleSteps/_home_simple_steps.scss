@@ -1,9 +1,6 @@
 @import './settings/colors';
 
-.simple-steps-container {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
+.simple-steps-container {   
     height: 100vh;
 }
 
@@ -50,9 +47,7 @@
     transform: scale(0.7);
 }
 
-.simple-steps-middle__underlined {    
-    // border-image: linear-gradient(to left, $color_black ,$color_white); 
-    // border-image-slice: 1;
+.simple-steps-middle__underlined {  
     padding-bottom: 10px;
     margin-top: 0;
     width: 60%;
@@ -79,39 +74,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 35vh;
 }
 
 @media (max-width: 750px) {
-    .simple-steps-container {
-        // margin-left: -10px;
+    .simple-steps-container {       
         height: unset;
     }
 
     .simple-steps-middle {
-        flex-direction: column;
-        // margin-left: -20px;
-        margin-bottom: 20px;
-        
+        flex-direction: column;    
+        margin-bottom: 20px;        
     }
 
     .simple-steps-bottom {        
         height: 10vh;
         display: flex;
         align-items: center;
-        justify-content: center;
-        // margin-top: 30px;
-        // margin-left: -20px;
+        justify-content: center;     
     }    
 
-    .simple-steps-middle__underlined {    
-        // border-image: linear-gradient(to left, $color_black ,$color_white); 
-        // border-image-slice: 1;
-        padding-bottom: 0;
-        // margin-top: 0;
+    .simple-steps-middle__underlined {      
+        padding-bottom: 0;    
         width: 100vw;
-        // font-size: 18px;
-        // font-weight: 400;
+      
     }
 
     .simple-steps-middle--decoration {
@@ -127,5 +113,14 @@
     border-bottom: 2px solid $color_white;
 }
 
+}
+
+@media (min-width: 751px) and (max-width: 1100px)  {
+    .simple-steps-bottom {
+        display: flex;
+        justify-content: center;
+        align-items: unset;
+        height: 50vh;
+    }
 }
 

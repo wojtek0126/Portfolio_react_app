@@ -101,10 +101,34 @@
     }
 }
 
-@media (min-width: 560px) {
+@media (min-width: 751px) {
 
     .header-container {
-        margin-bottom: 260px;        
+        margin-bottom: 100px;        
      }
+}
+
+@media (min-width: 560px) and (max-width: 750px) { 
+
+    .header-container {
+        margin-bottom: 290px;
+    }
+
+    .decorated-text--large {
+        width: 40vw;
+        font-size: 38px;
+    }
+
+    .header-right-side--content__buttons {     
+        margin-top: 0;
+    }
+  
+}
+
+@media (min-width: 770px) {
+
+    .decorated-text--large {
+        width: 40vw;       
+    }
 }
 

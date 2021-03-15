@@ -76,31 +76,27 @@
 
     .contact-right-side {
         position: unset;
-        width: 100vw;
-        // margin-top: -500px;
-    }
-
-    .contact-paragraph-above-decor {
-        // margin-left: 50px;
-        // margin-top: 95px;
-
-    }
+        width: 100vw;       
+    } 
 
     .contact-form-fields {      
         flex-direction: column;
        
     }
 
-    .contact-form {     
-        // align-items: baseline;
-        // flex-direction: column;
-        // margin-left: 75px;     
+    .contact-form {           
         z-index: 1;
     }
-   
+}
 
-    .contact-form-input--label {      
-        // margin: 10px 0;        
+@media (min-width: 560px) and (max-width: 1210px) {
+
+    .contact-right-side {        
+      left: 255px;
     }
- 
+
+    .contact-left-side__image {       
+        opacity: 0.35;
+    }
+  
 }

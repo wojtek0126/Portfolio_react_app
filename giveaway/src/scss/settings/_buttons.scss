@@ -30,6 +30,7 @@
     font-size: 18px; 
     font-weight: 400;  
     height: 42px;  
+    background-color: transparent;
     &:hover {
      border: 0.75px solid $color_black;    
     } 
@@ -148,14 +149,40 @@
         width: 80px;
         font-size: 9px;
         border: 0.75px solid $color3_yellowish;
+        &:hover {
+            background-color: $color3_yellowish;
+        }
+        &:focus {
+            background-color: $color3_yellowish;
+        }
     }
 }
 
-@media (min-width: 560px) {
+@media (min-width: 560px) and (max-width: 750px) {
 
     .menu-bottom-button {
         width: 94vw;   
+        &:hover {
+            background-color: $color3_yellowish;           
+        }
+        &:focus {
+            background-color: $color3_yellowish;            
+        }
     }
+  
+}
+
+@media (min-width: 560px) and (max-width: 1300px) { 
+    .header-button {       
+        font-size: 22px;
+        width: 150px;
+        height: 80px;
+        margin-bottom: 40px;
+        margin-top: 36px;
+       
+    }
+   
+  
 }
 
 
