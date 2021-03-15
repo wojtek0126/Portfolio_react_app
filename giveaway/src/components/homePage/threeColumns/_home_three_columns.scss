@@ -33,12 +33,9 @@
     .three-columns-container { 
         flex-direction: column;
         padding: 0;
-        // border-top: 0.5px solid $color_black;
-        // border-bottom: 0.5px solid $color_black;
-        // width: 85%;
-        // margin: auto;
-        // margin-left: 20px;
+        margin-top: -110px;
     }
+    
     .three-columns-column--text {
         // margin: auto;
         width: 90vw;
@@ -58,6 +55,13 @@
         margin-top: 20px;
         margin-bottom: 0;
         font-weight: 300;
+    }
+}
+
+@media (min-width: 751px)  {
+    
+    .three-columns-container {   
+      margin-top: -100px;
     }
 }
 

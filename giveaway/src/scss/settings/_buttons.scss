@@ -145,7 +145,8 @@
     }
 
     .menu-top-button {
-        margin-top: 8px;
+        margin-top: 10px;
+        margin-bottom: 10px;
         width: 80px;
         font-size: 9px;
         border: 0.75px solid $color3_yellowish;
@@ -176,13 +177,21 @@
     .header-button {       
         font-size: 22px;
         width: 150px;
-        height: 80px;
-        margin-bottom: 40px;
-        margin-top: 36px;
-       
+        height: 80px;          
     }
    
   
+}
+
+// iphone 5/SE
+@media (min-width: 568px) and (max-width: 568px) {
+    .menu-bottom-button {       
+        font-size: 12px;       
+        height: 30px;      
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 

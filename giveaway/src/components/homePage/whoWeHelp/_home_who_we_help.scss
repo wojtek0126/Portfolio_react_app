@@ -104,8 +104,7 @@
 
 @media (max-width: 750px) {
     .who-we-help-container {      
-        // margin-top: -60px; 
-        // margin-left: -10px;  
+        margin-top: 0;
         margin-bottom: -70px; 
         height: unset;
     }
@@ -137,10 +136,6 @@
 
     .who-we-help__list--name {       
         font-size: 18px;       
-    }
-
-
-    // margin-top: -260px;
-    // margin-left: -25px;
-    // width: 60vw;
+    }   
 }
+

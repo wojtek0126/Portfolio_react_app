@@ -24,7 +24,7 @@ const HomeHeader = () => {
             </div>
             <div className="header-right-side--content">                
                     <LargeTxtWithDecor text={`Zacznij pomagać!`} textSecondLine={` Oddaj niechciane rzeczy w zaufane ręce`} 
-                      className={`decorated-text--large`} wrapperClass={`header-right-side--content__text`} />
+                      className={`decorated-text--large`} wrapperClass={`header-right-side--content__text--header`} />
                 <div className="header-right-side--content__buttons">
                     <Link to="/login">
                         <BigUppercaseBtn text={`oddaj rzeczy`} />
