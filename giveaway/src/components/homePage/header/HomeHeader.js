@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import {getLoggedBool} from '../../../API/fetch';
 import AppMenu from '../../appMenu/AppMenu';
+import {CircleArrow as ScrollUpButton} from "react-scroll-up-button";
 import BigUppercaseBtn from '../../atoms/buttons/BigUppercaseBtn';
 import HomeHeaderImage from '../homePageFragments/HomeHeaderImage';
 import LargeTxtWithDecor from '../homePageFragments/LargeTxtWithDecor';
@@ -15,7 +16,9 @@ const HomeHeader = () => {
   
     console.log(logged, "props do homeheadermenu z  home header");
 
-    return (  
+    return ( 
+        <> 
+           <ScrollUpButton />
         <div className="header-container">
             <HomeHeaderImage />
         <div className="header-right-side container-half">
@@ -35,7 +38,8 @@ const HomeHeader = () => {
                 </div>
             </div>
             </div>
-        </div>        
+        </div>  
+        </>      
     )
 }
 

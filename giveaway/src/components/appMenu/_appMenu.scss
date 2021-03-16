@@ -79,12 +79,22 @@
         & .burger-border-top {
             width: 39px;
             height: 14px;
-            border-top: 4px solid $color_black;                                      
-    }
+            border-top: 4px solid $color_black;
+            border-radius: 35%;
+            -webkit-border-radius: 35%;
+            -moz-border-radius: 35%;
+            -ms-border-radius: 35%;
+            -o-border-radius: 35%;
+}
     & .burger-border-bottom {
         width: 39px;
         height: 14px;
-        border-bottom: 4px solid $color_black;                                      
+        border-bottom: 4px solid $color_black;    
+        border-radius: 35%;
+        -webkit-border-radius: 35%;
+        -moz-border-radius: 35%;
+        -ms-border-radius: 35%;
+        -o-border-radius: 35%;                                  
 }
 
 
@@ -96,6 +106,7 @@
     width: 39px;
     border-left: 4px solid $color_black;
     border-right: 4px solid $color_black;
+    border-radius: 35%;
 }
 
 .burger1 {
@@ -160,7 +171,7 @@
     justify-content: flex-end;  
     z-index: 3;
     width: 90vw;
-    margin-bottom: -273px;;
+    margin-bottom: --273px;;
 }
 
 .burger-clicked {
