@@ -2,6 +2,7 @@
   "name": "giveaway",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://wojtek0126.github.io/Portfolio_react_app",
   "dependencies": {
     "@fontsource/merriweather": "^4.1.0",
     "@testing-library/jest-dom": "^5.11.9",
@@ -26,7 +27,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy":"npm run build", 
+    "deploy":"gh-pages -b master -d build"
   },
   "eslintConfig": {
     "extends": [
