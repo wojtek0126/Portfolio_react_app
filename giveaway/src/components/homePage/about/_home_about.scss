@@ -8,7 +8,7 @@
 }
 //
 .about-left-side {
-    width: 50%;
+    // width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,13 +17,10 @@
 }
 
 
-// .about-right-side__img {
-    // max-width: 55vw;
-    // height: 100vh;
-    // width: 65vw;
-    // position: absolute;
-    // right: -220px;  
-// }
+.about-right-side__img {
+    max-width: 55vw;
+    max-height: 100vh;
+}
 
 .about-decorated-text--large {
     font-size: 38px;
@@ -72,7 +69,8 @@
     // }
 
     .about-right-side__img {
-        // height: 150px;
+        max-width: 100vw;
+        width: 100vw;
     }
 
     .about-left-side__text {
