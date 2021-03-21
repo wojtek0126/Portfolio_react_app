@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/Portfolio_react_app/static/css/main.5ce399d5.chunk.css",
+    "main.js": "/Portfolio_react_app/static/js/main.d36515b2.chunk.js",
+    "main.js.map": "/Portfolio_react_app/static/js/main.d36515b2.chunk.js.map",
+    "runtime-main.js": "/Portfolio_react_app/static/js/runtime-main.2164f8d8.js",
+    "runtime-main.js.map": "/Portfolio_react_app/static/js/runtime-main.2164f8d8.js.map",
+    "static/css/2.4fbdded8.chunk.css": "/Portfolio_react_app/static/css/2.4fbdded8.chunk.css",
+    "static/js/2.09b38c92.chunk.js": "/Portfolio_react_app/static/js/2.09b38c92.chunk.js",
+    "static/js/2.09b38c92.chunk.js.map": "/Portfolio_react_app/static/js/2.09b38c92.chunk.js.map",
+    "static/js/3.ea96478a.chunk.js": "/Portfolio_react_app/static/js/3.ea96478a.chunk.js",
+    "static/js/3.ea96478a.chunk.js.map": "/Portfolio_react_app/static/js/3.ea96478a.chunk.js.map",
+    "index.html": "/Portfolio_react_app/index.html",
+    "static/css/2.4fbdded8.chunk.css.map": "/Portfolio_react_app/static/css/2.4fbdded8.chunk.css.map",
+    "static/css/main.5ce399d5.chunk.css.map": "/Portfolio_react_app/static/css/main.5ce399d5.chunk.css.map",
+    "static/js/2.09b38c92.chunk.js.LICENSE.txt": "/Portfolio_react_app/static/js/2.09b38c92.chunk.js.LICENSE.txt",
+    "static/media/Background-Contact-Form.655c5442.jpg": "/Portfolio_react_app/static/media/Background-Contact-Form.655c5442.jpg",
+    "static/media/Decoration.aad75271.svg": "/Portfolio_react_app/static/media/Decoration.aad75271.svg",
+    "static/media/Facebook.1c1ea3ae.svg": "/Portfolio_react_app/static/media/Facebook.1c1ea3ae.svg",
+    "static/media/Icon-1.bd3d092a.svg": "/Portfolio_react_app/static/media/Icon-1.bd3d092a.svg",
+    "static/media/Icon-2.cfac69a1.svg": "/Portfolio_react_app/static/media/Icon-2.cfac69a1.svg",
+    "static/media/Icon-3.564c1731.svg": "/Portfolio_react_app/static/media/Icon-3.564c1731.svg",
+    "static/media/Icon-4.f1b3fb6d.svg": "/Portfolio_react_app/static/media/Icon-4.f1b3fb6d.svg",
+    "static/media/Instagram.5b663cf3.svg": "/Portfolio_react_app/static/media/Instagram.5b663cf3.svg",
+    "static/media/main.scss": "/Portfolio_react_app/static/media/merriweather-vietnamese-400-normal.bb64ba84.woff2",
+    "static/media/People.2fa041c6.jpg": "/Portfolio_react_app/static/media/People.2fa041c6.jpg",
+    "static/media/Signature.8f2a001d.svg": "/Portfolio_react_app/static/media/Signature.8f2a001d.svg",
+    "static/media/bear.d4bc6c85.jpg": "/Portfolio_react_app/static/media/bear.d4bc6c85.jpg",
+    "static/media/header.0c4f237f.jpg": "/Portfolio_react_app/static/media/header.0c4f237f.jpg",
+    "static/media/sweater.75cd7726.jpg": "/Portfolio_react_app/static/media/sweater.75cd7726.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2164f8d8.js",
+    "static/css/2.4fbdded8.chunk.css",
+    "static/js/2.09b38c92.chunk.js",
+    "static/css/main.5ce399d5.chunk.css",
+    "static/js/main.d36515b2.chunk.js"
+  ]
+}

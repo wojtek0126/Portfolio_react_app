@@ -1,1 +1,0 @@
-This project is made for CodersLab React course. It is an app made to giveaway old and unwanted items for charity. It contains homepage, login, item send form and contact form. Desktop ready, RWD WIP. Made with react, sass, fetch API.
