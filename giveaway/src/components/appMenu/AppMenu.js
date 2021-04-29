@@ -81,7 +81,7 @@ const AppMenu = ({homeOrLogin, loggedIn, containerClass, topClass, bottomClass})
               if (homeOrLogin === "home"){
                   return (
                       <>
-                            <MenuButtonLarger text={`Start`}/>                            
+                            <MenuButtonLarger text={`Start`} id={"start"}/>                            
                         <Link to="simpleSteps" smooth={true} duration={1000}>
                             <MenuButtonLarger text={`O co chodzi?`}/>                            
                         </Link>    
@@ -101,7 +101,7 @@ const AppMenu = ({homeOrLogin, loggedIn, containerClass, topClass, bottomClass})
                 return (
                     <>
                         <NavHashLink to="" smooth={true} duration={1000}>
-                            <MenuButtonLarger text={`Start`}/>                             
+                            <MenuButtonLarger text={`Start`} />                             
                         </NavHashLink>              
                          <NavHashLink to="simpleSteps" smooth={true} duration={1000}>
                             <MenuButtonLarger text={`O co chodzi?`}/>                            
