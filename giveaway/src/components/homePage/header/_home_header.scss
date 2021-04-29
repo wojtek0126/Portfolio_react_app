@@ -174,3 +174,50 @@
     }
 }
 
+// ipad
+@media (min-width: 766px) and (max-width: 780px)  {
+    .header-container {
+    margin-bottom: unset;
+    }
+
+    .header-right-side {
+        height: 674px;
+        padding-right: unset;
+    }  
+    
+    .header-right-side--content {
+        margin-top: unset;
+    }
+
+    .header-right-side--content__buttons {
+        margin-top: unset;
+    }
+    
+    .header-left-side {        
+        height: 56vh;
+    }    
+}
+
+//ipad pro
+@media (min-width: 1020px) and (max-width: 1024px)  {
+    .header-container {
+        margin-bottom: unset;
+        }
+
+    .header-right-side {
+        height: 784px;
+        padding-right: unset;
+    }    
+    
+    .header-left-side {       
+        height: 50vh;
+    }
+}
+
+@media (min-width: 318px) and (max-width: 322px)  {
+    .header-right-side--content {
+        margin-top: 0;
+    }
+}
+
+

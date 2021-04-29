@@ -124,3 +124,29 @@
     }
 }
 
+// ipad
+@media (max-width: 768px)  {
+    .simple-steps-container {
+        margin-top: unset;   
+        height: unset;
+    }
+
+    .simple-steps-bottom {
+        height: unset;
+        padding: 30px;
+    }
+}
+
+//ipad pro
+@media (max-width: 1024px)  {
+    .simple-steps-container {
+        margin-top: unset;   
+        height: unset;
+    }
+
+    .simple-steps-bottom {
+        height: unset;
+        padding: 30px;
+    }
+}
+

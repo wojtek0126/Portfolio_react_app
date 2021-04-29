@@ -104,3 +104,28 @@
     }
   
 }
+
+// ipad
+@media (min-width: 766px) and (max-width: 780px) {
+    .contact-container  {
+        margin-top: unset;   
+        height: unset;
+    }
+
+    .contact-left-side__image {
+        height: 65vh;
+    }
+}
+
+//ipad pro
+@media (min-width: 1020px) and (max-width: 1024px)  {
+    .contact-container  {
+        margin-top: unset;   
+        height: unset;
+    }
+
+    .contact-left-side__image {
+        height: 55vh;
+    }
+}
+
