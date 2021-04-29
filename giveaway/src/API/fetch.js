@@ -4,22 +4,6 @@ import {Messages_API} from "./variables";
 
 //need to minimize and purify these functions
 
-
-// export const getItems = (itemsToGet, successCallback) => {
-//     fetch(`${API}/${itemsToGet}`)
-//         .then(response => response.json())
-//         .then(data => {
-//             successCallback(data);
-//             if (data.error === false && typeof successCallback === "function") {
-//                 successCallback(data);
-//             }
-//         })
-//         .catch(error => {
-//             console.log(error);           
-//         });
-// }
-
-//get current step from json for order form
 export const getCurrentstep = (successCallback) => {
     fetch(`${API}/currentStep`)
         .then(response => response.json())
