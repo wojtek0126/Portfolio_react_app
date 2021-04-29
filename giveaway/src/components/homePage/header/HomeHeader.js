@@ -18,7 +18,7 @@ const HomeHeader = () => {
 
     return ( 
         <> 
-           <ScrollUpButton />
+        <div className="scroll-up-arrow"><ScrollUpButton /></div>           
         <div className="header-container">
             <HomeHeaderImage />
         <div className="header-right-side container-half">
