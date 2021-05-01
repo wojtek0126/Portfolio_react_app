@@ -6,8 +6,7 @@ import About from "./about/About.js";
 import WhoWeHelp from "./whoWeHelp/WhoWeHelp.js";
 import Contact from "./contact/Contact.js";
 
-const Home = () => {
-    console.log(localStorage.getItem("loggedIn"), "czy jest zalogowane zmienna z localstorage");
+const Home = () => {   
     return (
        <>
         <HomeHeader />
