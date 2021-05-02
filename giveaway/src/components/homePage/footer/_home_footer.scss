@@ -20,25 +20,20 @@
 
 .footer-icons {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around;  
 }
 
 .footer-icons--icon {
     height: 70%;
     &:hover {
         background-color: rgb(0, 238, 255);
-        transform: scale(1.2);
-        // border-radius: 4px;
-        border: none;
-        -webkit-border-radius: 4px;
-        // -moz-border-radius: 4px;
-        // -ms-border-radius: 4px;
-        // -o-border-radius: 4px;
+        transform: scale(1.2);      
+        border: none;        
         -webkit-transform: scale(1.2);
         -moz-transform: scale(1.2);
         -ms-transform: scale(1.2);
         -o-transform: scale(1.2);
-}
+    }
 }
 
 @media (max-width: 750px) {
@@ -61,9 +56,24 @@
     .footer-copyright {
         width: 100vw;
         margin-bottom: 10px;
-        margin-top: 30px;
-        // text-align: center;
-        // font-size: 18px;
-        // font-weight: 400;
+        margin-top: 30px;      
     }
+}
+
+// ipad
+@media (min-width: 766px) and (max-width: 780px) {
+    .footer-icons {
+      position: absolute;
+      right: 4px;
+      bottom: 0;
+    }
+}
+
+//ipad pro
+@media (min-width: 1020px) and (max-width: 1024px)  {
+    .footer-icons {
+        position: absolute;
+        right: -15px;
+        bottom: -20px;
+    } 
 }

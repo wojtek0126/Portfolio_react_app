@@ -8,7 +8,6 @@ import MenuButtonSmall from './MenuButtonSmall';
 import MenuButtonLarger from './MenuButtonLarger';
 import Burger from './RWD/Burger';
 
-
 //prop loggedIn is taken from components: login, signup, logout, homeheader, steps(all) - from where menu is
 const AppMenu = ({homeOrLogin, loggedIn, containerClass, topClass, bottomClass}) => {  
     let [logged, setLogged] = useState([]);

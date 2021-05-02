@@ -73,6 +73,16 @@
         margin-top: unset;   
         height: unset;
     }
+
+    .about-left-side__signature {
+        transform: scale(0.5) translateX(85px);
+        display: flex;
+        justify-content: flex-end;
+        -webkit-transform: scale(0.5) translateX(85px);
+        -moz-transform: scale(0.5) translateX(85px);
+        -ms-transform: scale(0.5) translateX(85px);
+        -o-transform: scale(0.5) translateX(85px);
+    }
 }
 
 //ipad pro
@@ -80,6 +90,22 @@
     .about-container {
         margin-top: unset;   
         height: unset;
+    }
+
+    .about-left-side__signature {
+        transform: scale(0.5) translateX(85px);
+        display: flex;
+        justify-content: flex-end;
+        -webkit-transform: scale(0.5) translateX(85px);
+        -moz-transform: scale(0.5) translateX(85px);
+        -ms-transform: scale(0.5) translateX(85px);
+        -o-transform: scale(0.5) translateX(85px);
+    }
+}
+
+@media (min-width: 1024px) {
+    .about-right-side__img {
+        max-width: 62vw;  
     }
 }
 
