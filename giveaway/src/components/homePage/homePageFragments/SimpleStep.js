@@ -4,7 +4,7 @@ import DeliveryIcon from '../../atoms/commonIcons/DeliveryIcon';
 import SearchIcon from '../../atoms/commonIcons/SearchIcon';
 import ShirtIcon from '../../atoms/commonIcons/ShirtIcon';
 
-const SimpleStep = ({headTxt, mainTxt, icon}) => {
+const SimpleStep = ({headTxt, mainTxt, icon, blank}) => {
     return (
         <div className="simple-steps-middle__align">
                {(() => {
@@ -30,7 +30,7 @@ const SimpleStep = ({headTxt, mainTxt, icon}) => {
             };             
               return null;
             })()}          
-            <p className="simple-steps-middle__underlined">{headTxt}</p>
+            <p className="simple-steps-middle__underlined">{headTxt}<span className="blank-space"><br/>{blank}</span></p>
             <div className="simple-steps-middle__underlined--underline"></div>
             <p className="simple-steps-middle__bottom-text">{mainTxt}</p>
         </div>

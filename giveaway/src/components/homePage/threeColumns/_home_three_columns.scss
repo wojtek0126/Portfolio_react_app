@@ -65,3 +65,20 @@
     }
 }
 
+// ipad
+@media (max-width: 768px)  {
+    .three-columns-column--heading {
+        text-align: center;
+        width: 89%
+    }
+}
+
+//ipad pro
+@media (max-width: 1024px)  {
+    .three-columns-column--heading {
+        text-align: center;
+        width: 89%
+    }
+}
+
+

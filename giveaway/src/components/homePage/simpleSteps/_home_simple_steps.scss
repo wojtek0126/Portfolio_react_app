@@ -96,8 +96,7 @@
 
     .simple-steps-middle__underlined {      
         padding-bottom: 0;    
-        width: 100vw;
-      
+        width: 100vw;      
     }
 
     .simple-steps-middle--decoration {
@@ -135,6 +134,14 @@
         height: unset;
         padding: 30px;
     }
+    
+    .simple-steps-middle__underlined {
+        width: 100%;
+    }
+    
+    .simple-steps-middle__bottom-text {      
+        width: 80%;    
+    }
 }
 
 //ipad pro
@@ -147,6 +154,14 @@
     .simple-steps-bottom {
         height: unset;
         padding: 30px;
+    }
+
+    .simple-steps-middle__underlined {
+        width: 100%;
+    }
+    
+    .simple-steps-middle__bottom-text {      
+        width: 80%;    
     }
 }
 

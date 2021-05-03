@@ -72,16 +72,21 @@
     .about-container {
         margin-top: unset;   
         height: unset;
+        flex-direction: column;
+    }
+
+    .about-left-side {
+        width: unset;
     }
 
     .about-left-side__signature {
-        transform: scale(0.5) translateX(85px);
+        transform: scale(0.5);
         display: flex;
         justify-content: flex-end;
-        -webkit-transform: scale(0.5) translateX(85px);
-        -moz-transform: scale(0.5) translateX(85px);
-        -ms-transform: scale(0.5) translateX(85px);
-        -o-transform: scale(0.5) translateX(85px);
+        -webkit-transform: scale(0.5);
+        -moz-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+        -o-transform: scale(0.5);
     }
 }
 

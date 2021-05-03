@@ -112,8 +112,13 @@
         height: unset;
     }
 
+    .contact-left-side {
+        position: absolute;
+        bottom: -279%;
+    }
+
     .contact-left-side__image {
-        height: 71vh;
+        height: 50vh;
     }
 }
 
