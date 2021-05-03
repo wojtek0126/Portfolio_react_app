@@ -2,8 +2,7 @@
 .contact-container {
     display: flex;
     overflow: hidden;
-    height: 100vh;
-    
+    height: 100vh;    
 }
 
 .contact-left-side {
@@ -23,7 +22,7 @@
     align-items: center;
     position: absolute;
     left: 60vw;
-    margin-top: 100px;
+    padding-top: 100px;
 }
 
 .contact-form {
@@ -60,6 +59,7 @@
   
 }
 
+//general mobile and small
 @media (max-width: 750px) {
     .contact-container {        
         height: unset; 
@@ -84,8 +84,7 @@
     } 
 
     .contact-form-fields {      
-        flex-direction: column;
-       
+        flex-direction: column;       
     }
 
     .contact-form {           
@@ -93,20 +92,14 @@
     }
 }
 
-@media (min-width: 560px) and (max-width: 1210px) {
-
-    .contact-right-side {        
-      left: 255px;
-    }
-
+@media (min-width: 560px) and (max-width: 1210px) {   
     .contact-left-side__image {       
         opacity: 0.35;
-    }
-  
+    }  
 }
 
 // ipad
-@media (min-width: 766px) and (max-width: 780px) {
+@media (min-width: 768px) and (max-width: 769px) {
     .contact-container  {
         margin-top: unset;   
         height: unset;
@@ -120,6 +113,10 @@
     .contact-left-side__image {
         height: 50vh;
     }
+
+    .contact-right-side {
+        left: 22vw !important;      
+    }
 }
 
 //ipad pro
@@ -132,5 +129,17 @@
     .contact-left-side__image {
         height: 55vh;
     }
+
+    .contact-right-side {
+        left: 28vw !important;      
+    }
+}
+
+//form visible for non-full screen desktop
+@media (min-width: 751px) and (max-width: 1300px) {
+    .contact-right-side {
+        left: 34vw;
+    }
+    
 }
 

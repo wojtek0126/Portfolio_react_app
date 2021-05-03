@@ -33,7 +33,7 @@
     .three-columns-container { 
         flex-direction: column;
         padding: 0;
-        margin-top: -110px;
+        // margin-top: -110px;
     }
     
     .three-columns-column--text {
@@ -61,7 +61,7 @@
 @media (min-width: 751px)  {
     
     .three-columns-container {   
-      margin-top: -100px;
+    //   margin-top: -100px;
     }
 }
 

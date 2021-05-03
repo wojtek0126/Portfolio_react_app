@@ -11,10 +11,11 @@ const HomeHeader = () => {
     let [logged, setLogged] = useState("");
    
     useEffect(() => {
-        getLoggedBool(setLogged);    
+        getLoggedBool(setLogged);  
+        //scroll up button control
+        const scrollUpArrow = document.querySelector('aside');       
+        scrollUpArrow.style.bottom = '50px';
     }, [])  
-  
-    console.log(logged, "props do homeheadermenu z  home header");
 
     return ( 
         <> 

@@ -2,8 +2,7 @@
     z-index: 5;
     position: absolute;
     opacity: 0.7;
-    top: 0;
-  
+    top: 0;  
 }
 
 .header-container {
@@ -19,8 +18,7 @@
 
 .header-right-side {   
     width: 1015px;
-    height: 963px;
-    
+    height: 65.8vh;
     padding-right: 142px;
 }
 
@@ -36,10 +34,6 @@
 .header-right-side--menu__bottom {
     display: flex;
     justify-content: flex-end;
-}
-
-.header-right-side--content {
-    margin-top: 120px;
 }
 
 .header-right-side--content__text {
@@ -81,10 +75,10 @@
     font-weight: 400;
 }
 
+//general for mobile
 @media (max-width: 750px) {
 
-    .header-container {
-        margin-bottom: 45px;
+    .header-container {       
         position: relative;
      }
 
@@ -94,9 +88,10 @@
 
     .header-left-side {
         display: flex;
+        padding-top: 8vh;
         opacity: 0.3;
         width: 100vw;
-        height: 75vh;
+        height: 50vh;
      }
 
      .header-right-side {     
@@ -113,17 +108,15 @@
     }
 }
 
-@media (min-width: 751px) {
-
+@media (min-width: 360px) and (max-width: 374px) { 
     .header-container {
-        margin-bottom: 100px;        
-     }
+        padding-bottom: 20vh;
+    }
 }
 
 @media (min-width: 560px) and (max-width: 750px) { 
-
     .header-container {
-        margin-bottom: 290px;
+        padding-bottom: 5vh;
     }
 
     .decorated-text--large {
@@ -138,36 +131,23 @@
 }
 
 @media (min-width: 770px) {
-
     .decorated-text--large {
         width: 40vw;       
     }
 }
 
-@media (max-width: 559px) {
-    
+@media (min-width: 560px) and (max-width: 567px) {    
     .header-container {
-        margin-bottom: 170px;
-    }
+        padding-bottom: 5vh;    }
 }
 
-@media (min-width: 560px) and (max-width: 567px) {
-    
-    .header-container {
-        margin-bottom: 340px;
-    }
-}
-
-// iphone 5/SE
-@media (min-width: 568px) and (max-width: 568px) {
-    
+@media (min-width: 568px) and (max-width: 568px) {    
     .decorated-text--large {
         font-size: 21px;      
     }
 
     .header-container {
-        margin-bottom: 320px;
-    }
+        padding-bottom: 5vh;    }
 
     .header-left-side {       
         height: 100vh;
@@ -189,7 +169,7 @@
     }
 
     .header-right-side {
-        height: 674px;
+        height: 574px;
         padding-right: unset;
     }  
     
@@ -202,7 +182,8 @@
     }
     
     .header-left-side {        
-        height: 56vh;
+        height: 40vh;
+        padding-top: 16vh;
     }    
 }
 
@@ -213,13 +194,13 @@
         }
 
     .header-right-side {
-        height: 784px;
+        height: 574px;
         padding-right: unset;
     }    
     
     .header-left-side {       
-        height: 50vh;
-    }
+        height: 45vh;
+    } 
 }
 
 //Iphone 5 SE
@@ -227,6 +208,34 @@
     .header-right-side--content {
         margin-top: 0;
     }
+
+    .header-container {
+        padding-bottom: 12vh;
+        }
 }
+
+//Iphone 6/7/8 Plus
+@media (min-width: 413px) and (max-width: 415px)  { 
+    .header-container {
+        padding-bottom: 12vh;
+        }
+}
+
+//Iphone X
+@media (min-width: 375px) and (max-width: 376px)  { 
+    .header-container {
+        padding-bottom: 5vh;
+        }
+}
+
+
+//pixel 2 XL
+@media (min-width: 410px) and (max-width: 412px) {
+    .header-container {
+        padding-bottom: 9vh;
+        }
+}
+
+
 
 
