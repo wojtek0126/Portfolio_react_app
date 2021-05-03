@@ -226,6 +226,10 @@
     .header-container {
         padding-bottom: 5vh;
         }
+
+        .header-right-side {             
+            padding-right: unset;
+        }
 }
 
 
@@ -235,6 +239,98 @@
         padding-bottom: 9vh;
         }
 }
+
+//horizontal androids 
+//samsungs horizontal
+@media (min-width: 640px) and (max-width: 641px) { 
+    .header-left-side {
+        height: 142vh !important;
+    }
+}
+
+//pixel 2 horizontal
+@media (min-width: 731px) and (max-width: 732px) { 
+    .header-left-side {
+        height: 126vh !important;
+    }
+}
+
+//pixel 2 xl horizontal
+@media (min-width: 823px) and (max-width: 824px) { 
+    .header-left-side {
+        width: 885px;
+        height: 100vh ;
+        padding-top: 200px !important;
+    }
+}
+
+//iphone 6/7/8 horizontal
+@media (min-width: 667px) and (max-width: 668px) { 
+    .header-left-side {
+        height: 140vh !important;
+    }
+}
+
+//iphone 6/7/8 plus horizontal
+@media (min-width: 736px) and (max-width: 737px) { 
+    .header-left-side {
+        height: 140vh !important;
+    }
+}
+
+//iphone x horizontal 
+@media (min-width: 812px) and (max-width: 813px) { 
+    .header-left-side {
+        height: 125vh !important;
+        padding-top: 145px;
+    }
+
+    .container-half {        
+        max-height: unset; 
+    }
+}
+
+//ipad horizontal
+@media (min-width: 1024px) and (max-width: 1025px) and (min-height: 768px) and (max-height: 769px){
+    .header-left-side {
+        height: 55vh;
+        padding-top: 166px;
+    }
+}
+
+//ipad pro horizontal
+@media (min-width: 1366px) and (max-width: 1367px) and (min-height: 1024px) and (max-height: 1025px) {
+    .header-right-side {       
+        padding-right: unset; 
+   }
+
+   .header-left-side {   
+    height: 66vh;
+    }
+}
+
+//surface duo horizontal
+@media (min-width: 720px) and (max-width: 721px) and (min-height: 540px) and (max-height: 541px) {
+   .header-left-side {   
+    height: 100vh;
+    }
+}
+
+ //galaxy fold horizontal
+ @media (min-width: 653px) and (max-width: 654px) and (min-height: 280px) and (max-height: 281px) {
+    .header-left-side {        
+        height: 192vh;
+    }
+}
+
+ //galaxy fold vertical
+ @media (min-width: 280px) and (max-width: 281px) and (min-height: 653px) and (max-height: 654px) {
+    .header-left-side {        
+        height: 53vh !important;
+    }
+ }
+
+
 
 
 

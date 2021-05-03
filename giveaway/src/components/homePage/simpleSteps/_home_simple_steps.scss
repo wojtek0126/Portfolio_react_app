@@ -165,4 +165,11 @@
     }
 }
 
+//ipad pro horizontal
+@media (min-width: 1366px) and (max-width: 1367px) and (min-height: 1024px) and (max-height: 1025px) {
+    .simple-steps-bottom {        
+        height: 20vh;
+    }
+}
+
 

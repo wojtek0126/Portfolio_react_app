@@ -143,3 +143,75 @@
     
 }
 
+//ipad horizontal
+@media (min-width: 1024px) and (max-width: 1025px) and (min-height: 768px) and (max-height: 769px){
+    .contact-left-side__image {
+        height: 95vh;
+    }
+
+    .container-full {
+        max-height: unset;
+     }
+}
+
+//ipad 
+@media (min-width: 1024px) and (max-width: 1025px) and (min-height: 1366px) and (max-height: 1367px) {
+    .contact-left-side__image {
+        height: 53vh;
+    }
+
+    .container-full {
+        max-height: unset;
+     }
+}
+
+//ipad pro horizontal
+@media (min-width: 1366px) and (max-width: 1367px) and (min-height: 1024px) and (max-height: 1025px) {
+    .contact-left-side__image {
+        height: 71vh;
+    }
+
+    .container-full {
+        max-height: unset;
+     }
+
+     .contact-container {       
+        height: 71vh;
+    }
+
+    .header-right-side {       
+        padding-right: unset; 
+   }
+}
+
+//iphone x horizontal 
+@media (min-width: 812px) and (max-width: 813px) { 
+    .container-full {
+       max-height: unset;
+    }
+
+    .contact-container {
+        height: unset;
+     }
+
+     .contact-left-side__image {
+        height: 140vh;
+        padding-top: 209px;
+    }
+}
+
+//surface duo horizontal
+@media (min-width: 720px) and (max-width: 721px) and (min-height: 540px) and (max-height: 541px) {
+    .contact-left-side__image {
+             height: unset;         
+    }
+ }
+
+ //galaxy fold horizontal
+@media (min-width: 653px) and (max-width: 654px) and (min-height: 280px) and (max-height: 281px) {
+    .contact-left-side__image {
+             height: 181vh;         
+    }
+ }
+ 
+

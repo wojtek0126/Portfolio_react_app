@@ -108,9 +108,17 @@
     }
 }
 
+//desktop full screen
 @media (min-width: 1024px) {
     .about-right-side__img {
         max-width: 62vw;  
+    }
+}
+
+//iphone x horizontal 
+@media (min-width: 812px) and (max-width: 813px) { 
+    .about-container {
+    //    padding-top: 263px;
     }
 }
 
