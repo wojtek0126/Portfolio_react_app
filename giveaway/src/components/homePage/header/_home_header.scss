@@ -108,9 +108,28 @@
     }
 }
 
-@media (min-width: 360px) and (max-width: 374px) { 
+//galaxy s5 vertical
+@media (min-width: 360px) and (max-width: 374px) and (min-height: 640px) and (max-height: 641px) { 
     .header-container {
         padding-bottom: 20vh;
+    }
+
+    .header-left-side {      
+        height: 45vh;
+    }
+}
+
+//pixel 2 xl horizontal
+@media (min-width: 823px) and (max-width: 824px) and (min-height: 411px) and (max-height:412px) { 
+    .header-right-side {       
+        padding-right: unset;
+    }
+}
+
+//iphone x horizontal
+@media (min-width: 812px) and (max-width: 813px) and (min-height: 375px) and (max-height: 376px) { 
+    .header-right-side {       
+        padding-right: unset;
     }
 }
 
@@ -240,7 +259,6 @@
         }
 }
 
-//horizontal androids 
 //samsungs horizontal
 @media (min-width: 640px) and (max-width: 641px) { 
     .header-left-side {

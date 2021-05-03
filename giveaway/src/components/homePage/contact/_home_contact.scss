@@ -74,7 +74,7 @@
     }
 
     .contact-left-side__image {
-        height: 50vh;
+        // height: 50vh;
         opacity: 0.3;
     }
 
@@ -89,6 +89,60 @@
 
     .contact-form {           
         z-index: 1;
+    }
+}
+
+//galaxy s5 vertical
+@media (min-width: 360px) and (max-width: 374px) and (min-height: 640px) and (max-height: 641px) { 
+    .header-container {
+        padding-bottom: 20vh;
+    }
+
+    .contact-left-side__image {      
+        height: 50vh;
+    }
+}
+
+//iphone 6/7/8 vertical
+@media (min-width: 375px) and (max-width: 376px) and (min-height: 667px) and (max-height: 668px) { 
+    .contact-left-side__image {       
+        height: 55vh;
+    }
+}
+
+//pixel 2 & 2 xl  vertical
+@media (min-width: 411px) and (max-width: 412px) and (min-height: 731px) and (max-height: 824px) { 
+    .contact-left-side__image {      
+        height: 50vh;
+    }
+}
+
+//iphone x vertical
+@media (min-width: 375px) and (max-width: 376px) and (min-height: 812px) and (max-height: 813px) { 
+    .contact-left-side__image {      
+        height: 50vh;
+    }
+}
+
+//pixel 2 & 2 xl  vertical
+@media (min-width: 414px) and (max-width: 415px) and (min-height: 736px) and (max-height: 737px) { 
+    .contact-left-side__image {      
+        height: 50vh;
+    }
+}
+
+//pixel 2 xl horizontal
+@media (min-width: 823px) and (max-width: 824px) and (min-height: 411px) and (max-height:412px) { 
+    .contact-left-side__image {      
+        height: 177vh;
+    }
+
+    .container-full {       
+        max-height: unset;
+    }
+
+    .contact-container { 
+        height: 175vh;
     }
 }
 
@@ -198,6 +252,10 @@
         height: 140vh;
         padding-top: 209px;
     }
+
+    .footer-container {
+        padding-top: 20px;
+    }
 }
 
 //surface duo horizontal
@@ -207,11 +265,31 @@
     }
  }
 
+ //surface duo vertical
+@media (min-width: 540px) and (max-width: 541px) and (min-height:720px) and (max-height: 721px) {
+    .contact-left-side__image {
+             height: 60vh;         
+    }
+ }
+
  //galaxy fold horizontal
 @media (min-width: 653px) and (max-width: 654px) and (min-height: 280px) and (max-height: 281px) {
     .contact-left-side__image {
              height: 181vh;         
     }
  }
- 
+
+  //galaxy fold vertical
+@media (min-width: 280px) and (max-width: 281px) and (min-height: 653px) and (max-height: 654px) {
+    .contact-left-side__image {
+             height: 50vh;         
+    }
+ }
+
+ //iphone s5/se vertical
+ @media (min-width: 320px) and (max-width: 321px) and (min-height: 568px) and (max-height: 569px) {
+    .contact-left-side__image {
+             height: 55vh;         
+    }
+ }
 
