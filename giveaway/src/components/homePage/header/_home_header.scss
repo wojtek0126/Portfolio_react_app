@@ -91,7 +91,7 @@
         padding-top: 8vh;
         opacity: 0.3;
         width: 100vw;
-        height: 50vh;
+        height: unset;
      }
 
      .header-right-side {     
@@ -132,6 +132,14 @@
         padding-right: unset;
     }
 }
+
+//iphone x vertical
+@media (min-width: 375px) and (max-width: 376px) and (min-height: 812px) and (max-height: 813px) { 
+    .header-left-side {       
+        height: 37vh;
+    }
+}
+
 
 @media (min-width: 560px) and (max-width: 750px) { 
     .header-container {
@@ -222,8 +230,12 @@
     } 
 }
 
-//Iphone 5 SE
-@media (min-width: 318px) and (max-width: 322px)  {
+//Iphone 5/SE vertical
+@media (min-width: 320px) and (max-width: 321px) and (min-height: 568px) and (max-height: 569px) {
+    .header-left-side{
+        height: 50vh;
+    }
+
     .header-right-side--content {
         margin-top: 0;
     }
@@ -246,9 +258,9 @@
         padding-bottom: 5vh;
         }
 
-        .header-right-side {             
-            padding-right: unset;
-        }
+        // .header-right-side {             
+        //     padding-right: unset;
+        // }
 }
 
 
@@ -281,6 +293,13 @@
         padding-top: 200px !important;
     }
 }
+
+ //iphone 6/7/8 vertical
+ @media (min-width: 375px) and (max-width: 376px) and (min-height: 667px) and (max-height: 668px) {
+    .header-left-side {        
+        height: 50vh !important;
+    }
+ }
 
 //iphone 6/7/8 horizontal
 @media (min-width: 667px) and (max-width: 668px) { 
@@ -345,6 +364,20 @@
  @media (min-width: 280px) and (max-width: 281px) and (min-height: 653px) and (max-height: 654px) {
     .header-left-side {        
         height: 53vh !important;
+    }
+ }
+
+  //responsive vertical
+  @media (min-width: 287px) and (max-width: 288px) and (min-height: 655px) and (max-height: 656px) {
+  .header-left-side {        
+        height: 53vh !important;
+    }
+ }
+
+  //responsive horizontal
+  @media (min-width: 655px) and (max-width: 656px) and (min-height: 287px) and (max-height: 288px) {
+   .header-left-side {        
+        height: 185vh !important;
     }
  }
 
