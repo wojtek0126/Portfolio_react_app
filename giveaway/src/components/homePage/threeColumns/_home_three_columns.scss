@@ -27,6 +27,7 @@
     margin-bottom: 16px;
     font-weight: 300;
     width: 25vw;
+    display: inline-flex ;
 }
 
 @media (max-width: 750px) {
@@ -38,7 +39,8 @@
     
     .three-columns-column--text {
         // margin: auto;
-        width: 90vw;
+        width: 100%;
+        display: inline-flex ;
     }
 
     .three-columns-column--heading {
@@ -58,18 +60,11 @@
     }
 }
 
-@media (min-width: 751px)  {
-    
-    .three-columns-container {   
-    //   margin-top: -100px;
-    }
-}
-
 // ipad
 @media (max-width: 768px)  {
     .three-columns-column--heading {
         text-align: center;
-        width: 89%
+        width: 100%
     }
 }
 
@@ -77,7 +72,7 @@
 @media (max-width: 1024px)  {
     .three-columns-column--heading {
         text-align: center;
-        width: 89%
+        width: 100%
     }
 }
 
