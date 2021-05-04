@@ -367,10 +367,24 @@
     }
  }
 
+   //galaxy s9 horizontal
+@media (min-width: 740px) and (max-width: 741px) and (min-height: 360px) and (max-height: 361px) {
+    .header-left-side {        
+        height: 150vh !important;
+    }
+ }
+
+  //galaxy s9 vertical
+@media (min-width: 360px) and (max-width: 361px) and (min-height: 740px) and (max-height: 741px) {
+    .header-left-side {        
+        height: 53vh !important;
+    }
+ }
+
   //responsive vertical
   @media (min-width: 287px) and (max-width: 288px) and (min-height: 655px) and (max-height: 656px) {
   .header-left-side {        
-        height: 53vh !important;
+        height: 150vh !important;
     }
  }
 
