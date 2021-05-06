@@ -55,29 +55,8 @@
 
     .footer-copyright {
         width: 100vw;
-        margin-bottom: 10px;
-        margin-top: 30px;      
+        // margin-bottom: 10px;
+        // margin-top: 30px;      
     }
 }
 
-// ipad
-@media (min-width: 766px) and (max-width: 780px) {
-    .footer-container {
-        padding-top: 4vh;
-    }
-
-    .footer-icons {
-      position: absolute;
-      right: 4px;
-      bottom: 0;
-    }
-}
-
-//ipad pro
-@media (min-width: 1020px) and (max-width: 1024px)  {
-    .footer-icons {
-        position: absolute;
-        right: -15px;
-        bottom: -20px;
-    } 
-}

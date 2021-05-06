@@ -7,13 +7,13 @@
     align-items: center;
     text-align: center;
     background-color: $color3_yellowish;
-    padding-bottom: 60px;
+    // padding-bottom: 60px;
 }
 
 .three-columns-column--number {
     font-size: 90px;
-    margin-top: 30px;
-    margin-bottom: 0;
+    // margin-top: 30px;
+    // margin-bottom: 0;
     font-weight: 300;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .three-columns-column--text {
-    margin-bottom: 16px;
+    // margin-bottom: 16px;
     font-weight: 300;
     width: 25vw;
     display: inline-flex ;
@@ -33,7 +33,7 @@
 @media (max-width: 750px) {
     .three-columns-container { 
         flex-direction: column;
-        padding: 0;
+        // padding: 0;
         // margin-top: -110px;
     }
     
@@ -54,26 +54,12 @@
 
     .three-columns-column--number {
         font-size: 70px;
-        margin-top: 20px;
-        margin-bottom: 0;
+        // margin-top: 20px;
+        // margin-bottom: 0;
         font-weight: 300;
     }
 }
 
-// ipad
-@media (max-width: 768px)  {
-    .three-columns-column--heading {
-        text-align: center;
-        width: 100%
-    }
-}
 
-//ipad pro
-@media (max-width: 1024px)  {
-    .three-columns-column--heading {
-        text-align: center;
-        width: 100%
-    }
-}
 
 

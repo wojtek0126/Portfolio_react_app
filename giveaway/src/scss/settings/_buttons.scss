@@ -13,7 +13,7 @@
     // width: 98px;
     height: 36px;
     padding: 10px;
-    margin: 1px;
+    // margin: 1px;
     color: $color_greyish;
     font-size: 14px;
     font-weight: 400;
@@ -25,7 +25,7 @@
 
 .menu-bottom-button {
     padding: 10px 20px;     
-    margin: 1px; 
+    // margin: 1px; 
     border: 0.75px solid $color_white;   
     font-size: 18px; 
     font-weight: 400;  
@@ -58,7 +58,7 @@
 
 .form-submit-button {
     padding: 10px 20px;     
-    margin: 1px; 
+    // margin: 1px; 
     border: 0.75px solid $color_black;   
     font-size: 18px;  
     font-weight: 300;
@@ -72,7 +72,7 @@
 
  .steps-button {
     padding: 10px 20px;     
-    margin: 1px; 
+    // margin: 1px; 
     border: 0.75px solid $color_black;   
     font-size: 24px;  
     font-weight: 300;
@@ -83,7 +83,7 @@
 
  .choice-button {
     padding: 10px 20px;     
-    margin: 1px; 
+    // margin: 1px; 
     border: 0.75px solid $color_black;   
     font-size: 18px;  
     font-weight: 300;
@@ -95,7 +95,7 @@
  }
 
  .radio-choice-button {
-     margin-right: 10px;
+    //  margin-right: 10px;
      width: 30px;
      height: 30px;
      border: 1px solid $color_black;
@@ -140,74 +140,74 @@
     right: 20px;
   }
 
-@media (max-width: 750px) {
-    .header-button {
-        font-size: 18px;
-        width: 140px;
-        height: 60px;
-    }
+// @media (max-width: 750px) {
+//     .header-button {
+//         font-size: 18px;
+//         width: 140px;
+//         height: 60px;
+//     }
 
-    .who-we-help--button {
-        font-size: 16px;
-        width: 150px;
-        height: 60px;
-        margin: 2px;
-    }
+//     .who-we-help--button {
+//         font-size: 16px;
+//         width: 150px;
+//         height: 60px;
+//         // margin: 2px;
+//     }
 
-    .menu-bottom-button {
-        width: 105vw;
-        background-color: rgba(0, 0, 0, 0.8);
-        color: $color_reddish;
-    }
+//     .menu-bottom-button {
+//         // width: 105vw;
+//         background-color: rgba(0, 0, 0, 0.8);
+//         color: $color_reddish;
+//     }
 
-    .menu-top-button {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        width: 80px;
-        font-size: 9px;
-        border: 0.75px solid $color3_yellowish;
-        &:hover {
-            background-color: $color3_yellowish;
-        }
-        &:focus {
-            background-color: $color3_yellowish;
-        }
-    }
-}
+//     .menu-top-button {
+//         // margin-top: 10px;
+//         // margin-bottom: 10px;
+//         width: 80px;
+//         font-size: 9px;
+//         border: 0.75px solid $color3_yellowish;
+//         &:hover {
+//             background-color: $color3_yellowish;
+//         }
+//         &:focus {
+//             background-color: $color3_yellowish;
+//         }
+//     }
+// }
 
-@media (min-width: 560px) and (max-width: 750px) {
+// @media (min-width: 560px) and (max-width: 750px) {
 
-    .menu-bottom-button {
-        width: 94vw;   
-        &:hover {
-            background-color: $color3_yellowish;           
-        }
-        &:focus {
-            background-color: $color3_yellowish;            
-        }
-    }
+//     .menu-bottom-button {
+//         width: 94vw;   
+//         &:hover {
+//             background-color: $color3_yellowish;           
+//         }
+//         &:focus {
+//             background-color: $color3_yellowish;            
+//         }
+//     }
   
-}
+// }
 
-@media (min-width: 560px) and (max-width: 1300px) { 
-    .header-button {       
-        font-size: 22px;
-        width: 150px;
-        height: 80px;          
-    }
+// @media (min-width: 560px) and (max-width: 1300px) { 
+//     .header-button {       
+//         font-size: 22px;
+//         width: 150px;
+//         height: 80px;          
+//     }
    
   
-}
+// }
 
-// iphone 5/SE
-@media (min-width: 568px) and (max-width: 568px) {
-    .menu-bottom-button {       
-        font-size: 12px;       
-        height: 30px;      
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
+// // iphone 5/SE
+// @media (min-width: 568px) and (max-width: 568px) {
+//     .menu-bottom-button {       
+//         font-size: 12px;       
+//         height: 30px;      
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//     }
+// }
 
 

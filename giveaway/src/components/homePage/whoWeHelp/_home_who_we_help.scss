@@ -5,8 +5,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
-    margin-bottom: 40px;
+    // margin-top: 50px;
+    // margin-bottom: 40px;
     // height: 100vh;
 }
 
@@ -20,7 +20,7 @@
 
 .who-we-help-top__decoration {
     transform: scale(0.7);
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
 }
 
 .who-we-help-top__options {
@@ -36,8 +36,8 @@
     justify-content: center;
     align-items: center;
     // width: 60%;
-    margin-top: 40px;
-    margin-bottom: 50px;
+    // margin-top: 40px;
+    // margin-bottom: 50px;
     font-size: 22px;
     font-weight: 400;
 }
@@ -48,7 +48,7 @@
     justify-content: space-between;
     width: 70vw;
     border-bottom: 1px solid black;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
 }
 
 .who-we-help__list--left {
@@ -62,14 +62,14 @@
 }
 
 .who-we-help__list--name {
-    margin: 0;
+    // margin: 0;
     font-family: $font-alt;
     font-size: 26px;
     font-weight: 300;
 }
 
 .who-we-help__list--text-left {
-    margin: 0;  
+    // margin: 0;  
     font-family: $font-alt;
     font-size: 18px;  
     font-weight: 300;
@@ -77,7 +77,7 @@
 }
 
 .who-we-help__list--text-right {
-    margin: 0; 
+    // margin: 0; 
     font-family: $font-alt;
     font-size: 18px;  
     font-weight: 300;   
@@ -92,11 +92,11 @@
 .who-we-help__list--paginate-list { 
   display: inline;
   list-style: none;  
-  margin: 3px;
+//   margin: 3px;
   border: none;
     & a {
         text-decoration: none;
-        padding: 5px;  
+        // padding: 5px;  
         font-size: 18px;  
         font-weight: 400;   
     }
@@ -104,8 +104,8 @@
 
 @media (max-width: 750px) {
     .who-we-help-container {      
-        margin-top: 0;
-        margin-bottom: -70px; 
+        // margin-top: 0;
+        // margin-bottom: -70px; 
         height: unset;
     }
 
@@ -139,19 +139,5 @@
     }   
 }
 
-// ipad
-@media (max-width: 768px)  {
-    .who-we-help-container   {
-        margin-top: unset;   
-        height: unset;
-    }
-}
 
-//ipad pro
-@media (max-width: 1024px)  {
-    .who-we-help-container   {
-        margin-top: unset;   
-        height: unset;
-    }  
-}
 
