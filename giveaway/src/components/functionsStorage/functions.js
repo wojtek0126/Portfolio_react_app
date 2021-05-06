@@ -106,8 +106,7 @@ export  const handleChoice = param => (e) => {
 
 //for radio boxes in simple steps form
 //for step 1
-export const handleRadioChoice1 = param => (e) => {
-    // e.preventDefault();
+export const handleRadioChoice1 = param => (e) => {  
     localStorage.setItem(param, e.target.id);
     console.log(e.target.id);
   }

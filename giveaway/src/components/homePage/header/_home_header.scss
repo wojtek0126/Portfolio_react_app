@@ -76,7 +76,7 @@
 }
 
 //general for mobile
-@media (max-width: 750px) {
+@media (max-width: 770px) {
 
     .header-container {       
         position: relative;
@@ -91,7 +91,7 @@
         padding-top: 8vh;
         opacity: 0.3;
         width: 100vw;
-        height: unset;
+        height: 50%;
      }
 
      .header-right-side {     
@@ -111,48 +111,52 @@
 //galaxy s5 vertical
 @media (min-width: 360px) and (max-width: 374px) and (min-height: 640px) and (max-height: 641px) { 
     .header-container {
-        padding-bottom: 20vh;
+        padding-bottom: 20vh !important;
     }
 
     .header-left-side {      
-        height: 45vh;
+        height: 45vh !important;
     }
 }
 
 //pixel 2 xl horizontal
 @media (min-width: 823px) and (max-width: 824px) and (min-height: 411px) and (max-height:412px) { 
     .header-right-side {       
-        padding-right: unset;
+        padding-right: unset !important;
+    }
+
+    .header-left-side {       
+        height: 38vh !important;
     }
 }
 
 //iphone x horizontal
 @media (min-width: 812px) and (max-width: 813px) and (min-height: 375px) and (max-height: 376px) { 
     .header-right-side {       
-        padding-right: unset;
-    }
+        padding-right: unset !important;
+   }   
 }
 
 //iphone x vertical
 @media (min-width: 375px) and (max-width: 376px) and (min-height: 812px) and (max-height: 813px) { 
     .header-left-side {       
-        height: 37vh;
+        height: 37vh !important;
     }
 }
 
 
 @media (min-width: 560px) and (max-width: 750px) { 
     .header-container {
-        padding-bottom: 5vh;
+        padding-bottom: 5vh !important;
     }
 
     .decorated-text--large {
-        width: 40vw;
-        font-size: 38px;
+        width: 40vw !important;
+        font-size: 38px !important;
     }
 
     .header-right-side--content__buttons {     
-        margin-top: 0;
+        margin-top: 0 !important;
     }
   
 }
@@ -192,82 +196,77 @@
 // ipad
 @media (min-width: 766px) and (max-width: 780px)  {
     .header-container {
-    margin-bottom: unset;
+    margin-bottom: unset !important;
     }
 
     .header-right-side {
-        height: 574px;
-        padding-right: unset;
+        height: 574px !important;
+        padding-right: unset !important;
     }  
     
     .header-right-side--content {
-        margin-top: unset;
+        margin-top: unset !important;
     }
 
     .header-right-side--content__buttons {
-        margin-top: unset;
+        margin-top: unset !important;
     }
     
     .header-left-side {        
-        height: 40vh;
-        padding-top: 16vh;
+        height: 40vh !important;
+        padding-top: 16vh !important;
     }    
 }
 
 //ipad pro
 @media (min-width: 1020px) and (max-width: 1024px)  {
     .header-container {
-        margin-bottom: unset;
+        margin-bottom: unset !important;
         }
 
     .header-right-side {
-        height: 574px;
-        padding-right: unset;
+        height: 574px !important;
+        padding-right: unset !important;
     }    
     
     .header-left-side {       
-        height: 45vh;
+        height: 45vh !important;
     } 
 }
 
 //Iphone 5/SE vertical
 @media (min-width: 320px) and (max-width: 321px) and (min-height: 568px) and (max-height: 569px) {
     .header-left-side{
-        height: 50vh;
+        height: 50vh !important;
     }
 
     .header-right-side--content {
-        margin-top: 0;
+        margin-top: 0 !important;
     }
 
     .header-container {
-        padding-bottom: 12vh;
+        padding-bottom: 12vh !important;
         }
 }
 
 //Iphone 6/7/8 Plus
 @media (min-width: 413px) and (max-width: 415px)  { 
     .header-container {
-        padding-bottom: 12vh;
+        padding-bottom: 12vh !important;
         }
 }
 
 //Iphone X
 @media (min-width: 375px) and (max-width: 376px)  { 
     .header-container {
-        padding-bottom: 5vh;
-        }
-
-        // .header-right-side {             
-        //     padding-right: unset;
-        // }
+        padding-bottom: 5vh !important;
+        } 
 }
-
 
 //pixel 2 XL
 @media (min-width: 410px) and (max-width: 412px) {
     .header-container {
-        padding-bottom: 9vh;
+        padding-bottom: 9vh !important;
         }
 }
 
@@ -288,8 +287,8 @@
 //pixel 2 xl horizontal
 @media (min-width: 823px) and (max-width: 824px) { 
     .header-left-side {
-        width: 885px;
-        height: 100vh ;
+        width: 885px !important;
+        height: 100vh !important;
         padding-top: 200px !important;
     }
 }
@@ -319,7 +318,7 @@
 @media (min-width: 812px) and (max-width: 813px) { 
     .header-left-side {
         height: 125vh !important;
-        padding-top: 145px;
+        padding-top: 145px !important;
     }
 
     .container-half {        
@@ -330,33 +329,33 @@
 //ipad horizontal
 @media (min-width: 1024px) and (max-width: 1025px) and (min-height: 768px) and (max-height: 769px){
     .header-left-side {
-        height: 55vh;
-        padding-top: 166px;
+        height: 55vh !important;
+        padding-top: 166px !important;
     }
 }
 
 //ipad pro horizontal
 @media (min-width: 1366px) and (max-width: 1367px) and (min-height: 1024px) and (max-height: 1025px) {
     .header-right-side {       
-        padding-right: unset; 
+        padding-right: unset !important; 
    }
 
    .header-left-side {   
-    height: 66vh;
+    height: 66vh !important;
     }
 }
 
 //surface duo horizontal
 @media (min-width: 720px) and (max-width: 721px) and (min-height: 540px) and (max-height: 541px) {
    .header-left-side {   
-    height: 100vh;
+    height: 100vh !important;
     }
 }
 
  //galaxy fold horizontal
  @media (min-width: 653px) and (max-width: 654px) and (min-height: 280px) and (max-height: 281px) {
     .header-left-side {        
-        height: 192vh;
+        height: 192vh !important;
     }
 }
 
@@ -382,18 +381,43 @@
  }
 
   //responsive vertical
-  @media (min-width: 287px) and (max-width: 288px) and (min-height: 655px) and (max-height: 656px) {
+  @media (min-width: 287px) and (max-width: 288px) and (min-height: 738px) and (max-height: 739px) {
   .header-left-side {        
-        height: 150vh !important;
+        height: 50vh !important;
     }
  }
 
   //responsive horizontal
-  @media (min-width: 655px) and (max-width: 656px) and (min-height: 287px) and (max-height: 288px) {
+  @media (min-width: 738px) and (max-width: 739px) and (min-height: 287px) and (max-height: 288px) {
    .header-left-side {        
         height: 185vh !important;
     }
  }
+
+ //filling holes
+ @media (min-width: 560px) and (max-width: 645px) {
+    .header-left-side {        
+        height: 80vh;
+    }
+ }
+
+ @media (min-width: 750px) and (max-width: 765px) {
+    .header-left-side {        
+        height: 70vh;
+    }
+}
+
+@media (max-width: 445px) {
+    .header-left-side {        
+        height: 70vh;
+    }
+}
+
+@media (max-width: 445px) and (max-width: 558px) {
+    .header-left-side {        
+        height: 50vh;
+    }
+}
 
 
 
