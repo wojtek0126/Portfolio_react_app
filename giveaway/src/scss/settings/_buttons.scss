@@ -10,7 +10,7 @@
 
 //home header buttons
 .menu-top-button {
-    // width: 98px;
+    width: 98px;
     height: 36px;
     padding: 10px;
     // margin: 1px;
@@ -139,6 +139,14 @@
   .AnyClassForTransition {
     right: 20px;
   }
+
+  @media (max-width: 125px) {
+    .menu-top-button {
+       margin: 0 auto;
+       width: 10%;
+       height: 30%;
+    }
+}
 
 // @media (max-width: 750px) {
 //     .header-button {
