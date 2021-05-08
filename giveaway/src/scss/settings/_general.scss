@@ -16,7 +16,16 @@ body {
 //blankspaces
 .blank-space {
     color: transparent;
-}   
+}  
+
+//switch for flex activating elements with display none
+.active-flex {
+    display: flex !important;
+}
+
+.off {
+    display: none !important;
+}
 
 //containers
 .container-half {

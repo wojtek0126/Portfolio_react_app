@@ -1,17 +1,38 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
+import { Slider } from 'react-burgers'
+ 
+const Hamburger = () => {
+  const [active, setActive] = useState(false);  
 
-const Burger = ({onClick}) => {
+  useEffect (() => {
 
+  },[])
+
+
+  const handleClick = () => {
+     
+        const menuTop = document.querySelector('.login-menu__top');
+        const menuBottom = document.querySelector('.login-menu__bottom');
+   
+  
+    
+    if(active === false) {
+      setActive(true);      
+    }
+    else {
+      setActive(false)
+    }
+
+    menuTop.classList.toggle("active-flex");
+    menuBottom.classList.toggle("active-flex");
+    // menuTop.classList.toggle("off");
+    // menuBottom.classList.toggle("off");
+  } 
+  
     return (
-        <div id="hamburger" className="burger" onClick={onClick}>
-            <span className="burger-border-top"></span>
-            <span id="burger-1" className="burger1"></span>
-            <span id="burger-2" className="burger2"></span>
-            <span className="burger-border-bottom"></span>
-        </div>
-    )
+      <Slider active={active} onClick={handleClick}/>
+    );
+
 }
 
-export default Burger;
-
-// "login-menu-container" "login-menu__top"
+export default Hamburger;

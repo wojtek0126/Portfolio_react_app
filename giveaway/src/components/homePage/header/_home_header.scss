@@ -12,8 +12,8 @@
 }
 
 .header-left-side {  
-    width: 885px;
-    height: 963px;
+    width: 100vw;
+    height: 50vw;
 }
 
 .header-right-side {   
@@ -71,7 +71,7 @@
 }
 
 .decorated-text--large {
-    font-size: 3vw;
+    font-size: 2.5vw;
     font-weight: 400;
 }
 
@@ -80,6 +80,8 @@
 
     .header-container {       
         position: relative;
+        // justify-content: center;
+        // align-items: center;
      }
 
     .decorated-text--large {
@@ -91,7 +93,7 @@
         // padding-top: 8vh;
         opacity: 0.3;
         width: 100vw;
-        height: 50%;
+        height: 65vw;
      }
 
      .header-right-side {     
@@ -100,6 +102,11 @@
         width: 100vw;
         height: unset;
         position: absolute;         
+     }
+
+     .header-right-side--content {     
+        position: absolute;
+        top: 15vw;       
      }
 
      .decorated-text--large {
