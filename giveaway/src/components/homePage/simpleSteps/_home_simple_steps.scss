@@ -1,30 +1,31 @@
 @import './settings/colors';
 
-// .simple-steps-container {   
-//     height: 100vh;
+.simple-steps-container {       
+    width: 100vw;
+}
+
+// .simple-steps-top {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+//     // margin-top: 30px;
+//     // margin-bottom: 20px;
+//     & p {
+//         // margin-bottom: 10px;
+//         // margin-top: 40px;
+//     }
 // }
 
-.simple-steps-top {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    // margin-top: 30px;
-    // margin-bottom: 20px;
-    & p {
-        // margin-bottom: 10px;
-        // margin-top: 40px;
-    }
-}
+// .simple-steps-top--text {
+//     font-size: 38px;
+//     font-weight: 400;
+// }
 
-.simple-steps-top--text {
-    font-size: 38px;
-    font-weight: 400;
-}
-
-.simple-steps-top--decoration {      
-    transform: scale(0.7);
-}
+// .simple-steps-top--decoration {      
+//     width: 6vw; 
+//     height: 6vw;
+// }
 
 .simple-steps-middle {
     display: flex;
@@ -44,14 +45,17 @@
 
 .simple-steps-middle--decoration {
     // margin-top: 30px;    
-    transform: scale(0.7);
+    // transform: scale(0.7);
+    margin-top: 5vw;
+    width: 6vw;
+    height: 6v;
 }
 
 .simple-steps-middle__underlined {  
     // padding-bottom: 10px;
     // margin-top: 0;
     width: 60%;
-    font-size: 18px;
+    font-size: 2vw;
     font-weight: 400;
 }
 
@@ -60,13 +64,14 @@
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid $color_black;
-    width: 40%;
+    width: 13vw;
 }
 
 .simple-steps-middle__bottom-text {
-    // margin-bottom: 30px;
-    width: 60%;
-    font-size: 16px;
+    margin-block-start: 5vw;
+    margin-block-end: 5vw;
+    width: 65%;
+    font-size: 1.65vw;
     font-weight: 400;
 }
 
@@ -74,7 +79,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 35vh;
+    height: 12vw;
 }
 
 @media (max-width: 833px) {
@@ -99,19 +104,28 @@
         width: 100vw;      
     }
 
-    .simple-steps-middle--decoration {
-        // margin-top: 0;
-        transform: scale(0.6);
-        -webkit-transform: scale(0.6);
-        -moz-transform: scale(0.6);
-        -ms-transform: scale(0.6);
-        -o-transform: scale(0.6);
-}
+    .simple-steps-middle--decoration {            
+            width: 10vw; 
+            height: 10vw;
+            margin-top: 3vw;
+
+       }
 
 .simple-steps-middle__align {
     border-bottom: 2px solid $color_white;
 }
 
+.simple-steps-middle__underlined {
+    font-size: 3.5vw;
+    }
 }
+
+@media (max-width: 540px) {
+    .simple-steps-bottom {
+        height: 8vh;     
+    }
+}
+
+
 
 

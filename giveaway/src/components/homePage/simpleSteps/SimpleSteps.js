@@ -10,9 +10,9 @@ const SimpleSteps = () => {
             <LargeTxtWithDecor text={`Wystarczą 4 proste kroki`} className={`decorated-text--large`} 
             wrapperClass={`header-right-side--content__text`}/>
             <div className="simple-steps-middle">              
-                <SimpleStep headTxt={`Wybierz rzeczy`} mainTxt={`ubrania, zabawki, sprzęt i inne`} icon={`shirt`} blank={`z`}/>
+                <SimpleStep headTxt={`Wybierz rzeczy`} mainTxt={`ubrania, zabawki, sprzęt i inne`} icon={`shirt`}/>
                 <SimpleStep headTxt={`Spakuj je`} mainTxt={`skorzystaj z worków na śmieci`} icon={`bag`} blank={`z`}/>
-                <SimpleStep headTxt={`Zdecyduj komu chcesz pomóc`} mainTxt={`wybierz zaufane miejsce`} icon={`search`} />
+                <SimpleStep headTxt={`Zdecyduj komu chcesz pomóc`} mainTxt={`wybierz zaufane miejsce`} icon={`search`}/>
                 <SimpleStep headTxt={`Zamów kuriera`} mainTxt={`kurier przyjedzie w dogodnym terminie`} icon={`delivery`} blank={`z`}/>
             </div>
             <div className="simple-steps-bottom">
