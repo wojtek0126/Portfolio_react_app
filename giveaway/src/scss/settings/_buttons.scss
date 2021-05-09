@@ -128,6 +128,13 @@
     }
 }
 
+// login menu links same color after visited
+.menu-btn-login {
+    &:visited {
+        color: $color_black;
+    }
+}
+
 // go to top icon
 .AnyClassForContainer {
     position: fixed;
@@ -160,7 +167,7 @@
         font-size: 3vw;
         font-weight: 400;
         height: 10vw;      
-        width: 98.5vw;
+        width: 100vw;
         background-color: $color_white;
     }
 
@@ -177,5 +184,6 @@
 @media (min-width: 834px) and (max-width: 1168px) {
     .menu-bottom-button {
         height: 5vw;
+        width: max-content;
     }
 }
