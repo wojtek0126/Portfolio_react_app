@@ -13,7 +13,6 @@ const Hamburger = () => {
      
         const menuTop = document.querySelector('.login-menu__top');
         const menuBottom = document.querySelector('.login-menu__bottom');
-   
   
     
     if(active === false) {
@@ -24,9 +23,7 @@ const Hamburger = () => {
     }
 
     menuTop.classList.toggle("active-flex");
-    menuBottom.classList.toggle("active-flex");
-    // menuTop.classList.toggle("off");
-    // menuBottom.classList.toggle("off");
+    menuBottom.classList.toggle("active-flex"); 
   } 
   
     return (

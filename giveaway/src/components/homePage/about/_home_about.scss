@@ -29,7 +29,7 @@
     text-align: center;  
     font-size: 30px;
     font-weight: 400;
-    padding: 20px;
+    // padding: 20px;
 } 
 
 .about-left-side__signature {
@@ -38,7 +38,7 @@
     justify-content: flex-end;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 833px) {
     .about-container {
         flex-direction: column;    
         height: unset;
@@ -51,7 +51,7 @@
 
     .about-left-side__text {     
         text-align: center;          
-        padding: 0;
+        // padding: 0;
         width: 90vw;
         font-size: 18px;    
     } 

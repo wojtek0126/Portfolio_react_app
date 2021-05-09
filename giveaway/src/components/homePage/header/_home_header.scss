@@ -13,7 +13,7 @@
 
 .header-left-side {  
     width: 100vw;
-    height: 50vw;
+    height: 47vw;
 }
 
 .header-right-side {   
@@ -21,6 +21,11 @@
     height: 65.8vh;
     // padding-right: 142px;
 }
+
+.header-right-side--content {     
+    position: absolute;
+    top: 11vw;       
+ }
 
 .header-right-side--menu {
     // margin:  20px 40px 0 0;
@@ -76,7 +81,7 @@
 }
 
 //general for mobile
-@media (max-width: 750px) {
+@media (max-width: 833px) {
 
     .header-container {       
         position: relative;
@@ -114,4 +119,12 @@
         font-size: 4vw;
     }
 }
+
+//desktop view
+@media (min-width: 833px) {
+    .header-container {        
+        height: 47vw;
+    }
+}
+
 

@@ -154,13 +154,13 @@
 }
 
 //burger menu buttons
-@media (max-width: 750px) {
+@media (max-width: 833px) {
     .menu-bottom-button {      
         border: 0.75px solid $color_black;
         font-size: 3vw;
         font-weight: 400;
         height: 10vw;      
-        width: 100vw;
+        width: 98.5vw;
         background-color: $color_white;
     }
 
@@ -239,4 +239,9 @@
 //     }
 // }
 
-
+// desktop menu buttons when they are changing to two lines
+@media (min-width: 834px) and (max-width: 1168px) {
+    .menu-bottom-button {
+        height: 5vw;
+    }
+}
