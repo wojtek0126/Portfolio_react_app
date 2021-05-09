@@ -20,7 +20,7 @@ const HomeHeader = () => {
     return ( 
         <> 
         <div className="scroll-up-arrow"><ScrollUpButton /></div>           
-        <div className="header-container">
+        <div className="header-container" id="home">
             <HomeHeaderImage />
         <div className="header-right-side container-half">
             <div className="login-menu-container">                     

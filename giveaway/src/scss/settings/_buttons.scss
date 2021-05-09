@@ -167,77 +167,11 @@
     .menu-top-button {      
         font-size: 3vw;      
     }
+
+    #startButton {
+        display: none;
+    }
 }
-
-// @media (max-width: 750px) {
-//     .header-button {
-//         font-size: 18px;
-//         width: 140px;
-//         height: 60px;
-//     }
-
-//     .who-we-help--button {
-//         font-size: 16px;
-//         width: 150px;
-//         height: 60px;
-//         // margin: 2px;
-//     }
-
-//     .menu-bottom-button {
-//         // width: 105vw;
-//         background-color: rgba(0, 0, 0, 0.8);
-//         color: $color_reddish;
-//     }
-
-//     .menu-top-button {
-//         // margin-top: 10px;
-//         // margin-bottom: 10px;
-//         width: 80px;
-//         font-size: 9px;
-//         border: 0.75px solid $color3_yellowish;
-//         &:hover {
-//             background-color: $color3_yellowish;
-//         }
-//         &:focus {
-//             background-color: $color3_yellowish;
-//         }
-//     }
-// }
-
-// @media (min-width: 560px) and (max-width: 750px) {
-
-//     .menu-bottom-button {
-//         width: 94vw;   
-//         &:hover {
-//             background-color: $color3_yellowish;           
-//         }
-//         &:focus {
-//             background-color: $color3_yellowish;            
-//         }
-//     }
-  
-// }
-
-// @media (min-width: 560px) and (max-width: 1300px) { 
-//     .header-button {       
-//         font-size: 22px;
-//         width: 150px;
-//         height: 80px;          
-//     }
-   
-  
-// }
-
-// // iphone 5/SE
-// @media (min-width: 568px) and (max-width: 568px) {
-//     .menu-bottom-button {       
-//         font-size: 12px;       
-//         height: 30px;      
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//     }
-// }
 
 // desktop menu buttons when they are changing to two lines
 @media (min-width: 834px) and (max-width: 1168px) {

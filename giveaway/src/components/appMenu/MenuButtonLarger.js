@@ -1,8 +1,8 @@
 import React from 'react';
 
-const MenuButtonLarger = ({text, id}) => {
+const MenuButtonLarger = ({text, id, href}) => {
     return (
-        <button className="btn menu-bottom-button" href="" id={id}>{text}</button>
+        <button className="btn menu-bottom-button" href={href} id={id}>{text}</button>
     )
 }
 
