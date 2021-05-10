@@ -35,7 +35,8 @@
         -ms-transform: scale(0.7);
         -o-transform: scale(0.7);
         position: absolute;   
-        top: -10px;    
+        top: 0; 
+        left: 0;   
 }
 
 .login-menu__top {
@@ -90,7 +91,7 @@
 @media (max-width: 220px) {
     .burger-container {
         top: -18px;
-        left: -8px;
+        left: -22px;
         transform: scale(0.4) !important;
         -webkit-transform: scale(0.4) !important;
         -moz-transform: scale(0.4) !important;
@@ -107,6 +108,6 @@
         -ms-transform: scale(0.9) !important;
         -o-transform: scale(0.9) !important;
         top: 0;
-        left: 2vw;
+        left: 0;
     }
 }
