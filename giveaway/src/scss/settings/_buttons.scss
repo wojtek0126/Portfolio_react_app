@@ -52,31 +52,27 @@
 }
 
 .who-we-help--button {
-    border: 0.75px solid $color_black;     
-    padding: 10px 30px;
-    font-size: 24px;
+    border: 0.75px solid $color_black;      
     font-weight: 400;
-    width: 235px;
+    font-size: 2.1vw;
+    width: 18vw;
+    height: 9vw; 
+    padding: unset;
     text-align: center;
 }
 
-.form-submit-button {
-    padding: 10px 20px;     
-    // margin: 1px; 
-    border: 0.75px solid $color_black;   
-    font-size: 18px;  
+.form-submit-button {      
+    margin: 3vw;
+    padding: 1vw 2vw;  
+    font-size: 2vw;
+    border: 0.75px solid $color_black;       
     font-weight: 300;
-    background-color: $color_white;  
-    // width: 180px;
-    width: -moz-fit-content; 
-    // &:hover {
-    //  border: 1px solid $color_black;    
-    // } 
+    background-color: $color_white;   
+    width: -moz-fit-content;    
  }
 
  .steps-button {
-    padding: 10px 20px;     
-    // margin: 1px; 
+    padding: 10px 20px;   
     border: 0.75px solid $color_black;   
     font-size: 24px;  
     font-weight: 300;
@@ -86,8 +82,7 @@
  }
 
  .choice-button {
-    padding: 10px 20px;     
-    // margin: 1px; 
+    padding: 10px 20px;       
     border: 0.75px solid $color_black;   
     font-size: 18px;  
     font-weight: 300;
@@ -98,8 +93,7 @@
     font-size: 16px;
  }
 
- .radio-choice-button {
-    //  margin-right: 10px;
+ .radio-choice-button {  
      width: 30px;
      height: 30px;
      border: 1px solid $color_black;
@@ -119,7 +113,6 @@
 
 .yellow-hover-btn {     
     border: 1px solid $color_black;
-    // padding: 10px;
     &:hover {
         background-color: $color3_yellowish;
     }
@@ -135,7 +128,14 @@
     }
 }
 
-// go to top icon
+.paginate-button {
+    width: 3vw;
+    height: 3vw;
+    font-size: 2vw;
+    padding: unset;
+}
+
+// scroll to top arrow icon customized
 .AnyClassForContainer {
     position: fixed;
     right: -100px;
@@ -151,15 +151,6 @@
     right: 20px;
   }
 
-  //menu for very small screen
-  @media (max-width: 125px) {
-    .menu-top-button {
-       margin: 0 auto;
-       width: 10%;
-       height: 30%;
-    }
-}
-
 //burger menu buttons
 @media (max-width: 833px) {
     .menu-bottom-button {      
@@ -173,17 +164,29 @@
 
     .menu-top-button {      
         font-size: 3vw;      
-    }
+    }  
 
     #startButton {
         display: none;
     }
 }
 
-// desktop menu buttons when they are changing to two lines
+// desktop menu buttons 
 @media (min-width: 834px) and (max-width: 1168px) {
     .menu-bottom-button {
         height: 5vw;
         width: max-content;
+    } 
+}
+
+//for full screen
+@media (min-width: 1239px) {
+    .paginate-button {     
+             width: 3vw;
+             height: 3vw;
+             font-size: 2vw;
+             padding: unset;
     }
 }
+
+

@@ -1,45 +1,40 @@
 @import './settings/colors';
 
 .who-we-help-container {
+    width: 100vw !important;   
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    // margin-top: 50px;
-    // margin-bottom: 40px;
-    // height: 100vh;
+    align-items: center;  
 }
 
 .who-we-help-top {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    // margin-top: -160px;
+    align-items: center;   
 }
 
-.who-we-help-top__decoration {
-    transform: scale(0.7);
-    width: 40vw;
+.who-we-help-top__decoration {  
+    width: 20vw;
+    margin-bottom: 3vw;
 }
 
 .who-we-help-top__options {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 65%;
+    width: 90vw;
 }
 
 .who-we-help-top__text {
     text-align: center;
     display: flex;
     justify-content: center;
-    align-items: center;
-    // width: 60%;
-    // margin-top: 40px;
-    // margin-bottom: 50px;
-    font-size: 22px;
+    align-items: center;   
+    font-size: 2.5vw;
     font-weight: 400;
+    width: 90vw;
 }
 
 .who-we-help__list--container {
@@ -47,8 +42,7 @@
     flex-direction: row;
     justify-content: space-between;
     width: 70vw;
-    border-bottom: 1px solid black;
-    // margin-bottom: 20px;
+    border-bottom: 1px solid black;  
 }
 
 .who-we-help__list--left {
@@ -61,25 +55,24 @@
    align-items: flex-end;
 }
 
-.who-we-help__list--name {
-    // margin: 0;
+.who-we-help__list--name {   
     font-family: $font-alt;
-    font-size: 26px;
+    font-size: 2.1vw;
     font-weight: 300;
+    margin-block-start: 1vw;
+    margin-block-end: 1vw;
 }
 
-.who-we-help__list--text-left {
-    // margin: 0;  
+.who-we-help__list--text-left {   
     font-family: $font-alt;
-    font-size: 18px;  
+    font-size: 1.6vw;  
     font-weight: 300;
     font-style: italic;
 }
 
-.who-we-help__list--text-right {
-    // margin: 0; 
+.who-we-help__list--text-right {   
     font-family: $font-alt;
-    font-size: 18px;  
+    font-size: 1.6vw;  
     font-weight: 300;   
 }
 
@@ -91,53 +84,59 @@
 
 .who-we-help__list--paginate-list { 
   display: inline;
-  list-style: none;  
-//   margin: 3px;
+  list-style: none; 
   border: none;
+  padding: 0.3vw;
     & a {
-        text-decoration: none;
-        // padding: 5px;  
+        text-decoration: none;     
         font-size: 18px;  
         font-weight: 400;   
     }
 }
 
+.who-we-help__list--paginate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;       
+}
+
 @media (max-width: 833px) {
-    .who-we-help-container {      
-        // margin-top: 0;
-        // margin-bottom: -70px; 
+    .who-we-help-container {           
         height: unset;
     }
 
     .who-we-help-top__options {        
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;       
     }
 
     .who-we-help-top__text {
         width: 90vw;
-        font-size: 18px;
+        font-size: 4vw;
     }
 
     .who-we-help__list--text-left {
-        max-width: 120px;
-        font-size: 12px;  
+        max-width: 30vw;
+        font-size: 2vw;  
      
     }
     
     .who-we-help__list--text-right {
-        max-width: 120px;
-        font-size: 12px;  
+        max-width: 30vw;
+        font-size: 2vw;  
         text-align: end;
         
     }
 
     .who-we-help__list--name {       
-        font-size: 18px;       
+        font-size: 3vw;       
     }   
 }
+
+
+
+
 
 
 

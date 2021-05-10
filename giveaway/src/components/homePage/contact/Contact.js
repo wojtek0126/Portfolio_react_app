@@ -16,7 +16,8 @@ const Contact = () => {
     return (
         <div className="contact-container container-full" id="contact">
             <div className="contact-left-side">
-              <ContactFormImage />             
+              <ContactFormImage />
+              <HomeFooter />             
             </div>
             <div className="contact-right-side">               
                  <LargeTxtWithDecor text={`Skontaktuj się z nami`} className={`decorated-text--large`}
@@ -37,8 +38,7 @@ const Contact = () => {
                     </div>                               
                     <SmallButton text={`Wyślij`} />
                 </form>
-            </div>
-            <HomeFooter />
+            </div>         
         </div>
     )
 }

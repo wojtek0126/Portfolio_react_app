@@ -75,7 +75,7 @@ const pageNumbers = setPageNumbers(orgType, orgsPerpage);
                             <Link to="/whoWeHelp">
                                 <PaginateButton id={"pagination"}
                                  numberOfPage={number}
-                                 className={"btn yellow-hover-btn"}
+                                 className={"btn yellow-hover-btn paginate-button"}
                                  href={"!#"}
                                  onClick={() => paginate(number, setCurrentpage)} />                                
                             </Link>

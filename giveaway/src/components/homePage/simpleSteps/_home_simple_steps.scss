@@ -1,7 +1,7 @@
 @import './settings/colors';
 
-.simple-steps-container {       
-    width: 100vw;
+.simple-steps-container {  
+    width: max-content !important;       
 }
 
 .simple-steps-middle {
@@ -9,8 +9,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    text-align: center;
-    // padding: 0 100px 0 100px;
+    text-align: center;    
     background-color: $color_whiteish;    
 }
 
@@ -20,17 +19,13 @@
     align-items: center;
 }
 
-.simple-steps-middle--decoration {
-    // margin-top: 30px;    
-    // transform: scale(0.7);
+.simple-steps-middle--decoration { 
     margin-top: 5vw;
     width: 6vw;
     height: 6v;
 }
 
-.simple-steps-middle__underlined {  
-    // padding-bottom: 10px;
-    // margin-top: 0;
+.simple-steps-middle__underlined {     
     width: 60%;
     font-size: 2vw;
     font-weight: 400;

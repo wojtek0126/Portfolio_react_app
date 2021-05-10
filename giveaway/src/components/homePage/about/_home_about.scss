@@ -1,6 +1,5 @@
-.about-container {
-    display: flex;
-    // margin-top: 20px;    
+.about-container {      
+    display: flex;  
     height: 50vw;
     overflow: hidden;
     width: 100vw;
@@ -72,7 +71,7 @@
 }
 
 //desktop full screen
-@media (min-width: 1024px) {
+@media (min-width: 833px) {
     .about-right-side__img {
         max-width: 62vw;  
     }
