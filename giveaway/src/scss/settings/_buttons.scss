@@ -9,11 +9,9 @@
 }
 
 //home header buttons
-.menu-top-button {
-    // width: 98px;
-    // height: 36px;
+.menu-top-button {    
     padding: 10px;
-    // margin: 1px;
+   
     color: $color_greyish;
     font-size: 1.25vw;
     font-weight: 400;
@@ -24,12 +22,10 @@
 }
 
 .menu-bottom-button {
-    padding: 10px 20px;     
-    // margin: 1px; 
+    padding: 10px 20px;   
     border: 0.75px solid $color_white;   
     font-size: 1.25vw;
-    font-weight: 400;  
-    // height: 42px;  
+    font-weight: 400;    
     background-color: $color_white;     
     &:hover {
      border: 0.75px solid $color_black;    
@@ -42,13 +38,11 @@
     justify-content: center;
     align-items: center;
     border: 0.75px solid $color_black; 
-    text-transform: uppercase;
-    // padding: 10px 30px;
+    text-transform: uppercase;   
     font-size: 2.1vw;
     width: 18vw;
     height: 9vw;
-    text-align: center;
-    // max-width: 18vw;
+    text-align: center;   
 }
 
 .who-we-help--button {
@@ -135,22 +129,6 @@
     padding: unset;
 }
 
-// scroll to top arrow icon customized
-.AnyClassForContainer {
-    position: fixed;
-    right: -100px;
-    bottom: 150px;
-    transition: right 0.5s;
-    cursor: pointer;
-    background-color: white;
-    font-size: 20px;
-    padding: 10px;
-  }
-  
-  .AnyClassForTransition {
-    right: 20px;
-  }
-
 //burger menu buttons
 @media (max-width: 833px) {
     .menu-bottom-button {      
@@ -164,8 +142,32 @@
 
     .menu-top-button {      
         font-size: 3vw;      
-    }  
+    }
+    
+    .form-submit-button {             
+        padding: 3vw 4vw;  
+        font-size: 4vw;       
+     }
 
+     .paginate-button {
+        width: 6vw;
+        height: 6vw;
+        font-size: 4vw;      
+    }
+
+    .who-we-help--button {
+        font-size: 3.6vw;
+        width: 29vw;
+        height: 14vw;
+    }
+
+    .header-button {           
+        width: 35vw;
+        height: 16vw;
+        font-size: 4vw;
+    }
+
+    // no start option in options visible in home menu for mobile
     #startButton {
         display: none;
     }

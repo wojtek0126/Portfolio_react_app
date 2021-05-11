@@ -1,20 +1,16 @@
 
 .login-menu-container {
-    display: flex;
-    // align-self: flex-start;
+    display: flex; 
     flex-direction: column;
  }
- 
 
- 
  .login-menu__top {
      display: flex;
      flex-direction: row;
      justify-content: flex-end;
  }
  
- .login-menu__bottom {
-    //  width: 683px;
+ .login-menu__bottom {  
      display: flex;
      flex-direction: row;
      justify-content: flex-end;   
@@ -53,13 +49,7 @@
     flex-direction: column;
     position: absolute;
     z-index: 1;
-    top: 15vw;
-}
-
-.mobile-menu__bottom {  
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;   
+    top: 20vw;
 }
 
 .login-menu-container-mobile {

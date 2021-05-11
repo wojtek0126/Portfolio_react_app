@@ -43,7 +43,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 15vw;
+    padding: 3vw;
 }
 
 .simple-steps-middle__bottom-text {
@@ -65,15 +65,16 @@
     }
 
     .simple-steps-bottom {        
-        height: 15vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;     
+        padding: 3vw;   
     }    
 
-    .simple-steps-middle__underlined {      
-        // padding-bottom: 0;    
-        width: 100vw;      
+    .simple-steps-middle__underlined {           
+        width: 100vw; 
+        font-size: 4.5vw;     
+    }
+
+    .simple-steps-middle__underlined--underline {
+        width: 40vw;
     }
 
     .simple-steps-middle--decoration {            
@@ -87,35 +88,28 @@
     border-bottom: 2px solid $color_white;
 }
 
-.simple-steps-middle__underlined {
-    font-size: 3.5vw;
-    }
-
-    .simple-steps-middle__bottom-text {      
-        font-size: 2vw;       
+.simple-steps-middle__bottom-text {      
+        font-size: 4vw;       
     }
 }
 
 //adjusting simple steps section button
 @media (max-width: 540px) {
     .simple-steps-bottom {
-        height: 8vw;     
+        padding: 3vw;   
     }
 }
 
 @media (max-width: 720px) {
     .simple-steps-bottom {
-        height: 13vw;     
+        padding: 3vw;   
     }
 }
 
 //
 @media (min-width: 1239px) {
-    .simple-steps-bottom {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 15vw;
+    .simple-steps-bottom {        
+        padding: 3vw;
     }
 }
 

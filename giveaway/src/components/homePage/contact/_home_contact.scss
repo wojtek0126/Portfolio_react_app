@@ -42,13 +42,11 @@
     border-left: none;
     border-right: none;
     border-top: none;
-    background: $color_white;
-    opacity: 0.3;
+    background: $color_form_transparent;  
     font-size: 1.72vw;
     font-weight: 400;
     width: 20vw;
-    padding: 1vw 0px;
-  
+    padding: 1vw 0px;  
 }
 
 //general mobile and small
@@ -82,6 +80,21 @@
 
     .contact-form {           
         z-index: 1;
+    }
+
+    .contact-form-input--label {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        margin-top: 1vw;
+        font-size: 3.71vw;   
+        font-weight: 600;
+    }
+    
+    .contact-form-input--input {      
+        width: unset;
+        font-size: 2.71vw;           
     }
 }
 

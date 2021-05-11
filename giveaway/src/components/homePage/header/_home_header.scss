@@ -81,11 +81,7 @@
 
     .header-container {       
         position: relative;      
-     }
-
-    .decorated-text--large {
-        font-size: 33px;     
-    }
+     }  
 
     .header-left-side {
         display: flex;   
@@ -103,12 +99,12 @@
 
      .header-right-side--content {     
         position: absolute;
-        top: 15vw;       
+        top: 6vw;       
      }
 
      .decorated-text--large {
         width: 100vw;
-        font-size: 5vw;
+        font-size: 6vw;
     }
 }
 

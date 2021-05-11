@@ -97,12 +97,17 @@
 .who-we-help__list--paginate {
     display: flex;
     justify-content: space-between;
-    align-items: center;       
+    align-items: center;  
+    padding: 1vw;     
 }
 
 @media (max-width: 833px) {
     .who-we-help-container {           
         height: unset;
+    }
+
+    .who-we-help-top__decoration {  
+        width: 40vw;       
     }
 
     .who-we-help-top__options {        
@@ -118,19 +123,25 @@
 
     .who-we-help__list--text-left {
         max-width: 30vw;
-        font-size: 2vw;  
+        font-size: 3vw;  
+        margin-block-end: 0.3em;
+        margin-block-start: 0.5em;  
      
     }
     
     .who-we-help__list--text-right {
         max-width: 30vw;
-        font-size: 2vw;  
+        font-size: 3vw;  
         text-align: end;
+        margin-block-end: 0.3em;
+        margin-block-start: 0.5em;  
         
     }
 
     .who-we-help__list--name {       
-        font-size: 3vw;       
+        font-size: 3.2vw;  
+        margin-block-start: 0.5em;     
+        margin-block-end: 0.3em;    
     }   
 }
 
